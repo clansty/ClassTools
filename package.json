@@ -1,0 +1,30 @@
+{
+  "name": "class-tools-reborn",
+  "version": "3.0.0",
+  "main": "dist/main/index.cjs",
+  "author": "Clansty <i@gao4.pw> & RainbowBird <rbxin2003@outlook.com>",
+  "private": true,
+  "scripts": {
+    "dev": "node scripts/watch.mjs",
+    "prebuild": "vue-tsc --project src/renderer/tsconfig.json --noEmit && node scripts/build.mjs",
+    "build": "electron-builder",
+    "debug": "npm run prebuild && vite ./src/renderer"
+  },
+  "engines": {
+    "node": ">=14.17.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.1.0",
+    "electron": "^17.1.0",
+    "electron-builder": "^22.14.5",
+    "typescript": "^4.5.5",
+    "vite": "^2.7.13",
+    "vite-plugin-resolve": "^1.4.4",
+    "vue": "^3.2.29",
+    "vue-tsc": "^0.31.1"
+  },
+  "env": {
+    "PORT": 3344
+  },
+  "packageManager": "yarn@3.2.0"
+}
