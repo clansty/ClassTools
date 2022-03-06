@@ -1,9 +1,14 @@
 import { createApp } from 'vue';
 import router from './router';
 import { RouterView } from 'vue-router';
+import { dateZhCN, NConfigProvider, zhCN } from 'naive-ui';
 
 createApp({
-  render: () => <RouterView/>,
+  render: () => (
+    <NConfigProvider locale={zhCN} dateLocale={dateZhCN}>
+      <RouterView/>
+    </NConfigProvider>
+  ),
 })
   .use(router)
   .mount('#app')
