@@ -813,6 +813,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@vue/devtools-api@npm:^6.0.0":
+  version: 6.0.12
+  resolution: "@vue/devtools-api@npm:6.0.12"
+  checksum: 5eb4601a6f6601c4481eab54c7f05f8e373ac3f2b5ab6973847a47e7ddbec7a9d2cd80dc692905da9e8615ac64a208702c54f7dfac47f7aa2168a5b7dd176545
+  languageName: node
+  linkType: hard
+
 "@vue/reactivity-transform@npm:3.2.31":
   version: 3.2.31
   resolution: "@vue/reactivity-transform@npm:3.2.31"
@@ -1425,6 +1432,7 @@ __metadata:
     vite: ^2.7.13
     vite-plugin-resolve: ^1.4.4
     vue: ^3.2.29
+    vue-router: ^4.0.13
     vue-tsc: ^0.31.1
   languageName: unknown
   linkType: soft
@@ -4667,6 +4675,17 @@ __metadata:
     vscode-pug-languageservice: 0.31.4
     vscode-typescript-languageservice: 0.31.4
   checksum: 68e53417824f13936682b4938556771094bb3efadc0b96949af10b51eff86de8c33b10d990605ec5ae0c2a38bca57cf080bc51e0940f7b7711d081732239f5f4
+  languageName: node
+  linkType: hard
+
+"vue-router@npm:^4.0.13":
+  version: 4.0.13
+  resolution: "vue-router@npm:4.0.13"
+  dependencies:
+    "@vue/devtools-api": ^6.0.0
+  peerDependencies:
+    vue: ^3.2.0
+  checksum: c1a4345e05af7e45d4808b89a92c6083891383759bba5f27a0e63840b19dbb4743fdaada48191445c652d6194792563dc76edf85557ae612a4908befa9148a57
   languageName: node
   linkType: hard
 

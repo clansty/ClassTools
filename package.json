@@ -21,6 +21,7 @@
     "vite": "^2.7.13",
     "vite-plugin-resolve": "^1.4.4",
     "vue": "^3.2.29",
+    "vue-router": "^4.0.13",
     "vue-tsc": "^0.31.1"
   },
   "env": {
