@@ -1,10 +1,10 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'MainWindow',
+  name: 'Homework',
   setup() {
     return () => (
-      <div>Wallpaper</div>
+      <div>homework</div>
     );
   },
 });
