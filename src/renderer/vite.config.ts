@@ -1,6 +1,6 @@
 import { builtinModules } from 'module';
 import { defineConfig, Plugin } from 'vite';
-import vueJsx from '@vitejs/plugin-vue-jsx';
+import vue from '@vitejs/plugin-vue';
 import resolve from 'vite-plugin-resolve';
 import pkg from '../../package.json';
 
@@ -9,7 +9,7 @@ export default defineConfig({
   mode: process.env.NODE_ENV,
   root: __dirname,
   plugins: [
-    vueJsx(),
+    vue(),
     resolveElectron(
       /**
        * Here you can specify other modules

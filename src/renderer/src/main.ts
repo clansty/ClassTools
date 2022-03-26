@@ -1,18 +1,11 @@
 import { createApp } from 'vue';
 import router from './router';
-import { RouterView } from 'vue-router';
-import { dateZhCN, NConfigProvider, zhCN } from 'naive-ui';
+import App from './App.vue';
 
-createApp({
-  render: () => (
-    <NConfigProvider locale={zhCN} dateLocale={dateZhCN}>
-      <RouterView/>
-    </NConfigProvider>
-  ),
-})
-  .use(router)
-  .mount('#app')
-  .$nextTick(window.removeLoading);
+const app = createApp(App);
+
+app.use(router);
+app.mount('#app');
 
 // console.log('fs', window.fs)
 // console.log('ipcRenderer', window.ipcRenderer)

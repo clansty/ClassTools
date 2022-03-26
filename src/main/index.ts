@@ -25,13 +25,13 @@ async function createWindow() {
 
   // XXX: 用 isPackaged 判断是否生产环境大概不太对，应该用环境变量的。因为 Arch System Electron 的情况 isPackaged = false
   if (app.isPackaged || process.env['DEBUG']) {
-    win.loadFile(join(__dirname, '../renderer/index.html') + '#/main');
+    win.loadFile(join(__dirname, '../renderer/index.html') + '#/wallpaper');
   }
   else {
     // 🚧 Use ['ENV_NAME'] avoid vite:define plugin
     const url = `http://${process.env['VITE_DEV_SERVER_HOST']}:${process.env['VITE_DEV_SERVER_PORT']}`;
 
-    win.loadURL(url + '#/main');
+    win.loadURL(url + '#/wallpaper');
   }
 
   // Test active push message to Renderer-process
