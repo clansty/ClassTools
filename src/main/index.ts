@@ -2,6 +2,8 @@ import { app, BrowserWindow, shell } from 'electron';
 import { release } from 'os';
 import { join } from 'path';
 
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
+
 // Disable GPU Acceleration for Windows 7
 if (release().startsWith('6.1')) app.disableHardwareAcceleration();
 
@@ -17,14 +19,19 @@ let win: BrowserWindow | null = null;
 
 async function createWindow() {
   win = new BrowserWindow({
-    title: 'Main window',
+    title: 'ClassTools 3 Wallpaper',
     webPreferences: {
       preload: join(__dirname, '../preload/index.cjs'),
     },
+    fullscreen: process.platform === 'win32'/* && !IS_DEVELOPMENT */,
   });
 
-  // XXX: 用 isPackaged 判断是否生产环境大概不太对，应该用环境变量的。因为 Arch System Electron 的情况 isPackaged = false
-  if (app.isPackaged || process.env['DEBUG']) {
+  if (process.platform === 'win32'/* && !IS_DEVELOPMENT */) {
+    const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
+    setAsWallpaper(win);
+  }
+
+  if (!IS_DEVELOPMENT) {
     win.loadFile(join(__dirname, '../renderer/index.html') + '#/wallpaper');
   }
   else {
@@ -50,7 +57,7 @@ app.whenReady().then(createWindow);
 
 app.on('window-all-closed', () => {
   win = null;
-  if (process.platform !== 'darwin') app.quit();
+  app.quit();
 });
 
 app.on('second-instance', () => {

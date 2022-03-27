@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { dateZhCN, NConfigProvider, zhCN } from 'naive-ui';
-import RouterView from 'vue-router';
+import { RouterView } from 'vue-router';
 
 </script>
 

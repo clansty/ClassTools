@@ -17,6 +17,8 @@ export default defineConfig({
     rollupOptions: {
       external: [
         'electron',
+        'ref-napi',
+        'ffi-napi',
         ...builtinModules,
         // @ts-ignore
         ...Object.keys(pkg.dependencies || {}),
