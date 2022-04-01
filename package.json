@@ -6,8 +6,8 @@
   "private": true,
   "scripts": {
     "dev": "node scripts/watch.mjs",
-    "prebuild": "vue-tsc --project src/renderer/tsconfig.json --noEmit && node scripts/build.mjs",
-    "build": "electron-builder",
+    "prebuild": "node scripts/build.mjs",
+    "build": "yarn build && electron-builder",
     "debug": "npm run prebuild && vite ./src/renderer"
   },
   "engines": {
@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.4",
+    "@vueuse/core": "^8.2.3",
     "electron": "^17.2.0",
     "electron-builder": "^22.14.5",
     "naive-ui": "^2.26.1",
