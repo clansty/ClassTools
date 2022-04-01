@@ -1,10 +1,5 @@
 import fs from 'fs';
 import { contextBridge, ipcRenderer } from 'electron';
-import { domReady } from './utils';
-
-(async () => {
-  await domReady();
-})();
 
 // --------- Expose some API to the Renderer process. ---------
 contextBridge.exposeInMainWorld('fs', fs);
