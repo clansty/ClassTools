@@ -8,9 +8,8 @@
     "dist"
   ],
   "mac": {
-    "artifactName": "${productName}_${version}.${ext}",
     "target": [
-      "dmg"
+      "dir"
     ]
   },
   "win": {
@@ -25,7 +24,7 @@
     "artifactName": "${productName}_${version}.${ext}"
   },
   "nsis": {
-    "oneClick": false,
+    "oneClick": true,
     "perMachine": false,
     "allowToChangeInstallationDirectory": false,
     "deleteAppDataOnUninstall": true

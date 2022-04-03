@@ -7,7 +7,7 @@
   "scripts": {
     "dev": "node scripts/watch.mjs",
     "prebuild": "node scripts/build.mjs",
-    "build": "yarn build && electron-builder",
+    "build": "yarn prebuild && electron-builder",
     "debug": "npm run prebuild && vite ./src/renderer"
   },
   "engines": {

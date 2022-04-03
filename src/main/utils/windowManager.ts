@@ -23,7 +23,7 @@ class WindowManager {
       win.loadURL(`${url}#/${route}`);
     }
     else {
-      win.loadFile(path.join(__dirname, '../renderer/index.html') + `#/${route}`);
+      win.loadFile(path.resolve(__dirname, '../renderer/index.html'), { hash: route });
     }
 
     // Make all links open with the browser, not with the application
@@ -31,6 +31,8 @@ class WindowManager {
       if (url.startsWith('https:')) shell.openExternal(url);
       return { action: 'deny' };
     });
+
+    win.webContents.openDevTools();
 
     return win;
   }
