@@ -1,6 +1,7 @@
-import { app } from 'electron';
+import { app, Menu } from 'electron';
 import os from 'os';
 import windowManager from './utils/windowManager';
+import tray from './components/tray';
 
 // Disable GPU Acceleration for Windows 7
 if (os.release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -14,9 +15,12 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 app.whenReady().then(async () => {
+  tray.init();
+  if (process.env.NODE_ENV !== 'development') {
+    Menu.setApplicationMenu(null);
+  }
   const wallPaperWindow = windowManager.createWallpaperWindow();
-  wallPaperWindow.setMenu(null);
-  if (process.platform === 'win32'/* && !IS_DEVELOPMENT */) {
+  if (process.platform === 'win32') {
     const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
     setAsWallpaper(wallPaperWindow);
   }

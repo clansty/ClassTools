@@ -42,6 +42,9 @@ class WindowManager {
     this.wallpaperWindow = this.createWindow('wallpaper', {
       fullscreen: process.platform === 'win32',
     });
+    this.wallpaperWindow.on('closed', () => {
+      this.wallpaperWindow = undefined;
+    });
     return this.wallpaperWindow;
   }
 
@@ -52,6 +55,9 @@ class WindowManager {
     }
     this.homeworkWindow = this.createWindow('homework');
     this.homeworkWindow.maximize();
+    this.homeworkWindow.on('close', () => {
+      this.homeworkWindow = undefined;
+    });
     return this.homeworkWindow;
   }
 
@@ -61,6 +67,9 @@ class WindowManager {
       return this.settingsWindow;
     }
     this.settingsWindow = this.createWindow('settings');
+    this.settingsWindow.on('close', () => {
+      this.settingsWindow = undefined;
+    });
     return this.settingsWindow;
   }
 
@@ -71,7 +80,25 @@ class WindowManager {
     }
     this.sloganEditWindow = this.createWindow('sloganEdit');
     this.sloganEditWindow.maximize();
+    this.sloganEditWindow.on('closed', () => {
+      this.sloganEditWindow = undefined;
+    });
     return this.sloganEditWindow;
+  }
+
+  public destroyAllWindows() {
+    if (this.wallpaperWindow) {
+      this.wallpaperWindow.destroy();
+    }
+    if (this.homeworkWindow) {
+      this.homeworkWindow.destroy();
+    }
+    if (this.settingsWindow) {
+      this.settingsWindow.destroy();
+    }
+    if (this.sloganEditWindow) {
+      this.sloganEditWindow.destroy();
+    }
   }
 }
 
