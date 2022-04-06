@@ -16,18 +16,18 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.4",
     "@vueuse/core": "^8.2.3",
+    "dayjs": "^1.11.0",
     "electron": "^17.2.0",
     "electron-builder": "^22.14.5",
     "naive-ui": "^2.26.1",
     "typescript": "^4.5.5",
+    "unplugin-vue-components": "^0.18.5",
     "vite": "^2.7.13",
     "vite-plugin-resolve": "^1.4.4",
     "vue": "^3.2.29",
     "vue-router": "^4.0.13",
     "vue-tsc": "^0.31.1",
-    "win-win-api": "^0.0.5",
-    "dayjs": "^1.11.0",
-    "unplugin-vue-components": "^0.18.5"
+    "win-win-api": "^0.0.5"
   },
   "env": {
     "PORT": 3344
