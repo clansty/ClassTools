@@ -5,6 +5,7 @@ import resolve from 'vite-plugin-resolve';
 import pkg from '../../package.json';
 import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Content from '@originjs/vite-plugin-content';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -25,7 +26,8 @@ export default defineConfig({
     ),
     Components({
       resolvers: [NaiveUiResolver()]
-    })
+    }),
+    Content()
   ],
   resolve: {
     alias: {

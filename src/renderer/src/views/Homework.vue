@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import locale from '../language/zh_CN.json'
+import locale from '../language/zh_CN.yaml'
 import useHomeworks from '../stores/homeworks';
 
 const homeworks = useHomeworks();
