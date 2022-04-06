@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/ClassTools-Reborn.iml" filepath="$PROJECT_DIR$/.idea/ClassTools-Reborn.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/ClassTools.iml" filepath="$PROJECT_DIR$/.idea/ClassTools.iml" />
     </modules>
   </component>
 </project>
