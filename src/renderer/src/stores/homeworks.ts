@@ -2,7 +2,16 @@ import { useStorage } from '@vueuse/core';
 
 const useHomeworks = () => useStorage('homeworks', {
   chinese: '',
-  maths: '',
+  math: '',
+  english: '',
+  physics: '',
+  chemistry: '',
+  biology: '',
+  history: '',
+  politics: '',
+  geography: '',
+  other: '',
+  class: '',
 });
 
 export default useHomeworks;

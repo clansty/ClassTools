@@ -25,7 +25,9 @@
     "vue": "^3.2.29",
     "vue-router": "^4.0.13",
     "vue-tsc": "^0.31.1",
-    "win-win-api": "^0.0.5"
+    "win-win-api": "^0.0.5",
+    "dayjs": "^1.11.0",
+    "unplugin-vue-components": "^0.18.5"
   },
   "env": {
     "PORT": 3344

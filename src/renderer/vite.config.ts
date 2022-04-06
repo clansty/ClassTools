@@ -3,6 +3,8 @@ import { defineConfig, Plugin } from 'vite';
 import vue from '@vitejs/plugin-vue';
 import resolve from 'vite-plugin-resolve';
 import pkg from '../../package.json';
+import Components from 'unplugin-vue-components/vite'
+import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,6 +23,9 @@ export default defineConfig({
        * }
        */
     ),
+    Components({
+      resolvers: [NaiveUiResolver()]
+    })
   ],
   resolve: {
     alias: {

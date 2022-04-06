@@ -6,7 +6,7 @@ const homeworks = useHomeworks();
 </script>
 
 <template>
-  <div>
-    <input type="text" v-model="homeworks.chinese"/>
+  <div v-for="(homework, subject) in homeworks">
+    <p><n-input type="text" v-model:value="homeworks[subject]"/></p>
   </div>
 </template>
