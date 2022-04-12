@@ -1,6 +1,6 @@
-import { useStorage } from '@vueuse/core';
+import createAutoUpdateStorage from '../hooks/createAutoUpdateStorage';
 
-const useHomeworks = () => useStorage('homeworks', {
+const useHomeworks = createAutoUpdateStorage('homeworks', {
   chinese: '',
   math: '',
   english: '',

@@ -1,6 +1,6 @@
-import { useStorage } from '@vueuse/core';
+import createAutoUpdateStorage from '../hooks/createAutoUpdateStorage';
 
-const useSettings = () => useStorage('settings', {
+const useSettings = createAutoUpdateStorage('settings', {
   countDownName: '高考',
   countDownDate: 1686067200000,
   fontSize: 32,
