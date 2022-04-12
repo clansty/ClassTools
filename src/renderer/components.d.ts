@@ -4,11 +4,18 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    NColorPicker: typeof import('naive-ui')['NColorPicker']
+    NDatePicker: typeof import('naive-ui')['NDatePicker']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
     NGi: typeof import('naive-ui')['NGi']
     NGrid: typeof import('naive-ui')['NGrid']
     NInput: typeof import('naive-ui')['NInput']
+    NInputNumber: typeof import('naive-ui')['NInputNumber']
+    NLayout: typeof import('naive-ui')['NLayout']
+    NLayoutContent: typeof import('naive-ui')['NLayoutContent']
+    NSlider: typeof import('naive-ui')['NSlider']
+    NSpace: typeof import('naive-ui')['NSpace']
   }
 }
 

@@ -11,7 +11,6 @@ const time = ref(getTime());
 
 setInterval(() => {
   time.value = getTime();
-  console.log(time.value);
 }, 1000);
 
 </script>

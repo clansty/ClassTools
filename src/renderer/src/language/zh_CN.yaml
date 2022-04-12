@@ -10,3 +10,20 @@ subject:
   geography: 地理
   other: 其他
   class: 班务
+
+settings:
+  countDownName: 倒计时目标
+  countDownDate: 倒计时日期
+  fontSize: 字体大小
+  fontColor: 字体颜色
+  city: 天气城市
+  schedule: 课表编辑 一行一节课
+
+weekdays:
+  - 周日
+  - 周一
+  - 周二
+  - 周三
+  - 周四
+  - 周五
+  - 周六
