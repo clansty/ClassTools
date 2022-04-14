@@ -6,7 +6,9 @@ const useSettings = createAutoUpdateStorage('settings', {
   fontSize: 32,
   fontColor: '#303133',
   city: 'CN101240102',
-  schedule: new Array(7).fill(''),
+  // 外层：第几节课 内层：周几。这样的话，加减节次会比较方便
+  // 我反复改了好几遍这个（（
+  schedule: new Array(10).fill(new Array(7).fill('')),
   lessons: [
     { name: '语文', hasHomework: true },
     { name: '数学', hasHomework: true },

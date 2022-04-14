@@ -17,7 +17,7 @@ settings:
   fontSize: 字体大小
   fontColor: 字体颜色
   city: 天气城市
-  schedule: 课表编辑 一行一节课
+  lessonCount: 节次设置
 
 weekdays:
   - 周日
