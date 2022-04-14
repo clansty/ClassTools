@@ -2,7 +2,10 @@ import fsP from 'fs/promises';
 
 const csvText = await fsP.readFile('./tools/city-list-generator/China-City-List-latest.csv', 'utf8');
 // 前两行不是数据
-const csv = csvText.split('\n').splice(2).map(row => row.split(','));
+const csv = csvText.split('\n')
+        .splice(2)
+        .filter(it => it)
+        .map(row => row.split(','));
 
 //     0       1      2   3   4    5      6     7       8      9        10          11         12       13
 // 101010100,Beijing,北京,CN,China,中国,Beijing,北京市,Beijing,北京市,Asia/Shanghai,39.904987,116.405289,110000
