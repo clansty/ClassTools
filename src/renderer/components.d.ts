@@ -4,6 +4,7 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
+    NCascader: typeof import('naive-ui')['NCascader']
     NCheckbox: typeof import('naive-ui')['NCheckbox']
     NColorPicker: typeof import('naive-ui')['NColorPicker']
     NDatePicker: typeof import('naive-ui')['NDatePicker']

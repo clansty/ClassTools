@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import useSettings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
+import cities from '../../data/cities.json';
 
 const settings = useSettings();
 </script>
@@ -37,8 +38,8 @@ const settings = useSettings();
     <n-form-item
       :label="locale.settings.city"
     >
-      <!-- TODO: 使用级联选择器直接选择城市 -->
-      <n-input type="text" v-model:value="settings.city"/>
+      <n-cascader v-model:value="settings.city" :options="cities"
+                  expand-trigger="hover" :show-path="true" check-strategy="child"/>
     </n-form-item>
   </n-form>
 </template>

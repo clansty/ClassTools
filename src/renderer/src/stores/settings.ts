@@ -21,6 +21,7 @@ const useSettings = createAutoUpdateStorage('settings', {
     { name: '地理', hasHomework: true },
     { name: '其他', hasHomework: true },
     { name: '班务', hasHomework: true },
+    { name: '精神食粮', hasHomework: false },
   ],
 });
 
