@@ -6,6 +6,8 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "preserve",
+    "jsxFactory": "h",
+    "jsxFragmentFactory": "Fragment",
     "sourceMap": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,

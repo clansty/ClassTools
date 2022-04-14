@@ -6,7 +6,7 @@ const useSettings = createAutoUpdateStorage('settings', {
   fontSize: 32,
   fontColor: '#303133',
   city: 'CN101240102',
-  schedule: ['', '', '', '', '', '', ''],
+  schedule: new Array(7).fill(''),
 });
 
 export default useSettings;
