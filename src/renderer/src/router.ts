@@ -5,6 +5,7 @@ import Settings from './views/Settings.vue';
 import SloganEdit from './views/SloganEdit.vue';
 import SettingsBasic from './views/settings/Basic.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
+import SettingsLessons from './views/settings/Lessons.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -16,6 +17,7 @@ export default createRouter({
       path: '/settings', component: Settings, children: [
         { path: '', redirect: '/settings/basic' },
         { path: 'basic', component: SettingsBasic, name: 'basic' },
+        { path: 'lessons', component: SettingsLessons, name: 'lessons' },
         { path: 'schedule', component: SettingsSchedule, name: 'schedule' },
       ],
     },

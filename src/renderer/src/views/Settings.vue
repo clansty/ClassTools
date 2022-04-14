@@ -17,6 +17,14 @@ const menuOptions: MenuOption[] = [
   },
   {
     label: () => (
+      <RouterLink to="/settings/lessons">
+        {() => '课程配置'}
+      </RouterLink>
+    ),
+    key: 'lessons',
+  },
+  {
+    label: () => (
       <RouterLink to="/settings/schedule">
         {() => '课表编辑'}
       </RouterLink>
