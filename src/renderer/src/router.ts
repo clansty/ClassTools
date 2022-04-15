@@ -1,6 +1,7 @@
 import { createRouter, createWebHashHistory } from 'vue-router';
 import Wallpaper from './views/Wallpaper.vue';
-import Homework from './views/Homework.vue';
+import HomeworkEdit from './views/HomeworkEdit.vue';
+import HomeworkView from './views/HomeworkView.vue';
 import Settings from './views/Settings.vue';
 import SloganEdit from './views/SloganEdit.vue';
 import SettingsBasic from './views/settings/Basic.vue';
@@ -12,7 +13,8 @@ export default createRouter({
   routes: [
     { path: '/', redirect: '/wallpaper' },
     { path: '/wallpaper', component: Wallpaper },
-    { path: '/homework', component: Homework },
+    { path: '/homeworkEdit', component: HomeworkEdit },
+    { path: '/HomeworkView', component: HomeworkView },
     {
       path: '/settings', component: Settings, children: [
         { path: '', redirect: '/settings/basic' },

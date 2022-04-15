@@ -1,17 +1,8 @@
 import createAutoUpdateStorage from '../hooks/createAutoUpdateStorage';
 
 const useHomeworks = createAutoUpdateStorage('homeworks', {
-  chinese: '',
-  math: '',
-  english: '',
-  physics: '',
-  chemistry: '',
-  biology: '',
-  history: '',
-  politics: '',
-  geography: '',
-  other: '',
-  class: '',
+  date: new Date().getTime(),
+  homeworks: {} as { [subject: string]: string },
 });
 
 export default useHomeworks;

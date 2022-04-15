@@ -8,8 +8,8 @@ const selectOptions = computed(() =>
   settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })));
 
 // 节次设置，节次在改的时候有点卡
-const lessonCount = ref(settings.value.schedule.length);
-watch(lessonCount, (count) => {
+const sessionCount = ref(settings.value.schedule.length);
+watch(sessionCount, (count) => {
   while (settings.value.schedule.length < count) {
     settings.value.schedule.push(new Array(7).fill(''));
   }
@@ -21,10 +21,10 @@ watch(lessonCount, (count) => {
 
 <template>
   <n-form-item
-    :label="locale.settings.lessonCount"
+    :label="locale.settings.sessionCount"
     label-placement="left"
   >
-    <n-input-number v-model:value="lessonCount"/>
+    <n-input-number v-model:value="sessionCount"/>
   </n-form-item>
   <n-grid x-gap="12" cols="7">
     <n-gi v-for="(name, weekday) in locale.weekdays">

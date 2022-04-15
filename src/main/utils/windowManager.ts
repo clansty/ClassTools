@@ -1,10 +1,11 @@
-import { BrowserWindow, BrowserWindowConstructorOptions, shell } from 'electron';
+import { BrowserWindow, BrowserWindowConstructorOptions, shell, screen } from 'electron';
 import path from 'path';
 
 class WindowManager {
   // 这些都设置成 private 了，要用这些窗口的时候用下面那些 create 的方法，会返回需要的窗口，这样保证它们都是存在的
   private wallpaperWindow?: BrowserWindow;
-  private homeworkWindow?: BrowserWindow;
+  private homeworkEditWindow?: BrowserWindow;
+  private homeworkViewWindow?: BrowserWindow;
   private settingsWindow?: BrowserWindow;
   private sloganEditWindow?: BrowserWindow;
 
@@ -50,17 +51,35 @@ class WindowManager {
     return this.wallpaperWindow;
   }
 
-  public createHomeworkWindow() {
-    if (this.homeworkWindow) {
-      this.homeworkWindow.show();
-      return this.homeworkWindow;
+  public createHomeworkEditWindow() {
+    if (this.homeworkEditWindow) {
+      this.homeworkEditWindow.show();
+      return this.homeworkEditWindow;
     }
-    this.homeworkWindow = this.createWindow('homework');
-    this.homeworkWindow.maximize();
-    this.homeworkWindow.on('close', () => {
-      this.homeworkWindow = undefined;
+    const screenSize = screen.getPrimaryDisplay().size;
+    this.homeworkEditWindow = this.createWindow('homeworkEdit', {
+      width: 600,
+      height: screenSize.height - 400,
     });
-    return this.homeworkWindow;
+    this.homeworkEditWindow.on('close', () => {
+      this.homeworkEditWindow = undefined;
+    });
+    return this.homeworkEditWindow;
+  }
+
+  public createHomeworkViewWindow() {
+    if (this.homeworkViewWindow) {
+      this.homeworkViewWindow.show();
+      return this.homeworkViewWindow;
+    }
+    this.homeworkViewWindow = this.createWindow('homeworkView', {
+      fullscreen: true,
+    });
+    this.homeworkViewWindow.maximize();
+    this.homeworkViewWindow.on('close', () => {
+      this.homeworkViewWindow = undefined;
+    });
+    return this.homeworkViewWindow;
   }
 
   public createSettingsWindow() {
@@ -92,8 +111,11 @@ class WindowManager {
     if (this.wallpaperWindow) {
       this.wallpaperWindow.destroy();
     }
-    if (this.homeworkWindow) {
-      this.homeworkWindow.destroy();
+    if (this.homeworkEditWindow) {
+      this.homeworkEditWindow.destroy();
+    }
+    if (this.homeworkViewWindow) {
+      this.homeworkViewWindow.destroy();
     }
     if (this.settingsWindow) {
       this.settingsWindow.destroy();

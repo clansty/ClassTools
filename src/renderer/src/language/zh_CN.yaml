@@ -1,23 +1,10 @@
-subject:
-  chinese: 语文
-  math: 数学
-  english: 英语
-  physics: 物理
-  chemistry: 化学
-  biology: 生物
-  politics: 政治
-  history: 历史
-  geography: 地理
-  other: 其他
-  class: 班务
-
 settings:
   countDownName: 倒计时目标
   countDownDate: 倒计时日期
   fontSize: 字体大小
   fontColor: 字体颜色
   city: 天气城市
-  lessonCount: 节次设置
+  sessionCount: 节次设置
 
 weekdays:
   - 周日

@@ -13,7 +13,13 @@ class AppTray {
       {
         label: '作业看板',
         click: () => {
-          windowManager.createHomeworkWindow();
+          windowManager.createHomeworkViewWindow();
+        },
+      },
+      {
+        label: '作业编辑',
+        click: () => {
+          windowManager.createHomeworkEditWindow();
         },
       },
       {
