@@ -9,12 +9,18 @@ class WindowManager {
   private settingsWindow?: BrowserWindow;
   private sloganEditWindow?: BrowserWindow;
 
-  private createWindow(route: string, options: Partial<BrowserWindowConstructorOptions> = {}) {
+  private createWindow(route: string, options: Partial<BrowserWindowConstructorOptions> = {}, onReadyToShow?: () => any) {
     const win = new BrowserWindow({
       webPreferences: {
         preload: path.join(__dirname, '../preload/index.cjs'),
       },
+      show: false,
       ...options,
+    });
+
+    win.once('ready-to-show', () => {
+      onReadyToShow && onReadyToShow();
+      win.show();
     });
 
     if (process.env.NODE_ENV === 'development') {
@@ -33,8 +39,6 @@ class WindowManager {
       return { action: 'deny' };
     });
 
-    win.webContents.openDevTools();
-
     return win;
   }
 
@@ -44,6 +48,7 @@ class WindowManager {
     }
     this.wallpaperWindow = this.createWindow('wallpaper', {
       fullscreen: process.platform === 'win32',
+      show: true,
     });
     this.wallpaperWindow.on('closed', () => {
       this.wallpaperWindow = undefined;
@@ -75,7 +80,6 @@ class WindowManager {
     this.homeworkViewWindow = this.createWindow('homeworkView', {
       fullscreen: true,
     });
-    this.homeworkViewWindow.maximize();
     this.homeworkViewWindow.on('close', () => {
       this.homeworkViewWindow = undefined;
     });
@@ -99,8 +103,9 @@ class WindowManager {
       this.sloganEditWindow.show();
       return this.sloganEditWindow;
     }
-    this.sloganEditWindow = this.createWindow('sloganEdit');
-    this.sloganEditWindow.maximize();
+    this.sloganEditWindow = this.createWindow('sloganEdit', {}, () => {
+      this.sloganEditWindow.maximize();
+    });
     this.sloganEditWindow.on('closed', () => {
       this.sloganEditWindow = undefined;
     });
