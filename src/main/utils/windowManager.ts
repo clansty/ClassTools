@@ -65,6 +65,7 @@ class WindowManager {
     this.homeworkEditWindow = this.createWindow('homeworkEdit', {
       width: 600,
       height: screenSize.height - 400,
+      title: '作业编辑',
     });
     this.homeworkEditWindow.on('close', () => {
       this.homeworkEditWindow = undefined;
@@ -79,6 +80,7 @@ class WindowManager {
     }
     this.homeworkViewWindow = this.createWindow('homeworkView', {
       fullscreen: true,
+      title: '作业看板',
     });
     this.homeworkViewWindow.on('close', () => {
       this.homeworkViewWindow = undefined;
@@ -91,7 +93,9 @@ class WindowManager {
       this.settingsWindow.show();
       return this.settingsWindow;
     }
-    this.settingsWindow = this.createWindow('settings');
+    this.settingsWindow = this.createWindow('settings', {
+      title: '设置',
+    });
     this.settingsWindow.on('close', () => {
       this.settingsWindow = undefined;
     });
@@ -103,7 +107,9 @@ class WindowManager {
       this.sloganEditWindow.show();
       return this.sloganEditWindow;
     }
-    this.sloganEditWindow = this.createWindow('sloganEdit', {}, () => {
+    this.sloganEditWindow = this.createWindow('sloganEdit', {
+      title: '标语编辑',
+    }, () => {
       this.sloganEditWindow.maximize();
     });
     this.sloganEditWindow.on('closed', () => {
