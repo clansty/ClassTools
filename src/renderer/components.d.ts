@@ -13,6 +13,8 @@ declare module 'vue' {
     NFormItem: typeof import('naive-ui')['NFormItem']
     NGi: typeof import('naive-ui')['NGi']
     NGrid: typeof import('naive-ui')['NGrid']
+    NH1: typeof import('naive-ui')['NH1']
+    NH2: typeof import('naive-ui')['NH2']
     NInput: typeof import('naive-ui')['NInput']
     NInputNumber: typeof import('naive-ui')['NInputNumber']
     NLayout: typeof import('naive-ui')['NLayout']
@@ -21,6 +23,7 @@ declare module 'vue' {
     NMenu: typeof import('naive-ui')['NMenu']
     NSelect: typeof import('naive-ui')['NSelect']
     NSlider: typeof import('naive-ui')['NSlider']
+    NTime: typeof import('naive-ui')['NTime']
   }
 }
 
