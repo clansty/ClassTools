@@ -9,3 +9,9 @@ import { RouterView } from 'vue-router';
     <RouterView/>
   </NConfigProvider>
 </template>
+
+<style>
+body {
+  margin: 0;
+}
+</style>

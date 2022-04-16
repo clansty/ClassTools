@@ -5,6 +5,13 @@ settings:
   fontColor: 字体颜色
   city: 天气城市
   sessionCount: 节次设置
+  backgroundType: 背景类型
+  backgroundTypeImage: 图片
+  backgroundTypeColor: 纯色
+  backgroundTypeAdvanced: 高级
+  backgroundImage: 背景图片
+  backgroundColor: 背景颜色
+  backgroundCss: 背景 CSS
 
 weekdays:
   - 周日
