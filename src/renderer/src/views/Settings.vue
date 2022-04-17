@@ -1,45 +1,21 @@
 <script setup lang="tsx">
 import type { MenuOption } from 'naive-ui';
 import { RouterLink, useRoute } from 'vue-router';
+import locale from '../language/zh_CN.yaml';
 // 不能删
 import { h, Fragment } from 'vue';
 
 const route = useRoute();
 
-const menuOptions: MenuOption[] = [
-  {
+const menuOptions: MenuOption[] = Object.entries(locale.settings.routes)
+  .map(([path, name]) => ({
     label: () => (
-      <RouterLink to="/settings/basic">
-        {() => '基础设置'}
+      <RouterLink to={path}>
+        {() => name}
       </RouterLink>
     ),
-    key: 'basic',
-  },
-  {
-    label: () => (
-      <RouterLink to="/settings/lessons">
-        {() => '课程配置'}
-      </RouterLink>
-    ),
-    key: 'lessons',
-  },
-  {
-    label: () => (
-      <RouterLink to="/settings/schedule">
-        {() => '课表编辑'}
-      </RouterLink>
-    ),
-    key: 'schedule',
-  },
-  {
-    label: () => (
-      <RouterLink to="/settings/duty">
-        {() => '值日生'}
-      </RouterLink>
-    ),
-    key: 'duty',
-  },
-];
+    key: path,
+  }));
 </script>
 
 <template>

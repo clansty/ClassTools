@@ -12,6 +12,11 @@ settings:
   backgroundImage: 背景图片
   backgroundColor: 背景颜色
   backgroundCss: 背景 CSS
+  routes:
+    basic: 基础设置
+    lessons: 课程配置
+    schedule: 课表编辑
+    duty: 值日生
 
 weekdays:
   - 周日
