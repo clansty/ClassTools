@@ -1,9 +1,10 @@
 import createAutoUpdateStorage from '../hooks/createAutoUpdateStorage';
+import HomeworkRecord from '../types/HomeworkRecord';
 
 const useHomeworks = createAutoUpdateStorage('homeworks', {
   date: new Date().getTime(),
-  homeworks: {} as { [subject: string]: string },
-});
+  homeworks: {},
+} as HomeworkRecord);
 
 export default useHomeworks;
 
