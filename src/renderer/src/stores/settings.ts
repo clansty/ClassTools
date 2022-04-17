@@ -33,6 +33,7 @@ const useSettings = createAutoUpdateStorage('settings', {
     { name: '班务', hasHomework: true },
     { name: '精神食粮', hasHomework: false },
   ],
+  duty: new Array(7).fill(''),
 });
 
 export default useSettings;

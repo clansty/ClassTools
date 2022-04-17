@@ -31,6 +31,14 @@ const menuOptions: MenuOption[] = [
     ),
     key: 'schedule',
   },
+  {
+    label: () => (
+      <RouterLink to="/settings/duty">
+        {() => '值日生'}
+      </RouterLink>
+    ),
+    key: 'duty',
+  },
 ];
 </script>
 

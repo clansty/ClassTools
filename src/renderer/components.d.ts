@@ -27,7 +27,6 @@ declare module 'vue' {
     NSelect: typeof import('naive-ui')['NSelect']
     NSlider: typeof import('naive-ui')['NSlider']
     NTime: typeof import('naive-ui')['NTime']
-    NUpload: typeof import('naive-ui')['NUpload']
   }
 }
 

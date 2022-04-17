@@ -13,5 +13,10 @@ import { RouterView } from 'vue-router';
 <style>
 body {
   margin: 0;
+  user-select: none;
+}
+
+* {
+  -webkit-user-drag: none;
 }
 </style>
