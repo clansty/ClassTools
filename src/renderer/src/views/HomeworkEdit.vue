@@ -31,9 +31,14 @@ const newDay = () => {
         <n-h2 style="flex-grow: 1">
           <n-time :time="homeworks.date" format="M 月 d 日作业"/>
         </n-h2>
-        <n-button v-if="!isToday(homeworks.date)" @click="newDay">
-          开启新的一天
-        </n-button>
+        <n-space>
+          <n-button v-if="!isToday(homeworks.date)" @click="newDay">
+            开启新的一天
+          </n-button>
+          <n-button @click="$router.push('/homeworkHistory')">
+            历史作业
+          </n-button>
+        </n-space>
       </div>
       <n-form
         label-placement="left"
