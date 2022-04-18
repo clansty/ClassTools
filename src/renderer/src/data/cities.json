@@ -8946,6 +8946,10 @@
           {
             "label": "滨江",
             "value": "CN101210114"
+          },
+          {
+            "label": "临平",
+            "value": "CN101210115"
           }
         ]
       },
@@ -9360,22 +9364,6 @@
           {
             "label": "定海",
             "value": "CN101211106"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "label": "浙江省",
-    "value": "Zhejiang Province",
-    "children": [
-      {
-        "label": "杭州市",
-        "value": "Zhejiang Province-Hangzhou City",
-        "children": [
-          {
-            "label": "临平",
-            "value": "CN101210115"
           }
         ]
       }
