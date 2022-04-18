@@ -31,25 +31,29 @@ const backgroundStyle = computed(() => {
 </script>
 
 <template>
-  <div class="container" :style="backgroundStyle">
-    <n-grid x-gap="12" cols="3">
-      <n-gi>
-        <div>高考倒计时</div>
-        <p>
-          <n-time :time="now" format="yyyy-M-d H:mm:ss"/>
-        </p>
-        <Weather/>
-      </n-gi>
-      <n-gi>
-        <div>天气</div>
-      </n-gi>
-      <n-gi>
-        <div>作业</div>
-        <p>
-        </p>
-      </n-gi>
-    </n-grid>
-  </div>
+  <n-layout has-sider>
+    <n-layout-content>
+      <div class="container" :style="backgroundStyle">
+        <n-grid x-gap="12" cols="3">
+          <n-gi>
+            <div>高考倒计时</div>
+            <p>
+              <n-time :time="now" format="yyyy-M-d H:mm:ss"/>
+            </p>
+            <Weather/>
+          </n-gi>
+          <n-gi>
+            <div>天气</div>
+          </n-gi>
+          <n-gi>
+            <div>作业</div>
+            <p>
+            </p>
+          </n-gi>
+        </n-grid>
+      </div>
+    </n-layout-content>
+  </n-layout>
 </template>
 
 <style lang="scss" scoped>

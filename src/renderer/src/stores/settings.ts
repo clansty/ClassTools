@@ -8,7 +8,9 @@ const useSettings = createAutoUpdateStorage('settings', {
   fontColor: '#303133',
   city: 'CN101240102',
   weatherKey: '',
-  weatherComponents:['realtime', 'aqi', 'props', '24h', '7days'],
+  weatherComponents: ['realtime', 'aqi', 'props', '24h', '7days'],
+  weatherColor: '#4a4a4a',
+  weatherColorSecondary: '#9b9b9b',
   backgroundType: 'color' as 'image' | 'color' | 'advanced',
   // image 时使用
   backgroundImage: '',

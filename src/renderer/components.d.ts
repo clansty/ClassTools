@@ -12,6 +12,7 @@ declare module 'vue' {
     NColorPicker: typeof import('naive-ui')['NColorPicker']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
     NDynamicInput: typeof import('naive-ui')['NDynamicInput']
+    NewComponent: typeof import('./src/components/Weather/NewComponent.vue')['default']
     NForm: typeof import('naive-ui')['NForm']
     NFormItem: typeof import('naive-ui')['NFormItem']
     NGi: typeof import('naive-ui')['NGi']
@@ -31,9 +32,13 @@ declare module 'vue' {
     NSelect: typeof import('naive-ui')['NSelect']
     NSlider: typeof import('naive-ui')['NSlider']
     NSpace: typeof import('naive-ui')['NSpace']
+    NStatistic: typeof import('naive-ui')['NStatistic']
     NText: typeof import('naive-ui')['NText']
     NTime: typeof import('naive-ui')['NTime']
+    Props: typeof import('./src/components/Weather/Props.vue')['default']
+    Realtime: typeof import('./src/components/Weather/Realtime.vue')['default']
     Weather: typeof import('./src/components/Weather/index.vue')['default']
+    WeatherIcon: typeof import('./src/components/Weather/WeatherIcon.vue')['default']
   }
 }
 

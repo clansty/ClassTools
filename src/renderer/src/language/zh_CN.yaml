@@ -12,6 +12,8 @@ settings:
     aqi: 空气质量
     24h: 24 小时预报
     7days: 七天预报
+  weatherColor: 天气字体颜色
+  weatherColorSecondary: 次要字体颜色
   sessionCount: 节次设置
   backgroundType: 背景类型
   backgroundTypeImage: 图片
@@ -35,3 +37,9 @@ weekdays:
   - 周四
   - 周五
   - 周六
+
+weather:
+  props:
+    pcpn: 降水
+    hum: 湿度
+    pres: 气压

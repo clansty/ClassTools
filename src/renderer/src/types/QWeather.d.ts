@@ -32,7 +32,7 @@ interface Hourly {
 export interface QWeatherH5 {
   status: string;
   air_now_city: Air_now_city;
-  now: Now;
+  now: QWeatherH5Now;
   daily_forecast: Daily_forecast[];
   lifestyle: Lifestyle[];
   yesterday: Yesterday;
@@ -46,7 +46,7 @@ interface Air_now_city {
   qlty: string;
 }
 
-interface Now {
+export interface QWeatherH5Now {
   cond_code: string;
   cond_txt: string;
   hum: string;

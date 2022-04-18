@@ -23,6 +23,16 @@ const settings = useSettings();
       <n-input type="text" v-model:value="settings.weatherKey"/>
     </n-form-item>
     <n-form-item
+      :label="locale.settings.weatherColor"
+    >
+      <n-color-picker v-model:value="settings.weatherColor" :show-alpha="false"/>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.weatherColorSecondary"
+    >
+      <n-color-picker v-model:value="settings.weatherColorSecondary" :show-alpha="false"/>
+    </n-form-item>
+    <n-form-item
       :label="locale.settings.weatherComponents"
     >
       <n-checkbox-group v-model:value="settings.weatherComponents">

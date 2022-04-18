@@ -14,6 +14,7 @@ import { RouterView } from 'vue-router';
 body {
   margin: 0;
   user-select: none;
+  -webkit-font-smoothing: antialiased;
 }
 
 * {
