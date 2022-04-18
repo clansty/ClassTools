@@ -33,6 +33,7 @@ declare module 'vue' {
     NSpace: typeof import('naive-ui')['NSpace']
     NText: typeof import('naive-ui')['NText']
     NTime: typeof import('naive-ui')['NTime']
+    Weather: typeof import('./src/components/Weather.vue')['default']
   }
 }
 

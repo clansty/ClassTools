@@ -1,19 +1,13 @@
 <script setup lang="ts">
 import useHomeworks from '../stores/homeworks';
-import dayjs from 'dayjs';
-import { computed, ref } from 'vue';
+import { computed } from 'vue';
 import useSettings from '../stores/settings';
+import { useNow } from '@vueuse/core';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
 
-const getTime = () => dayjs().format('YYYY-MM-DD HH:mm:ss');
-// const getHomework = (id: string) => homeworks.find(h => h.id === id);
-const time = ref(getTime());
-
-setInterval(() => {
-  time.value = getTime();
-}, 1000);
+const now = useNow();
 
 const backgroundStyle = computed(() => {
   switch (settings.value.backgroundType) {
@@ -33,7 +27,7 @@ const backgroundStyle = computed(() => {
     <n-grid x-gap="12" cols="4">
       <n-gi>
         <div>高考倒计时</div>
-        <p>{{ time }}</p>
+        <p><n-time :time="now" format="yyyy-M-d H:mm:ss"/></p>
       </n-gi>
       <n-gi>
         <div>天气</div>
