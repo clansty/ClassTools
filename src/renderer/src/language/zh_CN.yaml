@@ -4,6 +4,14 @@ settings:
   fontSize: 字体大小
   fontColor: 字体颜色
   city: 天气城市
+  weatherKey: 和风天气 KEY
+  weatherComponents: 天气组件
+  weatherComponentsGroup:
+    realtime: 实时天气
+    props: 实时参数
+    aqi: 空气质量
+    24h: 24 小时预报
+    7days: 七天预报
   sessionCount: 节次设置
   backgroundType: 背景类型
   backgroundTypeImage: 图片
@@ -14,6 +22,7 @@ settings:
   backgroundCss: 背景 CSS
   routes:
     basic: 基础设置
+    weather: 天气设置
     lessons: 课程配置
     schedule: 课表编辑
     duty: 值日生

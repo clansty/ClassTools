@@ -8,6 +8,7 @@ declare module 'vue' {
     NButton: typeof import('naive-ui')['NButton']
     NCascader: typeof import('naive-ui')['NCascader']
     NCheckbox: typeof import('naive-ui')['NCheckbox']
+    NCheckboxGroup: typeof import('naive-ui')['NCheckboxGroup']
     NColorPicker: typeof import('naive-ui')['NColorPicker']
     NDatePicker: typeof import('naive-ui')['NDatePicker']
     NDynamicInput: typeof import('naive-ui')['NDynamicInput']
@@ -16,7 +17,6 @@ declare module 'vue' {
     NGi: typeof import('naive-ui')['NGi']
     NGrid: typeof import('naive-ui')['NGrid']
     NH2: typeof import('naive-ui')['NH2']
-    NH3: typeof import('naive-ui')['NH3']
     NH5: typeof import('naive-ui')['NH5']
     NInput: typeof import('naive-ui')['NInput']
     NInputGroup: typeof import('naive-ui')['NInputGroup']
@@ -33,7 +33,7 @@ declare module 'vue' {
     NSpace: typeof import('naive-ui')['NSpace']
     NText: typeof import('naive-ui')['NText']
     NTime: typeof import('naive-ui')['NTime']
-    Weather: typeof import('./src/components/Weather.vue')['default']
+    Weather: typeof import('./src/components/Weather/index.vue')['default']
   }
 }
 

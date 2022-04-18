@@ -3,6 +3,7 @@ import useHomeworks from '../stores/homeworks';
 import { computed } from 'vue';
 import useSettings from '../stores/settings';
 import { useNow } from '@vueuse/core';
+import Weather from '../components/Weather/index.vue';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
@@ -10,24 +11,34 @@ const settings = useSettings();
 const now = useNow();
 
 const backgroundStyle = computed(() => {
+  let css = '';
   switch (settings.value.backgroundType) {
     case 'image':
-      return `background-image: url('file://${settings.value.backgroundImage}')`;
+      css += `background-image: url('file://${settings.value.backgroundImage}');`;
+      break;
     case 'color':
-      return `background-color: ${settings.value.backgroundColor}`;
+      css += `background-color: ${settings.value.backgroundColor};`;
+      break;
     case 'advanced':
-      return `background: ${settings.value.backgroundCss}`;
+      css += `background: ${settings.value.backgroundCss};`;
+      break;
   }
+  css += `font-size: ${settings.value.fontSize}px;`;
+  css += `color: ${settings.value.fontColor};`;
+  return css;
 });
 
 </script>
 
 <template>
   <div class="container" :style="backgroundStyle">
-    <n-grid x-gap="12" cols="4">
+    <n-grid x-gap="12" cols="3">
       <n-gi>
         <div>高考倒计时</div>
-        <p><n-time :time="now" format="yyyy-M-d H:mm:ss"/></p>
+        <p>
+          <n-time :time="now" format="yyyy-M-d H:mm:ss"/>
+        </p>
+        <Weather/>
       </n-gi>
       <n-gi>
         <div>天气</div>
@@ -36,9 +47,6 @@ const backgroundStyle = computed(() => {
         <div>作业</div>
         <p>
         </p>
-      </n-gi>
-      <n-gi>
-        <div>课程表</div>
       </n-gi>
     </n-grid>
   </div>

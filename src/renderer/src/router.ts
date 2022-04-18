@@ -10,6 +10,7 @@ import SettingsBasic from './views/settings/Basic.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
 import SettingsLessons from './views/settings/Lessons.vue';
 import SettingsDuty from './views/settings/Duty.vue';
+import SettingsWeather from './views/settings/Weather.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -30,6 +31,7 @@ export default createRouter({
         { path: 'lessons', component: SettingsLessons, name: 'lessons' },
         { path: 'schedule', component: SettingsSchedule, name: 'schedule' },
         { path: 'duty', component: SettingsDuty, name: 'duty' },
+        { path: 'weather', component: SettingsWeather, name: 'weather' },
       ],
     },
     { path: '/sloganEdit', component: SloganEdit },

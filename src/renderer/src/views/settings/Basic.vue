@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import useSettings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
-import cities from '../../data/cities.json';
 import { ref } from 'vue';
 
 const settings = useSettings();
@@ -42,12 +41,6 @@ const handleSelectFile = () => {
       :label="locale.settings.fontColor"
     >
       <n-color-picker v-model:value="settings.fontColor" :show-alpha="false"/>
-    </n-form-item>
-    <n-form-item
-      :label="locale.settings.city"
-    >
-      <n-cascader v-model:value="settings.city" :options="cities"
-                  expand-trigger="hover" :show-path="true" check-strategy="child"/>
     </n-form-item>
     <n-form-item
       :label="locale.settings.backgroundType"

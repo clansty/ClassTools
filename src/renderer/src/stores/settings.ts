@@ -4,9 +4,11 @@ const useSettings = createAutoUpdateStorage('settings', {
   countDownName: '高考',
   countDownDate: 1686067200000,
   // 这个字体大小大概在壁纸页面的最外层使用，然后内层使用 em
-  fontSize: 32,
+  fontSize: 26,
   fontColor: '#303133',
   city: 'CN101240102',
+  weatherKey: '',
+  weatherComponents:['realtime', 'aqi', 'props', '24h', '7days'],
   backgroundType: 'color' as 'image' | 'color' | 'advanced',
   // image 时使用
   backgroundImage: '',
