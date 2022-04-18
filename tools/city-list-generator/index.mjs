@@ -26,11 +26,11 @@ for (const row of csv) {
 
   // 市
   // 直辖市可以不用增加一级
-  let city = row[6] === row[8] ? province : province.children.find(it => it.value === row[8]);
+  let city = row[6] === row[8] ? province : province.children.find(it => it.value === `${row[6]}-${row[8]}`);
   if (!city) {
     city = {
       label: row[9],
-      value: row[8],
+      value: `${row[6]}-${row[8]}`,
       children: [],
     };
     province.children.push(city);

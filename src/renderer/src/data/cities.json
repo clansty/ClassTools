@@ -389,7 +389,7 @@
     "children": [
       {
         "label": "哈尔滨市",
-        "value": "Harbin",
+        "value": "Heilongjiang-Harbin",
         "children": [
           {
             "label": "哈尔滨",
@@ -471,7 +471,7 @@
       },
       {
         "label": "齐齐哈尔市",
-        "value": "Qiqihar",
+        "value": "Heilongjiang-Qiqihar",
         "children": [
           {
             "label": "齐齐哈尔",
@@ -545,7 +545,7 @@
       },
       {
         "label": "牡丹江市",
-        "value": "Mudanjiang",
+        "value": "Heilongjiang-Mudanjiang",
         "children": [
           {
             "label": "牡丹江",
@@ -595,7 +595,7 @@
       },
       {
         "label": "佳木斯市",
-        "value": "Jiamusi",
+        "value": "Heilongjiang-Jiamusi",
         "children": [
           {
             "label": "佳木斯",
@@ -645,7 +645,7 @@
       },
       {
         "label": "绥化市",
-        "value": "Suihua",
+        "value": "Heilongjiang-Suihua",
         "children": [
           {
             "label": "绥化",
@@ -695,7 +695,7 @@
       },
       {
         "label": "黑河市",
-        "value": "Heihe",
+        "value": "Heilongjiang-Heihe",
         "children": [
           {
             "label": "黑河",
@@ -729,7 +729,7 @@
       },
       {
         "label": "大兴安岭地区",
-        "value": "Daxing'anling Prefecture",
+        "value": "Heilongjiang-Daxing'anling Prefecture",
         "children": [
           {
             "label": "大兴安岭",
@@ -751,7 +751,7 @@
       },
       {
         "label": "伊春市",
-        "value": "Yichun",
+        "value": "Heilongjiang-Yichun",
         "children": [
           {
             "label": "伊春",
@@ -801,7 +801,7 @@
       },
       {
         "label": "大庆市",
-        "value": "Daqing",
+        "value": "Heilongjiang-Daqing",
         "children": [
           {
             "label": "大庆",
@@ -847,7 +847,7 @@
       },
       {
         "label": "七台河市",
-        "value": "Qitaihe",
+        "value": "Heilongjiang-Qitaihe",
         "children": [
           {
             "label": "新兴",
@@ -873,7 +873,7 @@
       },
       {
         "label": "鸡西市",
-        "value": "Jixi",
+        "value": "Heilongjiang-Jixi",
         "children": [
           {
             "label": "鸡西",
@@ -919,7 +919,7 @@
       },
       {
         "label": "鹤岗市",
-        "value": "Hegang",
+        "value": "Heilongjiang-Hegang",
         "children": [
           {
             "label": "鹤岗",
@@ -961,7 +961,7 @@
       },
       {
         "label": "双鸭山市",
-        "value": "Shuangyashan",
+        "value": "Heilongjiang-Shuangyashan",
         "children": [
           {
             "label": "双鸭山",
@@ -1009,7 +1009,7 @@
     "children": [
       {
         "label": "长春市",
-        "value": "Changchun",
+        "value": "Jilin-Changchun",
         "children": [
           {
             "label": "长春",
@@ -1099,7 +1099,7 @@
       },
       {
         "label": "延边朝鲜族自治州",
-        "value": "Yanbian Korean Autonomous Prefecture",
+        "value": "Jilin-Yanbian Korean Autonomous Prefecture",
         "children": [
           {
             "label": "延吉",
@@ -1141,7 +1141,7 @@
       },
       {
         "label": "四平市",
-        "value": "Siping",
+        "value": "Jilin-Siping",
         "children": [
           {
             "label": "四平",
@@ -1175,7 +1175,7 @@
       },
       {
         "label": "通化市",
-        "value": "Tonghua",
+        "value": "Jilin-Tonghua",
         "children": [
           {
             "label": "通化",
@@ -1213,7 +1213,7 @@
       },
       {
         "label": "白城市",
-        "value": "Baicheng",
+        "value": "Jilin-Baicheng",
         "children": [
           {
             "label": "白城",
@@ -1243,7 +1243,7 @@
       },
       {
         "label": "辽源市",
-        "value": "Liaoyuan",
+        "value": "Jilin-Liaoyuan",
         "children": [
           {
             "label": "辽源",
@@ -1269,7 +1269,7 @@
       },
       {
         "label": "松原市",
-        "value": "Songyuan",
+        "value": "Jilin-Songyuan",
         "children": [
           {
             "label": "松原",
@@ -1299,7 +1299,7 @@
       },
       {
         "label": "白山市",
-        "value": "Baishan",
+        "value": "Jilin-Baishan",
         "children": [
           {
             "label": "白山",
@@ -1339,7 +1339,7 @@
     "children": [
       {
         "label": "沈阳市",
-        "value": "Shenyang",
+        "value": "Liaoning-Shenyang",
         "children": [
           {
             "label": "沈阳",
@@ -1401,7 +1401,7 @@
       },
       {
         "label": "大连市",
-        "value": "Dalian",
+        "value": "Liaoning-Dalian",
         "children": [
           {
             "label": "大连",
@@ -1451,7 +1451,7 @@
       },
       {
         "label": "鞍山市",
-        "value": "Anshan",
+        "value": "Liaoning-Anshan",
         "children": [
           {
             "label": "鞍山",
@@ -1489,7 +1489,7 @@
       },
       {
         "label": "抚顺市",
-        "value": "Fushun",
+        "value": "Liaoning-Fushun",
         "children": [
           {
             "label": "抚顺",
@@ -1527,7 +1527,7 @@
       },
       {
         "label": "本溪市",
-        "value": "Benxi",
+        "value": "Liaoning-Benxi",
         "children": [
           {
             "label": "本溪",
@@ -1561,7 +1561,7 @@
       },
       {
         "label": "丹东市",
-        "value": "Dandong",
+        "value": "Liaoning-Dandong",
         "children": [
           {
             "label": "丹东",
@@ -1595,7 +1595,7 @@
       },
       {
         "label": "锦州市",
-        "value": "Jinzhou",
+        "value": "Liaoning-Jinzhou",
         "children": [
           {
             "label": "锦州",
@@ -1633,7 +1633,7 @@
       },
       {
         "label": "营口市",
-        "value": "Yingkou",
+        "value": "Liaoning-Yingkou",
         "children": [
           {
             "label": "营口",
@@ -1667,7 +1667,7 @@
       },
       {
         "label": "阜新市",
-        "value": "Fuxin",
+        "value": "Liaoning-Fuxin",
         "children": [
           {
             "label": "阜新",
@@ -1705,7 +1705,7 @@
       },
       {
         "label": "辽阳市",
-        "value": "Liaoyang",
+        "value": "Liaoning-Liaoyang",
         "children": [
           {
             "label": "辽阳",
@@ -1743,7 +1743,7 @@
       },
       {
         "label": "铁岭市",
-        "value": "Tieling",
+        "value": "Liaoning-Tieling",
         "children": [
           {
             "label": "铁岭",
@@ -1781,7 +1781,7 @@
       },
       {
         "label": "朝阳市",
-        "value": "Chaoyang",
+        "value": "Liaoning-Chaoyang",
         "children": [
           {
             "label": "朝阳",
@@ -1819,7 +1819,7 @@
       },
       {
         "label": "盘锦市",
-        "value": "Panjin",
+        "value": "Liaoning-Panjin",
         "children": [
           {
             "label": "盘锦",
@@ -1845,7 +1845,7 @@
       },
       {
         "label": "葫芦岛市",
-        "value": "Huludao",
+        "value": "Liaoning-Huludao",
         "children": [
           {
             "label": "葫芦岛",
@@ -1885,7 +1885,7 @@
     "children": [
       {
         "label": "呼和浩特市",
-        "value": "Hohhot",
+        "value": "Inner Mongolia Autonomous Region-Hohhot",
         "children": [
           {
             "label": "呼和浩特",
@@ -1931,7 +1931,7 @@
       },
       {
         "label": "包头市",
-        "value": "Baotou",
+        "value": "Inner Mongolia Autonomous Region-Baotou",
         "children": [
           {
             "label": "包头",
@@ -1977,7 +1977,7 @@
       },
       {
         "label": "乌海市",
-        "value": "Wuhai",
+        "value": "Inner Mongolia Autonomous Region-Wuhai",
         "children": [
           {
             "label": "乌海",
@@ -1999,7 +1999,7 @@
       },
       {
         "label": "乌兰察布市",
-        "value": "Ulanqab",
+        "value": "Inner Mongolia Autonomous Region-Ulanqab",
         "children": [
           {
             "label": "集宁",
@@ -2053,7 +2053,7 @@
       },
       {
         "label": "通辽市",
-        "value": "Tongliao",
+        "value": "Inner Mongolia Autonomous Region-Tongliao",
         "children": [
           {
             "label": "通辽",
@@ -2095,7 +2095,7 @@
       },
       {
         "label": "赤峰市",
-        "value": "Chifeng",
+        "value": "Inner Mongolia Autonomous Region-Chifeng",
         "children": [
           {
             "label": "赤峰",
@@ -2153,7 +2153,7 @@
       },
       {
         "label": "鄂尔多斯市",
-        "value": "Ordos",
+        "value": "Inner Mongolia Autonomous Region-Ordos",
         "children": [
           {
             "label": "鄂尔多斯",
@@ -2199,7 +2199,7 @@
       },
       {
         "label": "巴彦淖尔市",
-        "value": "Bayannur",
+        "value": "Inner Mongolia Autonomous Region-Bayannur",
         "children": [
           {
             "label": "临河",
@@ -2237,7 +2237,7 @@
       },
       {
         "label": "锡林郭勒盟",
-        "value": "Xilingol League",
+        "value": "Inner Mongolia Autonomous Region-Xilingol League",
         "children": [
           {
             "label": "锡林浩特",
@@ -2295,7 +2295,7 @@
       },
       {
         "label": "呼伦贝尔市",
-        "value": "Hulunbuir",
+        "value": "Inner Mongolia Autonomous Region-Hulunbuir",
         "children": [
           {
             "label": "海拉尔",
@@ -2361,7 +2361,7 @@
       },
       {
         "label": "兴安盟",
-        "value": "Hinggan League",
+        "value": "Inner Mongolia Autonomous Region-Hinggan League",
         "children": [
           {
             "label": "乌兰浩特",
@@ -2395,7 +2395,7 @@
       },
       {
         "label": "阿拉善盟",
-        "value": "Alxa League",
+        "value": "Inner Mongolia Autonomous Region-Alxa League",
         "children": [
           {
             "label": "阿左旗",
@@ -2423,7 +2423,7 @@
     "children": [
       {
         "label": "石家庄市",
-        "value": "Shijiazhuang",
+        "value": "Hebei-Shijiazhuang",
         "children": [
           {
             "label": "石家庄",
@@ -2521,7 +2521,7 @@
       },
       {
         "label": "保定市",
-        "value": "Baoding",
+        "value": "Hebei-Baoding",
         "children": [
           {
             "label": "保定",
@@ -2615,7 +2615,7 @@
       },
       {
         "label": "张家口市",
-        "value": "Zhangjiakou",
+        "value": "Hebei-Zhangjiakou",
         "children": [
           {
             "label": "张家口",
@@ -2689,7 +2689,7 @@
       },
       {
         "label": "承德市",
-        "value": "Chengde",
+        "value": "Hebei-Chengde",
         "children": [
           {
             "label": "双桥",
@@ -2743,7 +2743,7 @@
       },
       {
         "label": "唐山市",
-        "value": "Tangshan",
+        "value": "Hebei-Tangshan",
         "children": [
           {
             "label": "唐山",
@@ -2809,7 +2809,7 @@
       },
       {
         "label": "廊坊市",
-        "value": "Langfang",
+        "value": "Hebei-Langfang",
         "children": [
           {
             "label": "廊坊",
@@ -2859,7 +2859,7 @@
       },
       {
         "label": "沧州市",
-        "value": "Cangzhou",
+        "value": "Hebei-Cangzhou",
         "children": [
           {
             "label": "沧州",
@@ -2933,7 +2933,7 @@
       },
       {
         "label": "衡水市",
-        "value": "Hengshui",
+        "value": "Hebei-Hengshui",
         "children": [
           {
             "label": "衡水",
@@ -2987,7 +2987,7 @@
       },
       {
         "label": "邢台市",
-        "value": "Xingtai",
+        "value": "Hebei-Xingtai",
         "children": [
           {
             "label": "邢台",
@@ -3069,7 +3069,7 @@
       },
       {
         "label": "邯郸市",
-        "value": "Handan",
+        "value": "Hebei-Handan",
         "children": [
           {
             "label": "邯郸",
@@ -3151,7 +3151,7 @@
       },
       {
         "label": "秦皇岛市",
-        "value": "Qinhuangdao",
+        "value": "Hebei-Qinhuangdao",
         "children": [
           {
             "label": "秦皇岛",
@@ -3189,7 +3189,7 @@
       },
       {
         "label": "雄安新区",
-        "value": "Xiong'an New Area",
+        "value": "Hebei-Xiong'an New Area",
         "children": [
           {
             "label": "雄安新区",
@@ -3199,7 +3199,7 @@
       },
       {
         "label": "保定市",
-        "value": "Rongcheng",
+        "value": "Hebei-Rongcheng",
         "children": [
           {
             "label": "容城",
@@ -3209,7 +3209,7 @@
       },
       {
         "label": "保定市",
-        "value": "Anxin",
+        "value": "Hebei-Anxin",
         "children": [
           {
             "label": "安新",
@@ -3219,7 +3219,7 @@
       },
       {
         "label": "保定市",
-        "value": "Xiongxian",
+        "value": "Hebei-Xiongxian",
         "children": [
           {
             "label": "雄县",
@@ -3235,7 +3235,7 @@
     "children": [
       {
         "label": "太原市",
-        "value": "Taiyuan",
+        "value": "Shanxi-Taiyuan",
         "children": [
           {
             "label": "太原",
@@ -3285,7 +3285,7 @@
       },
       {
         "label": "大同市",
-        "value": "Datong",
+        "value": "Shanxi-Datong",
         "children": [
           {
             "label": "大同",
@@ -3331,7 +3331,7 @@
       },
       {
         "label": "大同市",
-        "value": "Datong City",
+        "value": "Shanxi-Datong City",
         "children": [
           {
             "label": "平城",
@@ -3341,7 +3341,7 @@
       },
       {
         "label": "阳泉市",
-        "value": "Yangquan",
+        "value": "Shanxi-Yangquan",
         "children": [
           {
             "label": "阳泉",
@@ -3371,7 +3371,7 @@
       },
       {
         "label": "晋中市",
-        "value": "Jinzhong",
+        "value": "Shanxi-Jinzhong",
         "children": [
           {
             "label": "晋中",
@@ -3425,7 +3425,7 @@
       },
       {
         "label": "长治市",
-        "value": "Changzhi",
+        "value": "Shanxi-Changzhi",
         "children": [
           {
             "label": "长治",
@@ -3483,7 +3483,7 @@
       },
       {
         "label": "晋城市",
-        "value": "Jincheng",
+        "value": "Shanxi-Jincheng",
         "children": [
           {
             "label": "晋城",
@@ -3517,7 +3517,7 @@
       },
       {
         "label": "临汾市",
-        "value": "Linfen",
+        "value": "Shanxi-Linfen",
         "children": [
           {
             "label": "临汾",
@@ -3595,7 +3595,7 @@
       },
       {
         "label": "运城市",
-        "value": "Yuncheng",
+        "value": "Shanxi-Yuncheng",
         "children": [
           {
             "label": "运城",
@@ -3657,7 +3657,7 @@
       },
       {
         "label": "朔州市",
-        "value": "Shuozhou",
+        "value": "Shanxi-Shuozhou",
         "children": [
           {
             "label": "朔州",
@@ -3691,7 +3691,7 @@
       },
       {
         "label": "忻州市",
-        "value": "Xinzhou",
+        "value": "Shanxi-Xinzhou",
         "children": [
           {
             "label": "忻州",
@@ -3757,7 +3757,7 @@
       },
       {
         "label": "吕梁市",
-        "value": "Lüliang",
+        "value": "Shanxi-Lüliang",
         "children": [
           {
             "label": "吕梁",
@@ -3825,7 +3825,7 @@
     "children": [
       {
         "label": "西安市",
-        "value": "Xi'an",
+        "value": "Shaanxi-Xi'an",
         "children": [
           {
             "label": "西安",
@@ -3887,7 +3887,7 @@
       },
       {
         "label": "咸阳市",
-        "value": "Xianyang",
+        "value": "Shaanxi-Xianyang",
         "children": [
           {
             "label": "咸阳",
@@ -3953,7 +3953,7 @@
       },
       {
         "label": "延安市",
-        "value": "Yan'an",
+        "value": "Shaanxi-Yan'an",
         "children": [
           {
             "label": "延安",
@@ -4015,7 +4015,7 @@
       },
       {
         "label": "榆林市",
-        "value": "Yulin",
+        "value": "Shaanxi-Yulin",
         "children": [
           {
             "label": "榆林",
@@ -4073,7 +4073,7 @@
       },
       {
         "label": "渭南市",
-        "value": "Weinan",
+        "value": "Shaanxi-Weinan",
         "children": [
           {
             "label": "渭南",
@@ -4127,7 +4127,7 @@
       },
       {
         "label": "商洛市",
-        "value": "Shangluo",
+        "value": "Shaanxi-Shangluo",
         "children": [
           {
             "label": "商洛",
@@ -4165,7 +4165,7 @@
       },
       {
         "label": "安康市",
-        "value": "Ankang",
+        "value": "Shaanxi-Ankang",
         "children": [
           {
             "label": "安康",
@@ -4215,7 +4215,7 @@
       },
       {
         "label": "汉中市",
-        "value": "Hanzhong",
+        "value": "Shaanxi-Hanzhong",
         "children": [
           {
             "label": "汉中",
@@ -4269,7 +4269,7 @@
       },
       {
         "label": "宝鸡市",
-        "value": "Baoji",
+        "value": "Shaanxi-Baoji",
         "children": [
           {
             "label": "宝鸡",
@@ -4327,7 +4327,7 @@
       },
       {
         "label": "铜川市",
-        "value": "Tongchuan",
+        "value": "Shaanxi-Tongchuan",
         "children": [
           {
             "label": "铜川",
@@ -4359,7 +4359,7 @@
     "children": [
       {
         "label": "济南市",
-        "value": "Jinan",
+        "value": "Shandong-Jinan",
         "children": [
           {
             "label": "济南",
@@ -4409,7 +4409,7 @@
       },
       {
         "label": "青岛市",
-        "value": "Qingdao",
+        "value": "Shandong-Qingdao",
         "children": [
           {
             "label": "青岛",
@@ -4459,7 +4459,7 @@
       },
       {
         "label": "淄博市",
-        "value": "Zibo",
+        "value": "Shandong-Zibo",
         "children": [
           {
             "label": "淄博",
@@ -4501,7 +4501,7 @@
       },
       {
         "label": "德州市",
-        "value": "Dezhou",
+        "value": "Shandong-Dezhou",
         "children": [
           {
             "label": "德州",
@@ -4555,7 +4555,7 @@
       },
       {
         "label": "烟台市",
-        "value": "Yantai",
+        "value": "Shandong-Yantai",
         "children": [
           {
             "label": "烟台",
@@ -4609,7 +4609,7 @@
       },
       {
         "label": "潍坊市",
-        "value": "Weifang",
+        "value": "Shandong-Weifang",
         "children": [
           {
             "label": "潍坊",
@@ -4667,7 +4667,7 @@
       },
       {
         "label": "济宁市",
-        "value": "Jining",
+        "value": "Shandong-Jining",
         "children": [
           {
             "label": "济宁",
@@ -4721,7 +4721,7 @@
       },
       {
         "label": "泰安市",
-        "value": "Tai'an",
+        "value": "Shandong-Tai'an",
         "children": [
           {
             "label": "泰安",
@@ -4755,7 +4755,7 @@
       },
       {
         "label": "临沂市",
-        "value": "Linyi",
+        "value": "Shandong-Linyi",
         "children": [
           {
             "label": "临沂",
@@ -4813,7 +4813,7 @@
       },
       {
         "label": "菏泽市",
-        "value": "Heze",
+        "value": "Shandong-Heze",
         "children": [
           {
             "label": "菏泽",
@@ -4859,7 +4859,7 @@
       },
       {
         "label": "滨州市",
-        "value": "Binzhou",
+        "value": "Shandong-Binzhou",
         "children": [
           {
             "label": "滨州",
@@ -4897,7 +4897,7 @@
       },
       {
         "label": "东营市",
-        "value": "Dongying",
+        "value": "Shandong-Dongying",
         "children": [
           {
             "label": "东营",
@@ -4927,7 +4927,7 @@
       },
       {
         "label": "威海市",
-        "value": "Weihai",
+        "value": "Shandong-Weihai",
         "children": [
           {
             "label": "威海",
@@ -4953,7 +4953,7 @@
       },
       {
         "label": "威海市",
-        "value": "Zaozhuang",
+        "value": "Shandong-Zaozhuang",
         "children": [
           {
             "label": "枣庄",
@@ -4987,7 +4987,7 @@
       },
       {
         "label": "日照市",
-        "value": "Rizhao",
+        "value": "Shandong-Rizhao",
         "children": [
           {
             "label": "日照",
@@ -5013,7 +5013,7 @@
       },
       {
         "label": "莱芜市",
-        "value": "Laiwu",
+        "value": "Shandong-Laiwu",
         "children": [
           {
             "label": "莱芜",
@@ -5027,7 +5027,7 @@
       },
       {
         "label": "聊城市",
-        "value": "Liaocheng",
+        "value": "Shandong-Liaocheng",
         "children": [
           {
             "label": "聊城",
@@ -5075,7 +5075,7 @@
     "children": [
       {
         "label": "乌鲁木齐市",
-        "value": "Urumqi",
+        "value": "Xinjiang Uygur Autonomous Region-Urumqi",
         "children": [
           {
             "label": "乌鲁木齐",
@@ -5117,7 +5117,7 @@
       },
       {
         "label": "克拉玛依市",
-        "value": "Karamay",
+        "value": "Xinjiang Uygur Autonomous Region-Karamay",
         "children": [
           {
             "label": "克拉玛依",
@@ -5143,7 +5143,7 @@
       },
       {
         "label": "石河子市",
-        "value": "Shihezi",
+        "value": "Xinjiang Uygur Autonomous Region-Shihezi",
         "children": [
           {
             "label": "石河子",
@@ -5153,7 +5153,7 @@
       },
       {
         "label": "昌吉回族自治州",
-        "value": "Changji Hui Autonomous Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Changji Hui Autonomous Prefecture",
         "children": [
           {
             "label": "昌吉",
@@ -5191,7 +5191,7 @@
       },
       {
         "label": "吐鲁番市",
-        "value": "Turpan",
+        "value": "Xinjiang Uygur Autonomous Region-Turpan",
         "children": [
           {
             "label": "吐鲁番",
@@ -5213,7 +5213,7 @@
       },
       {
         "label": "巴音郭楞蒙古自治州",
-        "value": "Bayingolin Mongol Autonomous Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Bayingolin Mongol Autonomous Prefecture",
         "children": [
           {
             "label": "库尔勒",
@@ -5259,7 +5259,7 @@
       },
       {
         "label": "阿拉尔市",
-        "value": "Aral",
+        "value": "Xinjiang Uygur Autonomous Region-Aral",
         "children": [
           {
             "label": "阿拉尔",
@@ -5269,7 +5269,7 @@
       },
       {
         "label": "阿克苏地区",
-        "value": "Aksu Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Aksu Prefecture",
         "children": [
           {
             "label": "阿克苏",
@@ -5315,7 +5315,7 @@
       },
       {
         "label": "喀什地区",
-        "value": "Kashgar Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Kashgar Prefecture",
         "children": [
           {
             "label": "喀什",
@@ -5373,7 +5373,7 @@
       },
       {
         "label": "伊犁哈萨克自治州",
-        "value": "Ili Kazakh Autonomous Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Ili Kazakh Autonomous Prefecture",
         "children": [
           {
             "label": "伊宁",
@@ -5427,7 +5427,7 @@
       },
       {
         "label": "塔城地区",
-        "value": "Tacheng Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Tacheng Prefecture",
         "children": [
           {
             "label": "塔城",
@@ -5465,7 +5465,7 @@
       },
       {
         "label": "哈密市",
-        "value": "Hami",
+        "value": "Xinjiang Uygur Autonomous Region-Hami",
         "children": [
           {
             "label": "哈密",
@@ -5487,7 +5487,7 @@
       },
       {
         "label": "和田地区",
-        "value": "Hotan Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Hotan Prefecture",
         "children": [
           {
             "label": "和田",
@@ -5529,7 +5529,7 @@
       },
       {
         "label": "阿勒泰地区",
-        "value": "Altay Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Altay Prefecture",
         "children": [
           {
             "label": "阿勒泰",
@@ -5567,7 +5567,7 @@
       },
       {
         "label": "克孜勒苏柯尔克孜自治州",
-        "value": "Kizilsu Kyrgyz Autonomous Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Kizilsu Kyrgyz Autonomous Prefecture",
         "children": [
           {
             "label": "阿图什",
@@ -5593,7 +5593,7 @@
       },
       {
         "label": "博尔塔拉蒙古自治州",
-        "value": "Bortala Mongol Autonomous Prefecture",
+        "value": "Xinjiang Uygur Autonomous Region-Bortala Mongol Autonomous Prefecture",
         "children": [
           {
             "label": "博乐",
@@ -5619,7 +5619,7 @@
       },
       {
         "label": "图木舒克市",
-        "value": "Tumxuk",
+        "value": "Xinjiang Uygur Autonomous Region-Tumxuk",
         "children": [
           {
             "label": "图木舒克",
@@ -5629,7 +5629,7 @@
       },
       {
         "label": "五家渠市",
-        "value": "Wujiaqu",
+        "value": "Xinjiang Uygur Autonomous Region-Wujiaqu",
         "children": [
           {
             "label": "五家渠",
@@ -5639,7 +5639,7 @@
       },
       {
         "label": "铁门关市",
-        "value": "Tiemenguan",
+        "value": "Xinjiang Uygur Autonomous Region-Tiemenguan",
         "children": [
           {
             "label": "铁门关",
@@ -5649,7 +5649,7 @@
       },
       {
         "label": "昆玉市",
-        "value": "Kunyu",
+        "value": "Xinjiang Uygur Autonomous Region-Kunyu",
         "children": [
           {
             "label": "昆玉",
@@ -5659,7 +5659,7 @@
       },
       {
         "label": "北屯市",
-        "value": "Beitun",
+        "value": "Xinjiang Uygur Autonomous Region-Beitun",
         "children": [
           {
             "label": "北屯",
@@ -5669,7 +5669,7 @@
       },
       {
         "label": "双河市",
-        "value": "Shuanghe",
+        "value": "Xinjiang Uygur Autonomous Region-Shuanghe",
         "children": [
           {
             "label": "双河",
@@ -5679,7 +5679,7 @@
       },
       {
         "label": "可克达拉市",
-        "value": "Kokdala",
+        "value": "Xinjiang Uygur Autonomous Region-Kokdala",
         "children": [
           {
             "label": "可克达拉",
@@ -5689,7 +5689,7 @@
       },
       {
         "label": "胡杨河市",
-        "value": "Huyanghe",
+        "value": "Xinjiang Uygur Autonomous Region-Huyanghe",
         "children": [
           {
             "label": "胡杨河",
@@ -5705,7 +5705,7 @@
     "children": [
       {
         "label": "拉萨市",
-        "value": "Lhasa",
+        "value": "Tibet Autonomous Region-Lhasa",
         "children": [
           {
             "label": "拉萨",
@@ -5747,7 +5747,7 @@
       },
       {
         "label": "日喀则市",
-        "value": "Xigazê",
+        "value": "Tibet Autonomous Region-Xigazê",
         "children": [
           {
             "label": "日喀则",
@@ -5829,7 +5829,7 @@
       },
       {
         "label": "山南市",
-        "value": "Shannan",
+        "value": "Tibet Autonomous Region-Shannan",
         "children": [
           {
             "label": "山南",
@@ -5887,7 +5887,7 @@
       },
       {
         "label": "林芝市",
-        "value": "Linzi",
+        "value": "Tibet Autonomous Region-Linzi",
         "children": [
           {
             "label": "林芝",
@@ -5909,7 +5909,7 @@
       },
       {
         "label": "林芝市",
-        "value": "Nyingchi",
+        "value": "Tibet Autonomous Region-Nyingchi",
         "children": [
           {
             "label": "工布江达",
@@ -5931,7 +5931,7 @@
       },
       {
         "label": "昌都市",
-        "value": "Qamdo",
+        "value": "Tibet Autonomous Region-Qamdo",
         "children": [
           {
             "label": "昌都",
@@ -5981,7 +5981,7 @@
       },
       {
         "label": "昌都市",
-        "value": "Changdou",
+        "value": "Tibet Autonomous Region-Changdou",
         "children": [
           {
             "label": "卡若",
@@ -5991,7 +5991,7 @@
       },
       {
         "label": "那曲市",
-        "value": "Nagqu",
+        "value": "Tibet Autonomous Region-Nagqu",
         "children": [
           {
             "label": "那曲",
@@ -6045,7 +6045,7 @@
       },
       {
         "label": "阿里地区",
-        "value": "Ngari Prefecture",
+        "value": "Tibet Autonomous Region-Ngari Prefecture",
         "children": [
           {
             "label": "阿里",
@@ -6089,7 +6089,7 @@
     "children": [
       {
         "label": "西宁市",
-        "value": "Xining",
+        "value": "Qinghai-Xining",
         "children": [
           {
             "label": "西宁",
@@ -6127,7 +6127,7 @@
       },
       {
         "label": "海东市",
-        "value": "Haidong",
+        "value": "Qinghai-Haidong",
         "children": [
           {
             "label": "平安",
@@ -6161,7 +6161,7 @@
       },
       {
         "label": "黄南藏族自治州",
-        "value": "Huangnan Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Huangnan Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "同仁",
@@ -6187,7 +6187,7 @@
       },
       {
         "label": "海南藏族自治州",
-        "value": "Hainan Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Hainan Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "共和",
@@ -6217,7 +6217,7 @@
       },
       {
         "label": "果洛藏族自治州",
-        "value": "Golog Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Golog Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "玛沁",
@@ -6251,7 +6251,7 @@
       },
       {
         "label": "玉树藏族自治州",
-        "value": "Yushu Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Yushu Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "玉树",
@@ -6285,7 +6285,7 @@
       },
       {
         "label": "海西蒙古族藏族自治州",
-        "value": "Haixi Mongol and Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Haixi Mongol and Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "德令哈",
@@ -6323,7 +6323,7 @@
       },
       {
         "label": "海北藏族自治州",
-        "value": "Haibei Tibetan Autonomous Prefecture",
+        "value": "Qinghai-Haibei Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "海晏",
@@ -6355,7 +6355,7 @@
     "children": [
       {
         "label": "兰州市",
-        "value": "Lanzhou",
+        "value": "Gansu-Lanzhou",
         "children": [
           {
             "label": "兰州",
@@ -6397,7 +6397,7 @@
       },
       {
         "label": "定西市",
-        "value": "Dingxi",
+        "value": "Gansu-Dingxi",
         "children": [
           {
             "label": "定西",
@@ -6435,7 +6435,7 @@
       },
       {
         "label": "平凉市",
-        "value": "Pingliang",
+        "value": "Gansu-Pingliang",
         "children": [
           {
             "label": "平凉",
@@ -6473,7 +6473,7 @@
       },
       {
         "label": "庆阳市",
-        "value": "Qingyang",
+        "value": "Gansu-Qingyang",
         "children": [
           {
             "label": "庆阳",
@@ -6515,7 +6515,7 @@
       },
       {
         "label": "武威市",
-        "value": "Wuwei",
+        "value": "Gansu-Wuwei",
         "children": [
           {
             "label": "武威",
@@ -6541,7 +6541,7 @@
       },
       {
         "label": "金昌市",
-        "value": "Jinchang",
+        "value": "Gansu-Jinchang",
         "children": [
           {
             "label": "金昌",
@@ -6559,7 +6559,7 @@
       },
       {
         "label": "张掖市",
-        "value": "Zhangye",
+        "value": "Gansu-Zhangye",
         "children": [
           {
             "label": "张掖",
@@ -6593,7 +6593,7 @@
       },
       {
         "label": "酒泉市",
-        "value": "Jiuquan",
+        "value": "Gansu-Jiuquan",
         "children": [
           {
             "label": "酒泉",
@@ -6631,7 +6631,7 @@
       },
       {
         "label": "天水市",
-        "value": "Tianshui",
+        "value": "Gansu-Tianshui",
         "children": [
           {
             "label": "天水",
@@ -6669,7 +6669,7 @@
       },
       {
         "label": "陇南市",
-        "value": "Longnan",
+        "value": "Gansu-Longnan",
         "children": [
           {
             "label": "武都",
@@ -6715,7 +6715,7 @@
       },
       {
         "label": "临夏回族自治州",
-        "value": "Linxia Hui Autonomous Prefecture",
+        "value": "Gansu-Linxia Hui Autonomous Prefecture",
         "children": [
           {
             "label": "临夏",
@@ -6757,7 +6757,7 @@
       },
       {
         "label": "甘南藏族自治州",
-        "value": "Gannan Tibetan Autonomous Prefecture",
+        "value": "Gansu-Gannan Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "合作",
@@ -6799,7 +6799,7 @@
       },
       {
         "label": "白银市",
-        "value": "Baiyin",
+        "value": "Gansu-Baiyin",
         "children": [
           {
             "label": "白银",
@@ -6829,7 +6829,7 @@
       },
       {
         "label": "嘉峪关市",
-        "value": "Jiayuguan",
+        "value": "Gansu-Jiayuguan",
         "children": [
           {
             "label": "嘉峪关",
@@ -6845,7 +6845,7 @@
     "children": [
       {
         "label": "银川市",
-        "value": "Yinchuan",
+        "value": "Ningxia Hui Autonomous Region-Yinchuan",
         "children": [
           {
             "label": "银川",
@@ -6879,7 +6879,7 @@
       },
       {
         "label": "石嘴山市",
-        "value": "Shizuishan",
+        "value": "Ningxia Hui Autonomous Region-Shizuishan",
         "children": [
           {
             "label": "石嘴山",
@@ -6901,7 +6901,7 @@
       },
       {
         "label": "吴忠市",
-        "value": "Wuzhong",
+        "value": "Ningxia Hui Autonomous Region-Wuzhong",
         "children": [
           {
             "label": "吴忠",
@@ -6931,7 +6931,7 @@
       },
       {
         "label": "固原市",
-        "value": "Guyuan",
+        "value": "Ningxia Hui Autonomous Region-Guyuan",
         "children": [
           {
             "label": "固原",
@@ -6961,7 +6961,7 @@
       },
       {
         "label": "中卫市",
-        "value": "Zhongwei",
+        "value": "Ningxia Hui Autonomous Region-Zhongwei",
         "children": [
           {
             "label": "中卫",
@@ -6989,7 +6989,7 @@
     "children": [
       {
         "label": "郑州市",
-        "value": "Zhengzhou",
+        "value": "Henan-Zhengzhou",
         "children": [
           {
             "label": "郑州",
@@ -7047,7 +7047,7 @@
       },
       {
         "label": "安阳市",
-        "value": "Anyang",
+        "value": "Henan-Anyang",
         "children": [
           {
             "label": "安阳",
@@ -7089,7 +7089,7 @@
       },
       {
         "label": "安阳市",
-        "value": "Anyang City",
+        "value": "Henan-Anyang City",
         "children": [
           {
             "label": "安阳县",
@@ -7099,7 +7099,7 @@
       },
       {
         "label": "新乡市",
-        "value": "Xinxiang",
+        "value": "Henan-Xinxiang",
         "children": [
           {
             "label": "新乡",
@@ -7157,7 +7157,7 @@
       },
       {
         "label": "许昌市",
-        "value": "Xuchang",
+        "value": "Henan-Xuchang",
         "children": [
           {
             "label": "许昌",
@@ -7191,7 +7191,7 @@
       },
       {
         "label": "平顶山市",
-        "value": "Pingdingshan",
+        "value": "Henan-Pingdingshan",
         "children": [
           {
             "label": "平顶山",
@@ -7241,7 +7241,7 @@
       },
       {
         "label": "信阳市",
-        "value": "Xinyang",
+        "value": "Henan-Xinyang",
         "children": [
           {
             "label": "信阳",
@@ -7291,7 +7291,7 @@
       },
       {
         "label": "南阳市",
-        "value": "Nanyang",
+        "value": "Henan-Nanyang",
         "children": [
           {
             "label": "南阳",
@@ -7353,7 +7353,7 @@
       },
       {
         "label": "开封市",
-        "value": "Kaifeng",
+        "value": "Henan-Kaifeng",
         "children": [
           {
             "label": "开封",
@@ -7399,7 +7399,7 @@
       },
       {
         "label": "洛阳市",
-        "value": "Luoyang",
+        "value": "Henan-Luoyang",
         "children": [
           {
             "label": "洛阳",
@@ -7465,7 +7465,7 @@
       },
       {
         "label": "商丘市",
-        "value": "Shangqiu",
+        "value": "Henan-Shangqiu",
         "children": [
           {
             "label": "商丘",
@@ -7511,7 +7511,7 @@
       },
       {
         "label": "焦作市",
-        "value": "Jiaozuo",
+        "value": "Henan-Jiaozuo",
         "children": [
           {
             "label": "焦作",
@@ -7561,7 +7561,7 @@
       },
       {
         "label": "鹤壁市",
-        "value": "Hebi",
+        "value": "Henan-Hebi",
         "children": [
           {
             "label": "鹤壁",
@@ -7591,7 +7591,7 @@
       },
       {
         "label": "濮阳市",
-        "value": "Puyang",
+        "value": "Henan-Puyang",
         "children": [
           {
             "label": "濮阳",
@@ -7625,7 +7625,7 @@
       },
       {
         "label": "周口市",
-        "value": "Zhoukou",
+        "value": "Henan-Zhoukou",
         "children": [
           {
             "label": "周口",
@@ -7675,7 +7675,7 @@
       },
       {
         "label": "漯河市",
-        "value": "Luohe",
+        "value": "Henan-Luohe",
         "children": [
           {
             "label": "漯河",
@@ -7705,7 +7705,7 @@
       },
       {
         "label": "驻马店市",
-        "value": "Zhumadian",
+        "value": "Henan-Zhumadian",
         "children": [
           {
             "label": "驻马店",
@@ -7755,7 +7755,7 @@
       },
       {
         "label": "三门峡市",
-        "value": "Sanmenxia",
+        "value": "Henan-Sanmenxia",
         "children": [
           {
             "label": "三门峡",
@@ -7789,7 +7789,7 @@
       },
       {
         "label": "济源市",
-        "value": "Jiyuan",
+        "value": "Henan-Jiyuan",
         "children": [
           {
             "label": "济源",
@@ -7805,7 +7805,7 @@
     "children": [
       {
         "label": "南京市",
-        "value": "Nanjing",
+        "value": "Jiangsu-Nanjing",
         "children": [
           {
             "label": "南京",
@@ -7859,7 +7859,7 @@
       },
       {
         "label": "无锡市",
-        "value": "Wuxi",
+        "value": "Jiangsu-Wuxi",
         "children": [
           {
             "label": "无锡",
@@ -7897,7 +7897,7 @@
       },
       {
         "label": "镇江市",
-        "value": "Zhenjiang",
+        "value": "Jiangsu-Zhenjiang",
         "children": [
           {
             "label": "镇江",
@@ -7931,7 +7931,7 @@
       },
       {
         "label": "苏州市",
-        "value": "Suzhou",
+        "value": "Jiangsu-Suzhou",
         "children": [
           {
             "label": "苏州",
@@ -7977,7 +7977,7 @@
       },
       {
         "label": "南通市",
-        "value": "Nantong",
+        "value": "Jiangsu-Nantong",
         "children": [
           {
             "label": "南通",
@@ -8015,7 +8015,7 @@
       },
       {
         "label": "扬州市",
-        "value": "Yangzhou",
+        "value": "Jiangsu-Yangzhou",
         "children": [
           {
             "label": "扬州",
@@ -8049,7 +8049,7 @@
       },
       {
         "label": "盐城市",
-        "value": "Yancheng",
+        "value": "Jiangsu-Yancheng",
         "children": [
           {
             "label": "盐城",
@@ -8095,7 +8095,7 @@
       },
       {
         "label": "徐州市",
-        "value": "Xuzhou",
+        "value": "Jiangsu-Xuzhou",
         "children": [
           {
             "label": "徐州",
@@ -8145,7 +8145,7 @@
       },
       {
         "label": "淮安市",
-        "value": "Huaian",
+        "value": "Jiangsu-Huaian",
         "children": [
           {
             "label": "淮安",
@@ -8183,7 +8183,7 @@
       },
       {
         "label": "连云港市",
-        "value": "Lianyungang",
+        "value": "Jiangsu-Lianyungang",
         "children": [
           {
             "label": "连云港",
@@ -8217,7 +8217,7 @@
       },
       {
         "label": "常州市",
-        "value": "Changzhou",
+        "value": "Jiangsu-Changzhou",
         "children": [
           {
             "label": "常州",
@@ -8251,7 +8251,7 @@
       },
       {
         "label": "泰州市",
-        "value": "Taizhou",
+        "value": "Jiangsu-Taizhou",
         "children": [
           {
             "label": "泰州",
@@ -8285,7 +8285,7 @@
       },
       {
         "label": "宿迁市",
-        "value": "Suqian",
+        "value": "Jiangsu-Suqian",
         "children": [
           {
             "label": "宿迁",
@@ -8321,7 +8321,7 @@
     "children": [
       {
         "label": "武汉市",
-        "value": "Wuhan",
+        "value": "Hubei-Wuhan",
         "children": [
           {
             "label": "武汉",
@@ -8383,7 +8383,7 @@
       },
       {
         "label": "襄阳市",
-        "value": "Xiangyang",
+        "value": "Hubei-Xiangyang",
         "children": [
           {
             "label": "襄阳",
@@ -8429,7 +8429,7 @@
       },
       {
         "label": "鄂州市",
-        "value": "Ezhou",
+        "value": "Hubei-Ezhou",
         "children": [
           {
             "label": "鄂州",
@@ -8451,7 +8451,7 @@
       },
       {
         "label": "孝感市",
-        "value": "Xiaogan",
+        "value": "Hubei-Xiaogan",
         "children": [
           {
             "label": "孝感",
@@ -8489,7 +8489,7 @@
       },
       {
         "label": "黄冈市",
-        "value": "Huanggang",
+        "value": "Hubei-Huanggang",
         "children": [
           {
             "label": "黄冈",
@@ -8539,7 +8539,7 @@
       },
       {
         "label": "黄石市",
-        "value": "Huangshi",
+        "value": "Hubei-Huangshi",
         "children": [
           {
             "label": "黄石",
@@ -8573,7 +8573,7 @@
       },
       {
         "label": "咸宁市",
-        "value": "Xianning",
+        "value": "Hubei-Xianning",
         "children": [
           {
             "label": "咸宁",
@@ -8607,7 +8607,7 @@
       },
       {
         "label": "荆州市",
-        "value": "Jingzhou",
+        "value": "Hubei-Jingzhou",
         "children": [
           {
             "label": "荆州",
@@ -8649,7 +8649,7 @@
       },
       {
         "label": "宜昌市",
-        "value": "Yichang",
+        "value": "Hubei-Yichang",
         "children": [
           {
             "label": "宜昌",
@@ -8711,7 +8711,7 @@
       },
       {
         "label": "恩施土家族苗族自治州",
-        "value": "Enshi Tujia and Miao Autonomous Prefecture",
+        "value": "Hubei-Enshi Tujia and Miao Autonomous Prefecture",
         "children": [
           {
             "label": "恩施",
@@ -8753,7 +8753,7 @@
       },
       {
         "label": "十堰市",
-        "value": "Shiyan",
+        "value": "Hubei-Shiyan",
         "children": [
           {
             "label": "十堰",
@@ -8795,7 +8795,7 @@
       },
       {
         "label": "神农架林区",
-        "value": "Shennongjia",
+        "value": "Hubei-Shennongjia",
         "children": [
           {
             "label": "神农架",
@@ -8805,7 +8805,7 @@
       },
       {
         "label": "随州市",
-        "value": "Suizhou",
+        "value": "Hubei-Suizhou",
         "children": [
           {
             "label": "随州",
@@ -8827,7 +8827,7 @@
       },
       {
         "label": "荆门市",
-        "value": "Jingmen",
+        "value": "Hubei-Jingmen",
         "children": [
           {
             "label": "荆门",
@@ -8857,7 +8857,7 @@
       },
       {
         "label": "天门市",
-        "value": "Tianmen",
+        "value": "Hubei-Tianmen",
         "children": [
           {
             "label": "天门",
@@ -8867,7 +8867,7 @@
       },
       {
         "label": "仙桃市",
-        "value": "Xiantao",
+        "value": "Hubei-Xiantao",
         "children": [
           {
             "label": "仙桃",
@@ -8877,7 +8877,7 @@
       },
       {
         "label": "潜江市",
-        "value": "Qianjiang",
+        "value": "Hubei-Qianjiang",
         "children": [
           {
             "label": "潜江",
@@ -8893,7 +8893,7 @@
     "children": [
       {
         "label": "杭州市",
-        "value": "Hangzhou",
+        "value": "Zhejiang-Hangzhou",
         "children": [
           {
             "label": "杭州",
@@ -8951,7 +8951,7 @@
       },
       {
         "label": "湖州市",
-        "value": "Huzhou",
+        "value": "Zhejiang-Huzhou",
         "children": [
           {
             "label": "湖州",
@@ -8981,7 +8981,7 @@
       },
       {
         "label": "嘉兴市",
-        "value": "Jiaxing",
+        "value": "Zhejiang-Jiaxing",
         "children": [
           {
             "label": "嘉兴",
@@ -9019,7 +9019,7 @@
       },
       {
         "label": "宁波市",
-        "value": "Ningbo",
+        "value": "Zhejiang-Ningbo",
         "children": [
           {
             "label": "宁波",
@@ -9069,7 +9069,7 @@
       },
       {
         "label": "绍兴市",
-        "value": "Shaoxing",
+        "value": "Zhejiang-Shaoxing",
         "children": [
           {
             "label": "越城",
@@ -9103,7 +9103,7 @@
       },
       {
         "label": "台州市",
-        "value": "Taizhou",
+        "value": "Zhejiang-Taizhou",
         "children": [
           {
             "label": "台州",
@@ -9149,7 +9149,7 @@
       },
       {
         "label": "温州市",
-        "value": "Wenzhou",
+        "value": "Zhejiang-Wenzhou",
         "children": [
           {
             "label": "温州",
@@ -9203,7 +9203,7 @@
       },
       {
         "label": "温州市",
-        "value": "Wenzhou City",
+        "value": "Zhejiang-Wenzhou City",
         "children": [
           {
             "label": "龙港",
@@ -9213,7 +9213,7 @@
       },
       {
         "label": "丽水市",
-        "value": "Lishui",
+        "value": "Zhejiang-Lishui",
         "children": [
           {
             "label": "丽水",
@@ -9259,7 +9259,7 @@
       },
       {
         "label": "金华市",
-        "value": "Jinhua",
+        "value": "Zhejiang-Jinhua",
         "children": [
           {
             "label": "金华",
@@ -9305,7 +9305,7 @@
       },
       {
         "label": "衢州市",
-        "value": "Quzhou",
+        "value": "Zhejiang-Quzhou",
         "children": [
           {
             "label": "衢州",
@@ -9339,7 +9339,7 @@
       },
       {
         "label": "舟山市",
-        "value": "Zhoushan",
+        "value": "Zhejiang-Zhoushan",
         "children": [
           {
             "label": "舟山",
@@ -9371,7 +9371,7 @@
     "children": [
       {
         "label": "杭州市",
-        "value": "Hangzhou City",
+        "value": "Zhejiang Province-Hangzhou City",
         "children": [
           {
             "label": "临平",
@@ -9387,7 +9387,7 @@
     "children": [
       {
         "label": "合肥市",
-        "value": "Hefei",
+        "value": "Anhui-Hefei",
         "children": [
           {
             "label": "合肥",
@@ -9433,7 +9433,7 @@
       },
       {
         "label": "蚌埠市",
-        "value": "Bengbu",
+        "value": "Anhui-Bengbu",
         "children": [
           {
             "label": "蚌埠",
@@ -9455,7 +9455,7 @@
       },
       {
         "label": "蚌埠市",
-        "value": "Bangbu",
+        "value": "Anhui-Bangbu",
         "children": [
           {
             "label": "龙子湖",
@@ -9477,7 +9477,7 @@
       },
       {
         "label": "芜湖市",
-        "value": "Wuhu",
+        "value": "Anhui-Wuhu",
         "children": [
           {
             "label": "芜湖",
@@ -9515,7 +9515,7 @@
       },
       {
         "label": "淮南市",
-        "value": "Huainan",
+        "value": "Anhui-Huainan",
         "children": [
           {
             "label": "淮南",
@@ -9553,7 +9553,7 @@
       },
       {
         "label": "马鞍山市",
-        "value": "Ma'anshan",
+        "value": "Anhui-Ma'anshan",
         "children": [
           {
             "label": "马鞍山",
@@ -9563,7 +9563,7 @@
       },
       {
         "label": "马鞍山市",
-        "value": "Maanshan",
+        "value": "Anhui-Maanshan",
         "children": [
           {
             "label": "当涂",
@@ -9593,7 +9593,7 @@
       },
       {
         "label": "安庆市",
-        "value": "Anqing",
+        "value": "Anhui-Anqing",
         "children": [
           {
             "label": "安庆",
@@ -9643,7 +9643,7 @@
       },
       {
         "label": "宿州市",
-        "value": "Suzhou",
+        "value": "Anhui-Suzhou",
         "children": [
           {
             "label": "宿州",
@@ -9673,7 +9673,7 @@
       },
       {
         "label": "阜阳市",
-        "value": "Fuyang",
+        "value": "Anhui-Fuyang",
         "children": [
           {
             "label": "阜阳",
@@ -9715,7 +9715,7 @@
       },
       {
         "label": "亳州市",
-        "value": "Bozhou",
+        "value": "Anhui-Bozhou",
         "children": [
           {
             "label": "亳州",
@@ -9741,7 +9741,7 @@
       },
       {
         "label": "黄山市",
-        "value": "Huangshan",
+        "value": "Anhui-Huangshan",
         "children": [
           {
             "label": "黄山",
@@ -9779,7 +9779,7 @@
       },
       {
         "label": "滁州市",
-        "value": "Chuzhou",
+        "value": "Anhui-Chuzhou",
         "children": [
           {
             "label": "滁州",
@@ -9821,7 +9821,7 @@
       },
       {
         "label": "淮北市",
-        "value": "Huaibei",
+        "value": "Anhui-Huaibei",
         "children": [
           {
             "label": "淮北",
@@ -9847,7 +9847,7 @@
       },
       {
         "label": "铜陵市",
-        "value": "Tongling",
+        "value": "Anhui-Tongling",
         "children": [
           {
             "label": "铜陵",
@@ -9873,7 +9873,7 @@
       },
       {
         "label": "宣城市",
-        "value": "Xuancheng",
+        "value": "Anhui-Xuancheng",
         "children": [
           {
             "label": "宣城",
@@ -9911,7 +9911,7 @@
       },
       {
         "label": "六安市",
-        "value": "Lu'an",
+        "value": "Anhui-Lu'an",
         "children": [
           {
             "label": "六安",
@@ -9921,7 +9921,7 @@
       },
       {
         "label": "六安市",
-        "value": "Liuan",
+        "value": "Anhui-Liuan",
         "children": [
           {
             "label": "霍邱",
@@ -9955,7 +9955,7 @@
       },
       {
         "label": "池州市",
-        "value": "Chizhou",
+        "value": "Anhui-Chizhou",
         "children": [
           {
             "label": "池州",
@@ -9987,7 +9987,7 @@
     "children": [
       {
         "label": "福州市",
-        "value": "Fuzhou",
+        "value": "Fujian-Fuzhou",
         "children": [
           {
             "label": "福州",
@@ -10049,7 +10049,7 @@
       },
       {
         "label": "厦门市",
-        "value": "Xiamen",
+        "value": "Fujian-Xiamen",
         "children": [
           {
             "label": "厦门",
@@ -10083,7 +10083,7 @@
       },
       {
         "label": "宁德市",
-        "value": "Ningde",
+        "value": "Fujian-Ningde",
         "children": [
           {
             "label": "宁德",
@@ -10129,7 +10129,7 @@
       },
       {
         "label": "莆田市",
-        "value": "Putian",
+        "value": "Fujian-Putian",
         "children": [
           {
             "label": "莆田",
@@ -10159,7 +10159,7 @@
       },
       {
         "label": "泉州市",
-        "value": "Quanzhou",
+        "value": "Fujian-Quanzhou",
         "children": [
           {
             "label": "泉州",
@@ -10217,7 +10217,7 @@
       },
       {
         "label": "漳州市",
-        "value": "Zhangzhou",
+        "value": "Fujian-Zhangzhou",
         "children": [
           {
             "label": "漳州",
@@ -10271,7 +10271,7 @@
       },
       {
         "label": "龙岩市",
-        "value": "Longyan",
+        "value": "Fujian-Longyan",
         "children": [
           {
             "label": "龙岩",
@@ -10309,7 +10309,7 @@
       },
       {
         "label": "三明市",
-        "value": "Sanming",
+        "value": "Fujian-Sanming",
         "children": [
           {
             "label": "三明",
@@ -10367,7 +10367,7 @@
       },
       {
         "label": "南平市",
-        "value": "Nanping",
+        "value": "Fujian-Nanping",
         "children": [
           {
             "label": "南平",
@@ -10417,7 +10417,7 @@
       },
       {
         "label": "钓鱼岛",
-        "value": "Diaoyudao",
+        "value": "Fujian-Diaoyudao",
         "children": [
           {
             "label": "钓鱼岛",
@@ -10433,7 +10433,7 @@
     "children": [
       {
         "label": "南昌市",
-        "value": "Nanchang",
+        "value": "Jiangxi-Nanchang",
         "children": [
           {
             "label": "南昌",
@@ -10479,7 +10479,7 @@
       },
       {
         "label": "九江市",
-        "value": "Jiujiang",
+        "value": "Jiangxi-Jiujiang",
         "children": [
           {
             "label": "九江",
@@ -10541,7 +10541,7 @@
       },
       {
         "label": "上饶市",
-        "value": "Shangrao",
+        "value": "Jiangxi-Shangrao",
         "children": [
           {
             "label": "上饶",
@@ -10599,7 +10599,7 @@
       },
       {
         "label": "抚州市",
-        "value": "Fuzhou",
+        "value": "Jiangxi-Fuzhou",
         "children": [
           {
             "label": "抚州",
@@ -10653,7 +10653,7 @@
       },
       {
         "label": "宜春市",
-        "value": "Yichun",
+        "value": "Jiangxi-Yichun",
         "children": [
           {
             "label": "宜春",
@@ -10703,7 +10703,7 @@
       },
       {
         "label": "吉安市",
-        "value": "Ji'an",
+        "value": "Jiangxi-Ji'an",
         "children": [
           {
             "label": "吉安",
@@ -10765,7 +10765,7 @@
       },
       {
         "label": "赣州市",
-        "value": "Ganzhou",
+        "value": "Jiangxi-Ganzhou",
         "children": [
           {
             "label": "赣州",
@@ -10847,7 +10847,7 @@
       },
       {
         "label": "景德镇市",
-        "value": "Jingdezhen",
+        "value": "Jiangxi-Jingdezhen",
         "children": [
           {
             "label": "景德镇",
@@ -10873,7 +10873,7 @@
       },
       {
         "label": "萍乡市",
-        "value": "Pingxiang",
+        "value": "Jiangxi-Pingxiang",
         "children": [
           {
             "label": "萍乡",
@@ -10903,7 +10903,7 @@
       },
       {
         "label": "新余市",
-        "value": "Xinyu",
+        "value": "Jiangxi-Xinyu",
         "children": [
           {
             "label": "新余",
@@ -10921,7 +10921,7 @@
       },
       {
         "label": "鹰潭市",
-        "value": "Yingtan",
+        "value": "Jiangxi-Yingtan",
         "children": [
           {
             "label": "鹰潭",
@@ -10949,7 +10949,7 @@
     "children": [
       {
         "label": "长沙市",
-        "value": "Changsha",
+        "value": "Hunan-Changsha",
         "children": [
           {
             "label": "长沙",
@@ -10995,7 +10995,7 @@
       },
       {
         "label": "湘潭市",
-        "value": "Xiangtan",
+        "value": "Hunan-Xiangtan",
         "children": [
           {
             "label": "湘潭",
@@ -11025,7 +11025,7 @@
       },
       {
         "label": "株洲市",
-        "value": "Zhuzhou",
+        "value": "Hunan-Zhuzhou",
         "children": [
           {
             "label": "株洲",
@@ -11067,7 +11067,7 @@
       },
       {
         "label": "株洲市",
-        "value": "Zhuzhou City",
+        "value": "Hunan-Zhuzhou City",
         "children": [
           {
             "label": "渌口",
@@ -11077,7 +11077,7 @@
       },
       {
         "label": "衡阳市",
-        "value": "Hengyang",
+        "value": "Hunan-Hengyang",
         "children": [
           {
             "label": "衡阳",
@@ -11135,7 +11135,7 @@
       },
       {
         "label": "郴州市",
-        "value": "Chenzhou",
+        "value": "Hunan-Chenzhou",
         "children": [
           {
             "label": "郴州",
@@ -11189,7 +11189,7 @@
       },
       {
         "label": "常德市",
-        "value": "Changde",
+        "value": "Hunan-Changde",
         "children": [
           {
             "label": "常德",
@@ -11235,7 +11235,7 @@
       },
       {
         "label": "益阳市",
-        "value": "Yiyang",
+        "value": "Hunan-Yiyang",
         "children": [
           {
             "label": "益阳",
@@ -11269,7 +11269,7 @@
       },
       {
         "label": "娄底市",
-        "value": "Loudi",
+        "value": "Hunan-Loudi",
         "children": [
           {
             "label": "娄底",
@@ -11299,7 +11299,7 @@
       },
       {
         "label": "邵阳市",
-        "value": "Shaoyang",
+        "value": "Hunan-Shaoyang",
         "children": [
           {
             "label": "邵阳",
@@ -11357,7 +11357,7 @@
       },
       {
         "label": "岳阳市",
-        "value": "Yueyang",
+        "value": "Hunan-Yueyang",
         "children": [
           {
             "label": "岳阳",
@@ -11403,7 +11403,7 @@
       },
       {
         "label": "张家界市",
-        "value": "Zhangjiajie",
+        "value": "Hunan-Zhangjiajie",
         "children": [
           {
             "label": "张家界",
@@ -11429,7 +11429,7 @@
       },
       {
         "label": "怀化市",
-        "value": "Huaihua",
+        "value": "Hunan-Huaihua",
         "children": [
           {
             "label": "怀化",
@@ -11487,7 +11487,7 @@
       },
       {
         "label": "永州市",
-        "value": "Yongzhou",
+        "value": "Hunan-Yongzhou",
         "children": [
           {
             "label": "永州",
@@ -11541,7 +11541,7 @@
       },
       {
         "label": "湘西土家族苗族自治州",
-        "value": "Xiangxi Tujia and Miao Autonomous Prefecture",
+        "value": "Hunan-Xiangxi Tujia and Miao Autonomous Prefecture",
         "children": [
           {
             "label": "吉首",
@@ -11589,7 +11589,7 @@
     "children": [
       {
         "label": "贵阳市",
-        "value": "Guiyang",
+        "value": "Guizhou-Guiyang",
         "children": [
           {
             "label": "贵阳",
@@ -11639,7 +11639,7 @@
       },
       {
         "label": "遵义市",
-        "value": "Zunyi",
+        "value": "Guizhou-Zunyi",
         "children": [
           {
             "label": "遵义",
@@ -11705,7 +11705,7 @@
       },
       {
         "label": "安顺市",
-        "value": "Anshun",
+        "value": "Guizhou-Anshun",
         "children": [
           {
             "label": "安顺",
@@ -11739,7 +11739,7 @@
       },
       {
         "label": "黔南布依族苗族自治州",
-        "value": "Qiannan Buyi and Miao Autonomous Prefecture",
+        "value": "Guizhou-Qiannan Buyi and Miao Autonomous Prefecture",
         "children": [
           {
             "label": "都匀",
@@ -11797,7 +11797,7 @@
       },
       {
         "label": "黔东南苗族侗族自治州",
-        "value": "Qiandongnan Miao and Dong Autonomous Prefecture",
+        "value": "Guizhou-Qiandongnan Miao and Dong Autonomous Prefecture",
         "children": [
           {
             "label": "凯里",
@@ -11871,7 +11871,7 @@
       },
       {
         "label": "铜仁市",
-        "value": "Tongren",
+        "value": "Guizhou-Tongren",
         "children": [
           {
             "label": "铜仁",
@@ -11921,7 +11921,7 @@
       },
       {
         "label": "毕节市",
-        "value": "Bijie",
+        "value": "Guizhou-Bijie",
         "children": [
           {
             "label": "毕节",
@@ -11963,7 +11963,7 @@
       },
       {
         "label": "六盘水市",
-        "value": "Liupanshui",
+        "value": "Guizhou-Liupanshui",
         "children": [
           {
             "label": "水城",
@@ -11989,7 +11989,7 @@
       },
       {
         "label": "黔西南布依族苗族自治州",
-        "value": "Qianxinan Buyei and Miao Autonomous Prefecture",
+        "value": "Guizhou-Qianxinan Buyei and Miao Autonomous Prefecture",
         "children": [
           {
             "label": "兴义",
@@ -12037,7 +12037,7 @@
     "children": [
       {
         "label": "成都市",
-        "value": "Chengdu",
+        "value": "Sichuan-Chengdu",
         "children": [
           {
             "label": "成都",
@@ -12107,7 +12107,7 @@
       },
       {
         "label": "成都市",
-        "value": "Chengdou",
+        "value": "Sichuan-Chengdou",
         "children": [
           {
             "label": "锦江",
@@ -12133,7 +12133,7 @@
       },
       {
         "label": "攀枝花市",
-        "value": "Panzhihua",
+        "value": "Sichuan-Panzhihua",
         "children": [
           {
             "label": "攀枝花",
@@ -12163,7 +12163,7 @@
       },
       {
         "label": "自贡市",
-        "value": "Zigong",
+        "value": "Sichuan-Zigong",
         "children": [
           {
             "label": "自贡",
@@ -12197,7 +12197,7 @@
       },
       {
         "label": "绵阳市",
-        "value": "Mianyang",
+        "value": "Sichuan-Mianyang",
         "children": [
           {
             "label": "绵阳",
@@ -12243,7 +12243,7 @@
       },
       {
         "label": "南充市",
-        "value": "Nanchong",
+        "value": "Sichuan-Nanchong",
         "children": [
           {
             "label": "南充",
@@ -12289,7 +12289,7 @@
       },
       {
         "label": "达州市",
-        "value": "Dazhou",
+        "value": "Sichuan-Dazhou",
         "children": [
           {
             "label": "达州",
@@ -12327,7 +12327,7 @@
       },
       {
         "label": "遂宁市",
-        "value": "Suining",
+        "value": "Sichuan-Suining",
         "children": [
           {
             "label": "遂宁",
@@ -12357,7 +12357,7 @@
       },
       {
         "label": "广安市",
-        "value": "Guang'an",
+        "value": "Sichuan-Guang'an",
         "children": [
           {
             "label": "广安",
@@ -12391,7 +12391,7 @@
       },
       {
         "label": "巴中市",
-        "value": "Bazhong",
+        "value": "Sichuan-Bazhong",
         "children": [
           {
             "label": "巴中",
@@ -12421,7 +12421,7 @@
       },
       {
         "label": "泸州市",
-        "value": "Luzhou",
+        "value": "Sichuan-Luzhou",
         "children": [
           {
             "label": "泸州",
@@ -12459,7 +12459,7 @@
       },
       {
         "label": "宜宾市",
-        "value": "Yibin",
+        "value": "Sichuan-Yibin",
         "children": [
           {
             "label": "宜宾",
@@ -12509,7 +12509,7 @@
       },
       {
         "label": "内江市",
-        "value": "Neijiang",
+        "value": "Sichuan-Neijiang",
         "children": [
           {
             "label": "内江",
@@ -12535,7 +12535,7 @@
       },
       {
         "label": "内江市",
-        "value": "Najiang",
+        "value": "Sichuan-Najiang",
         "children": [
           {
             "label": "市中",
@@ -12545,7 +12545,7 @@
       },
       {
         "label": "资阳市",
-        "value": "Ziyang",
+        "value": "Sichuan-Ziyang",
         "children": [
           {
             "label": "资阳",
@@ -12567,7 +12567,7 @@
       },
       {
         "label": "乐山市",
-        "value": "Leshan",
+        "value": "Sichuan-Leshan",
         "children": [
           {
             "label": "乐山",
@@ -12621,7 +12621,7 @@
       },
       {
         "label": "眉山市",
-        "value": "Meishan",
+        "value": "Sichuan-Meishan",
         "children": [
           {
             "label": "眉山",
@@ -12655,7 +12655,7 @@
       },
       {
         "label": "凉山彝族自治州",
-        "value": "Liangshan Yi Autonomous Prefecture",
+        "value": "Sichuan-Liangshan Yi Autonomous Prefecture",
         "children": [
           {
             "label": "凉山",
@@ -12733,7 +12733,7 @@
       },
       {
         "label": "雅安市",
-        "value": "Ya'an",
+        "value": "Sichuan-Ya'an",
         "children": [
           {
             "label": "雅安",
@@ -12775,7 +12775,7 @@
       },
       {
         "label": "甘孜藏族自治州",
-        "value": "Garze Tibetan Autonomous Prefecture",
+        "value": "Sichuan-Garze Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "甘孜",
@@ -12857,7 +12857,7 @@
       },
       {
         "label": "阿坝藏族羌族自治州",
-        "value": "Aba Tibetan and Qiang Autonomous Prefecture",
+        "value": "Sichuan-Aba Tibetan and Qiang Autonomous Prefecture",
         "children": [
           {
             "label": "阿坝",
@@ -12919,7 +12919,7 @@
       },
       {
         "label": "德阳市",
-        "value": "Deyang",
+        "value": "Sichuan-Deyang",
         "children": [
           {
             "label": "德阳",
@@ -12953,7 +12953,7 @@
       },
       {
         "label": "广元市",
-        "value": "Guangyuan",
+        "value": "Sichuan-Guangyuan",
         "children": [
           {
             "label": "广元",
@@ -12997,7 +12997,7 @@
     "children": [
       {
         "label": "广州市",
-        "value": "Guangzhou",
+        "value": "Guangdong-Guangzhou",
         "children": [
           {
             "label": "广州",
@@ -13051,7 +13051,7 @@
       },
       {
         "label": "韶关市",
-        "value": "Shaoguan",
+        "value": "Guangdong-Shaoguan",
         "children": [
           {
             "label": "韶关",
@@ -13101,7 +13101,7 @@
       },
       {
         "label": "惠州市",
-        "value": "Huizhou",
+        "value": "Guangdong-Huizhou",
         "children": [
           {
             "label": "惠州",
@@ -13131,7 +13131,7 @@
       },
       {
         "label": "梅州市",
-        "value": "Meizhou",
+        "value": "Guangdong-Meizhou",
         "children": [
           {
             "label": "梅州",
@@ -13173,7 +13173,7 @@
       },
       {
         "label": "汕头市",
-        "value": "Shantou",
+        "value": "Guangdong-Shantou",
         "children": [
           {
             "label": "汕头",
@@ -13211,7 +13211,7 @@
       },
       {
         "label": "深圳市",
-        "value": "Shenzhen",
+        "value": "Guangdong-Shenzhen",
         "children": [
           {
             "label": "深圳",
@@ -13253,7 +13253,7 @@
       },
       {
         "label": "深圳市",
-        "value": "Shenzhen City",
+        "value": "Guangdong-Shenzhen City",
         "children": [
           {
             "label": "光明",
@@ -13263,7 +13263,7 @@
       },
       {
         "label": "珠海市",
-        "value": "Zhuhai",
+        "value": "Guangdong-Zhuhai",
         "children": [
           {
             "label": "珠海",
@@ -13285,7 +13285,7 @@
       },
       {
         "label": "佛山市",
-        "value": "Foshan",
+        "value": "Guangdong-Foshan",
         "children": [
           {
             "label": "佛山",
@@ -13315,7 +13315,7 @@
       },
       {
         "label": "肇庆市",
-        "value": "Zhaoqing",
+        "value": "Guangdong-Zhaoqing",
         "children": [
           {
             "label": "肇庆",
@@ -13357,7 +13357,7 @@
       },
       {
         "label": "湛江市",
-        "value": "Zhanjiang",
+        "value": "Guangdong-Zhanjiang",
         "children": [
           {
             "label": "湛江",
@@ -13403,7 +13403,7 @@
       },
       {
         "label": "江门市",
-        "value": "Jiangmen",
+        "value": "Guangdong-Jiangmen",
         "children": [
           {
             "label": "江门",
@@ -13441,7 +13441,7 @@
       },
       {
         "label": "河源市",
-        "value": "Heyuan",
+        "value": "Guangdong-Heyuan",
         "children": [
           {
             "label": "河源",
@@ -13475,7 +13475,7 @@
       },
       {
         "label": "清远市",
-        "value": "Qingyuan",
+        "value": "Guangdong-Qingyuan",
         "children": [
           {
             "label": "清远",
@@ -13517,7 +13517,7 @@
       },
       {
         "label": "云浮市",
-        "value": "Yunfu",
+        "value": "Guangdong-Yunfu",
         "children": [
           {
             "label": "云浮",
@@ -13547,7 +13547,7 @@
       },
       {
         "label": "潮州市",
-        "value": "Chaozhou",
+        "value": "Guangdong-Chaozhou",
         "children": [
           {
             "label": "潮州",
@@ -13569,7 +13569,7 @@
       },
       {
         "label": "东莞市",
-        "value": "Dongguan",
+        "value": "Guangdong-Dongguan",
         "children": [
           {
             "label": "东莞",
@@ -13579,7 +13579,7 @@
       },
       {
         "label": "中山市",
-        "value": "Zhongshan",
+        "value": "Guangdong-Zhongshan",
         "children": [
           {
             "label": "中山",
@@ -13589,7 +13589,7 @@
       },
       {
         "label": "阳江市",
-        "value": "Yangjiang",
+        "value": "Guangdong-Yangjiang",
         "children": [
           {
             "label": "阳江",
@@ -13615,7 +13615,7 @@
       },
       {
         "label": "揭阳市",
-        "value": "Jieyang",
+        "value": "Guangdong-Jieyang",
         "children": [
           {
             "label": "揭阳",
@@ -13645,7 +13645,7 @@
       },
       {
         "label": "茂名市",
-        "value": "Maoming",
+        "value": "Guangdong-Maoming",
         "children": [
           {
             "label": "茂名",
@@ -13675,7 +13675,7 @@
       },
       {
         "label": "汕尾市",
-        "value": "Shanwei",
+        "value": "Guangdong-Shanwei",
         "children": [
           {
             "label": "汕尾",
@@ -13707,7 +13707,7 @@
     "children": [
       {
         "label": "昆明市",
-        "value": "Kunming",
+        "value": "Yunnan-Kunming",
         "children": [
           {
             "label": "昆明",
@@ -13773,7 +13773,7 @@
       },
       {
         "label": "大理白族自治州",
-        "value": "Dali Bai Autonomous Prefecture",
+        "value": "Yunnan-Dali Bai Autonomous Prefecture",
         "children": [
           {
             "label": "大理",
@@ -13831,7 +13831,7 @@
       },
       {
         "label": "红河哈尼族彝族自治州",
-        "value": "Honghe Hani and Yi Autonomous Prefecture",
+        "value": "Yunnan-Honghe Hani and Yi Autonomous Prefecture",
         "children": [
           {
             "label": "红河",
@@ -13893,7 +13893,7 @@
       },
       {
         "label": "曲靖市",
-        "value": "Qujing",
+        "value": "Yunnan-Qujing",
         "children": [
           {
             "label": "曲靖",
@@ -13939,7 +13939,7 @@
       },
       {
         "label": "保山市",
-        "value": "Baoshan",
+        "value": "Yunnan-Baoshan",
         "children": [
           {
             "label": "保山",
@@ -13969,7 +13969,7 @@
       },
       {
         "label": "文山壮族苗族自治州",
-        "value": "Wenshan Zhuang and Miao Autonomous Prefecture",
+        "value": "Yunnan-Wenshan Zhuang and Miao Autonomous Prefecture",
         "children": [
           {
             "label": "文山",
@@ -14011,7 +14011,7 @@
       },
       {
         "label": "玉溪市",
-        "value": "Yuxi",
+        "value": "Yunnan-Yuxi",
         "children": [
           {
             "label": "玉溪",
@@ -14057,7 +14057,7 @@
       },
       {
         "label": "楚雄彝族自治州",
-        "value": "Chuxiong Yi Autonomous Prefecture",
+        "value": "Yunnan-Chuxiong Yi Autonomous Prefecture",
         "children": [
           {
             "label": "楚雄",
@@ -14107,7 +14107,7 @@
       },
       {
         "label": "普洱市",
-        "value": "Pu'er City",
+        "value": "Yunnan-Pu'er City",
         "children": [
           {
             "label": "普洱",
@@ -14157,7 +14157,7 @@
       },
       {
         "label": "昭通市",
-        "value": "Zhaotong",
+        "value": "Yunnan-Zhaotong",
         "children": [
           {
             "label": "昭通",
@@ -14211,7 +14211,7 @@
       },
       {
         "label": "临沧市",
-        "value": "Lincang",
+        "value": "Yunnan-Lincang",
         "children": [
           {
             "label": "临沧",
@@ -14253,7 +14253,7 @@
       },
       {
         "label": "怒江傈僳族自治州",
-        "value": "Nujiang Lisu Autonomous Prefecture",
+        "value": "Yunnan-Nujiang Lisu Autonomous Prefecture",
         "children": [
           {
             "label": "怒江",
@@ -14279,7 +14279,7 @@
       },
       {
         "label": "迪庆藏族自治州",
-        "value": "Diqing Tibetan Autonomous Prefecture",
+        "value": "Yunnan-Diqing Tibetan Autonomous Prefecture",
         "children": [
           {
             "label": "香格里拉",
@@ -14301,7 +14301,7 @@
       },
       {
         "label": "丽江市",
-        "value": "Lijiang",
+        "value": "Yunnan-Lijiang",
         "children": [
           {
             "label": "丽江",
@@ -14331,7 +14331,7 @@
       },
       {
         "label": "德宏傣族景颇族自治州",
-        "value": "Dehong Dai and Jingpo Autonomous Prefecture",
+        "value": "Yunnan-Dehong Dai and Jingpo Autonomous Prefecture",
         "children": [
           {
             "label": "德宏",
@@ -14361,7 +14361,7 @@
       },
       {
         "label": "西双版纳傣族自治州",
-        "value": "Xishuangbanna Dai Autonomous Prefecture",
+        "value": "Yunnan-Xishuangbanna Dai Autonomous Prefecture",
         "children": [
           {
             "label": "景洪",
@@ -14389,7 +14389,7 @@
     "children": [
       {
         "label": "南宁市",
-        "value": "Nanning",
+        "value": "Guangxi Zhuang Autonomous Region-Nanning",
         "children": [
           {
             "label": "南宁",
@@ -14447,7 +14447,7 @@
       },
       {
         "label": "崇左市",
-        "value": "Chongzuo",
+        "value": "Guangxi Zhuang Autonomous Region-Chongzuo",
         "children": [
           {
             "label": "崇左",
@@ -14485,7 +14485,7 @@
       },
       {
         "label": "柳州市",
-        "value": "Liuzhou",
+        "value": "Guangxi Zhuang Autonomous Region-Liuzhou",
         "children": [
           {
             "label": "柳州",
@@ -14535,7 +14535,7 @@
       },
       {
         "label": "来宾市",
-        "value": "Laibin",
+        "value": "Guangxi Zhuang Autonomous Region-Laibin",
         "children": [
           {
             "label": "来宾",
@@ -14569,7 +14569,7 @@
       },
       {
         "label": "桂林市",
-        "value": "Guilin",
+        "value": "Guangxi Zhuang Autonomous Region-Guilin",
         "children": [
           {
             "label": "桂林",
@@ -14647,7 +14647,7 @@
       },
       {
         "label": "梧州市",
-        "value": "Wuzhou",
+        "value": "Guangxi Zhuang Autonomous Region-Wuzhou",
         "children": [
           {
             "label": "梧州",
@@ -14685,7 +14685,7 @@
       },
       {
         "label": "贺州市",
-        "value": "Hezhou",
+        "value": "Guangxi Zhuang Autonomous Region-Hezhou",
         "children": [
           {
             "label": "贺州",
@@ -14715,7 +14715,7 @@
       },
       {
         "label": "贵港市",
-        "value": "Guigang",
+        "value": "Guangxi Zhuang Autonomous Region-Guigang",
         "children": [
           {
             "label": "贵港",
@@ -14745,7 +14745,7 @@
       },
       {
         "label": "玉林市",
-        "value": "Yulin",
+        "value": "Guangxi Zhuang Autonomous Region-Yulin",
         "children": [
           {
             "label": "玉林",
@@ -14783,7 +14783,7 @@
       },
       {
         "label": "百色市",
-        "value": "Baise",
+        "value": "Guangxi Zhuang Autonomous Region-Baise",
         "children": [
           {
             "label": "百色",
@@ -14841,7 +14841,7 @@
       },
       {
         "label": "钦州市",
-        "value": "Qinzhou",
+        "value": "Guangxi Zhuang Autonomous Region-Qinzhou",
         "children": [
           {
             "label": "钦州",
@@ -14867,7 +14867,7 @@
       },
       {
         "label": "河池市",
-        "value": "Hechi",
+        "value": "Guangxi Zhuang Autonomous Region-Hechi",
         "children": [
           {
             "label": "河池",
@@ -14921,7 +14921,7 @@
       },
       {
         "label": "北海市",
-        "value": "Beihai",
+        "value": "Guangxi Zhuang Autonomous Region-Beihai",
         "children": [
           {
             "label": "北海",
@@ -14947,7 +14947,7 @@
       },
       {
         "label": "防城港市",
-        "value": "Fangchenggang",
+        "value": "Guangxi Zhuang Autonomous Region-Fangchenggang",
         "children": [
           {
             "label": "防城港",
@@ -14979,7 +14979,7 @@
     "children": [
       {
         "label": "海口市",
-        "value": "Haikou",
+        "value": "Hainan-Haikou",
         "children": [
           {
             "label": "海口",
@@ -15005,7 +15005,7 @@
       },
       {
         "label": "三亚市",
-        "value": "Sanya",
+        "value": "Hainan-Sanya",
         "children": [
           {
             "label": "三亚",
@@ -15031,7 +15031,7 @@
       },
       {
         "label": "东方市",
-        "value": "Dongfang",
+        "value": "Hainan-Dongfang",
         "children": [
           {
             "label": "东方",
@@ -15041,7 +15041,7 @@
       },
       {
         "label": "临高县",
-        "value": "Lingao",
+        "value": "Hainan-Lingao",
         "children": [
           {
             "label": "临高",
@@ -15051,7 +15051,7 @@
       },
       {
         "label": "澄迈县",
-        "value": "Chengmai",
+        "value": "Hainan-Chengmai",
         "children": [
           {
             "label": "澄迈",
@@ -15061,7 +15061,7 @@
       },
       {
         "label": "儋州市",
-        "value": "Zhanzhou",
+        "value": "Hainan-Zhanzhou",
         "children": [
           {
             "label": "儋州",
@@ -15071,7 +15071,7 @@
       },
       {
         "label": "昌江黎族自治县",
-        "value": "Changjiang Li Autonomous County",
+        "value": "Hainan-Changjiang Li Autonomous County",
         "children": [
           {
             "label": "昌江",
@@ -15081,7 +15081,7 @@
       },
       {
         "label": "白沙黎族自治县",
-        "value": "Baisha Li Autonomous County",
+        "value": "Hainan-Baisha Li Autonomous County",
         "children": [
           {
             "label": "白沙",
@@ -15091,7 +15091,7 @@
       },
       {
         "label": "琼中黎族苗族自治县",
-        "value": "Qiongzhong Li and Miao Autonomous County",
+        "value": "Hainan-Qiongzhong Li and Miao Autonomous County",
         "children": [
           {
             "label": "琼中",
@@ -15101,7 +15101,7 @@
       },
       {
         "label": "定安县",
-        "value": "Dingan",
+        "value": "Hainan-Dingan",
         "children": [
           {
             "label": "定安",
@@ -15111,7 +15111,7 @@
       },
       {
         "label": "屯昌县",
-        "value": "Tunchang",
+        "value": "Hainan-Tunchang",
         "children": [
           {
             "label": "屯昌",
@@ -15121,7 +15121,7 @@
       },
       {
         "label": "琼海市",
-        "value": "Qionghai",
+        "value": "Hainan-Qionghai",
         "children": [
           {
             "label": "琼海",
@@ -15131,7 +15131,7 @@
       },
       {
         "label": "文昌市",
-        "value": "Wenchang",
+        "value": "Hainan-Wenchang",
         "children": [
           {
             "label": "文昌",
@@ -15141,7 +15141,7 @@
       },
       {
         "label": "保亭黎族苗族自治县",
-        "value": "Baoting Li and Miao Autonomous County",
+        "value": "Hainan-Baoting Li and Miao Autonomous County",
         "children": [
           {
             "label": "保亭",
@@ -15151,7 +15151,7 @@
       },
       {
         "label": "万宁市",
-        "value": "Wanning",
+        "value": "Hainan-Wanning",
         "children": [
           {
             "label": "万宁",
@@ -15161,7 +15161,7 @@
       },
       {
         "label": "陵水黎族自治县",
-        "value": "Lingshui Li Autonomous County",
+        "value": "Hainan-Lingshui Li Autonomous County",
         "children": [
           {
             "label": "陵水",
@@ -15171,7 +15171,7 @@
       },
       {
         "label": "乐东黎族自治县",
-        "value": "Ledong",
+        "value": "Hainan-Ledong",
         "children": [
           {
             "label": "乐东",
@@ -15181,7 +15181,7 @@
       },
       {
         "label": "五指山市",
-        "value": "Wuzhishan",
+        "value": "Hainan-Wuzhishan",
         "children": [
           {
             "label": "五指山",
@@ -15191,7 +15191,7 @@
       },
       {
         "label": "三沙市",
-        "value": "Sansha",
+        "value": "Hainan-Sansha",
         "children": [
           {
             "label": "三沙",
@@ -15215,7 +15215,7 @@
     "children": [
       {
         "label": "香港特别行政区",
-        "value": "Hongkong",
+        "value": "Hong Kong SAR-Hongkong",
         "children": [
           {
             "label": "香港",
@@ -15239,7 +15239,7 @@
     "children": [
       {
         "label": "澳门特别行政区",
-        "value": "Macao",
+        "value": "Macao SAR-Macao",
         "children": [
           {
             "label": "澳门",
@@ -15263,7 +15263,7 @@
     "children": [
       {
         "label": "台北市",
-        "value": "Taipei",
+        "value": "Taiwan-Taipei",
         "children": [
           {
             "label": "台北",
@@ -15285,7 +15285,7 @@
       },
       {
         "label": "高雄市",
-        "value": "Kaohsiung",
+        "value": "Taiwan-Kaohsiung",
         "children": [
           {
             "label": "高雄",
@@ -15295,7 +15295,7 @@
       },
       {
         "label": "嘉义市",
-        "value": "Gaoxiong",
+        "value": "Taiwan-Gaoxiong",
         "children": [
           {
             "label": "嘉义",
@@ -15317,7 +15317,7 @@
       },
       {
         "label": "台中市",
-        "value": "Taizhong",
+        "value": "Taiwan-Taizhong",
         "children": [
           {
             "label": "台中",
