@@ -43,3 +43,4 @@ weather:
     pcpn: 降水
     hum: 湿度
     pres: 气压
+    aqi: 空气质量

@@ -45,7 +45,7 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
     <!-- 第一行，左边显示温度和天气状态，右边显示原版第二行的参数 -->
     <div style="display: flex" v-if="dataH5">
       <Realtime :now="dataH5.now" v-if="settings.weatherComponents.includes('realtime')"/>
-      <Props :now="dataH5.now" v-if="settings.weatherComponents.includes('props')"/>
+      <Props :now="dataH5.now" :air="dataH5.air_now_city" v-if="settings.weatherComponents.includes('props')"/>
     </div>
     <!-- 第二行 降水提示，没有就不会显示 -->
     <RainWarning :text="dataH5.rain.txt" v-if="dataH5"/>

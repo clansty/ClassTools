@@ -1,9 +1,10 @@
 <script setup lang="ts">
-import { QWeatherH5Now } from '../../types/QWeather';
+import { QWeatherH5Air, QWeatherH5Now } from '../../types/QWeather';
 import locale from '../../language/zh_CN.yaml';
 
 const props = defineProps<{
   now: QWeatherH5Now
+  air: QWeatherH5Air
 }>();
 </script>
 
@@ -22,8 +23,8 @@ const props = defineProps<{
       <div>{{ props.now.wind_sc }}级</div>
     </n-gi>
     <n-gi class="item">
-      <div class="secondary">{{ locale.weather.props.pres }}</div>
-      <div>{{ props.now.pres }}hpa</div>
+      <div class="secondary">{{ locale.weather.props.aqi }}</div>
+      <div>{{ props.air.aqi }} {{ props.air.qlty }}</div>
     </n-gi>
   </n-grid>
 </template>
