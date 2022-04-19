@@ -8,7 +8,7 @@
     "dev": "node scripts/watch.mjs",
     "prebuild": "node scripts/build.mjs",
     "build": "yarn prebuild && electron-builder",
-    "debug": "npm run prebuild && vite ./src/renderer"
+    "debug": "vite ./src/renderer"
   },
   "engines": {
     "node": ">=14.17.0"

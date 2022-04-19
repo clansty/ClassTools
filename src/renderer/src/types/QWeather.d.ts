@@ -33,7 +33,7 @@ export interface QWeatherH5 {
   status: string;
   air_now_city: Air_now_city;
   now: QWeatherH5Now;
-  daily_forecast: Daily_forecast[];
+  daily_forecast: DailyForecast[];
   lifestyle: Lifestyle[];
   yesterday: Yesterday;
   rain: Rain;
@@ -78,7 +78,7 @@ interface Planet {
   set: string;
 }
 
-interface Daily_forecast {
+interface DailyForecast {
   cond_code_d: string;
   cond_code_n: string;
   cond_txt_d: string;
@@ -97,4 +97,42 @@ interface Daily_forecast {
 interface Lifestyle {
   type: string;
   brf: string;
+}
+
+export interface Daily {
+  fxDate: string;
+  sunrise: string;
+  sunset: string;
+  moonrise: string;
+  moonset: string;
+  moonPhase: string;
+  moonPhaseIcon: string;
+  tempMax: string;
+  tempMin: string;
+  iconDay: string;
+  textDay: string;
+  iconNight: string;
+  textNight: string;
+  wind360Day: string;
+  windDirDay: string;
+  windScaleDay: string;
+  windSpeedDay: string;
+  wind360Night: string;
+  windDirNight: string;
+  windScaleNight: string;
+  windSpeedNight: string;
+  humidity: string;
+  precip: string;
+  pressure: string;
+  vis: string;
+  cloud: string;
+  uvIndex: string;
+}
+
+export interface QWeather7d {
+  code: string;
+  updateTime: string;
+  fxLink: string;
+  daily: Daily[];
+  refer: Refer;
 }

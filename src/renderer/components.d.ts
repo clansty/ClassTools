@@ -40,6 +40,7 @@ declare module 'vue' {
     Realtime: typeof import('./src/components/Weather/Realtime.vue')['default']
     Weather: typeof import('./src/components/Weather/index.vue')['default']
     WeatherIcon: typeof import('./src/components/Weather/WeatherIcon.vue')['default']
+    Week: typeof import('./src/components/Weather/Week.vue')['default']
   }
 }
 

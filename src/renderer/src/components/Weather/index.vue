@@ -2,20 +2,23 @@
 import useSettings from '../../stores/settings';
 import { useIntervalFn } from '@vueuse/core';
 import { ref, watch } from 'vue';
-import { QWeather24h, QWeatherH5 } from '../../types/QWeather';
+import { QWeather24h, QWeather7d, QWeatherH5 } from '../../types/QWeather';
 import Realtime from './Realtime.vue';
 import Props from './Props.vue';
 import Hourly from './Hourly.vue';
 import RainWarning from './RainWarning.vue';
+import Week from './Week.vue';
 
 const PUBLIC_KEY = '0fffcb8f8d144d6294cd5f3c331d53da';
 const QWEATHER_H5API = new URL('https://widget-api.heweather.net/s6/plugin/h5');
 const QWEATHER_24HAPI = new URL('https://devapi.qweather.com/v7/weather/24h');
+const QWEATHER_7DAPI = new URL('https://devapi.qweather.com/v7/weather/7d');
 
 const settings = useSettings();
 
 const dataH5 = ref<QWeatherH5>();
 const data24h = ref<QWeather24h>();
+const data7d = ref<QWeather7d>();
 
 // 更新天气数据
 const fetchWeatherApi = async (url: URL, key: string) => {
@@ -30,6 +33,7 @@ const updateWeather = async () => {
   // 24h api 需要密钥
   if (!settings.value.weatherKey) return;
   data24h.value = await fetchWeatherApi(QWEATHER_24HAPI, settings.value.weatherKey);
+  data7d.value = await fetchWeatherApi(QWEATHER_7DAPI, settings.value.weatherKey);
 };
 useIntervalFn(updateWeather, 1000 * 60 * 5, { immediateCallback: true });
 watch([() => settings.value.weatherKey, () => settings.value.city], updateWeather);
@@ -46,8 +50,11 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
     <!-- 第二行 降水提示，没有就不会显示 -->
     <RainWarning :text="dataH5.rain.txt" v-if="dataH5"/>
     <!-- 第三行 八小时天气（因为差不多只能显示八小时的） -->
-    <hr/>
+    <hr v-if="data24h"/>
     <Hourly :data="data24h.hourly" v-if="data24h"/>
+    <!-- 一周预报 -->
+    <hr v-if="data7d"/>
+    <Week :data="data7d.daily" v-if="data7d"/>
   </div>
 </template>
 
@@ -64,6 +71,7 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
 
   hr {
     border: 0;
+    margin: 15px 0;
     height: 1px;
     background-color: rgba(0, 0, 0, 0.22);
   }
