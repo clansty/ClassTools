@@ -11,7 +11,7 @@ interface Refer {
   license: string[];
 }
 
-interface Hourly {
+export interface Hourly {
   fxTime: string;
   temp: string;
   // 图标代码

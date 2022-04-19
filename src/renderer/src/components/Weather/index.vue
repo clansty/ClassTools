@@ -5,6 +5,7 @@ import { ref, watch } from 'vue';
 import { QWeather24h, QWeatherH5 } from '../../types/QWeather';
 import Realtime from './Realtime.vue';
 import Props from './Props.vue';
+import Hourly from './Hourly.vue';
 
 const PUBLIC_KEY = '0fffcb8f8d144d6294cd5f3c331d53da';
 const QWEATHER_H5API = new URL('https://widget-api.heweather.net/s6/plugin/h5');
@@ -41,16 +42,27 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
       <Realtime :now="dataH5.now" v-if="settings.weatherComponents.includes('realtime')"/>
       <Props :now="dataH5.now" v-if="settings.weatherComponents.includes('props')"/>
     </div>
+    <!-- 第二行 八小时天气（因为差不多只能显示八小时的） -->
+    <hr/>
+    <Hourly :data="data24h.hourly" v-if="data24h"/>
   </div>
 </template>
 
 <style lang="scss">
 .weatherContainer {
-  /* 还是这个字体放在天气上好看qwq */
-  font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, sans-serif;
+  // 还是这个字体放在天气上好看qwq
+  // 华文黑体永远滴神
+  font-family: STHeiti, 华文细黑, "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", MingLiu, sans-serif;
+  width: 21em;
 
   .secondary {
     color: var(--color-secondary);
+  }
+
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.22);
   }
 }
 </style>
