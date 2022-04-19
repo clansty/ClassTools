@@ -36,6 +36,7 @@ declare module 'vue' {
     NText: typeof import('naive-ui')['NText']
     NTime: typeof import('naive-ui')['NTime']
     Props: typeof import('./src/components/Weather/Props.vue')['default']
+    RainWarning: typeof import('./src/components/Weather/RainWarning.vue')['default']
     Realtime: typeof import('./src/components/Weather/Realtime.vue')['default']
     Weather: typeof import('./src/components/Weather/index.vue')['default']
     WeatherIcon: typeof import('./src/components/Weather/WeatherIcon.vue')['default']

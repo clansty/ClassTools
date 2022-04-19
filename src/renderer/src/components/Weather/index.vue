@@ -6,6 +6,7 @@ import { QWeather24h, QWeatherH5 } from '../../types/QWeather';
 import Realtime from './Realtime.vue';
 import Props from './Props.vue';
 import Hourly from './Hourly.vue';
+import RainWarning from './RainWarning.vue';
 
 const PUBLIC_KEY = '0fffcb8f8d144d6294cd5f3c331d53da';
 const QWEATHER_H5API = new URL('https://widget-api.heweather.net/s6/plugin/h5');
@@ -42,7 +43,9 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
       <Realtime :now="dataH5.now" v-if="settings.weatherComponents.includes('realtime')"/>
       <Props :now="dataH5.now" v-if="settings.weatherComponents.includes('props')"/>
     </div>
-    <!-- 第二行 八小时天气（因为差不多只能显示八小时的） -->
+    <!-- 第二行 降水提示，没有就不会显示 -->
+    <RainWarning :text="dataH5.rain.txt" v-if="dataH5"/>
+    <!-- 第三行 八小时天气（因为差不多只能显示八小时的） -->
     <hr/>
     <Hourly :data="data24h.hourly" v-if="data24h"/>
   </div>

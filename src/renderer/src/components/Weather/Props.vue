@@ -8,7 +8,7 @@ const props = defineProps<{
 </script>
 
 <template>
-  <n-grid x-gap="12" cols="2">
+  <n-grid cols="2">
     <n-gi class="item">
       <div class="secondary">{{ locale.weather.props.pcpn }}</div>
       <div>{{ props.now.pcpn }}mm</div>
