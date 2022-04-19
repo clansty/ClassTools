@@ -48,13 +48,13 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
       <Props :now="dataH5.now" :air="dataH5.air_now_city" v-if="settings.weatherComponents.includes('props')"/>
     </div>
     <!-- 第二行 降水提示，没有就不会显示 -->
-    <RainWarning :text="dataH5.rain.txt" v-if="dataH5"/>
+    <RainWarning :text="dataH5.rain.txt" v-if="dataH5 && settings.weatherComponents.includes('rain')"/>
     <!-- 第三行 八小时天气（因为差不多只能显示八小时的） -->
-    <hr v-if="data24h"/>
-    <Hourly :data="data24h.hourly" v-if="data24h"/>
+    <hr v-if="data24h && settings.weatherComponents.includes('24h')"/>
+    <Hourly :data="data24h.hourly" v-if="data24h && settings.weatherComponents.includes('24h')"/>
     <!-- 一周预报 -->
-    <hr v-if="data7d"/>
-    <Week :data="data7d.daily" v-if="data7d"/>
+    <hr v-if="data7d && settings.weatherComponents.includes('7days')"/>
+    <Week :data="data7d.daily" v-if="data7d && settings.weatherComponents.includes('7days')"/>
   </div>
 </template>
 

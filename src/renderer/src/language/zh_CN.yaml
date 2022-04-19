@@ -9,7 +9,7 @@ settings:
   weatherComponentsGroup:
     realtime: 实时天气
     props: 实时参数
-    aqi: 空气质量
+    rain: 降水提示（如果有）
     24h: 24 小时预报
     7days: 七天预报
   weatherColor: 天气字体颜色
