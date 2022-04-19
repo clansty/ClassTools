@@ -31,10 +31,10 @@ const handleSelectFile = () => {
     <n-form-item
       :label="locale.settings.fontSize"
     >
-      <n-slider v-model:value="settings.fontSize" :min="8" :max="64"/>
+      <n-slider v-model:value="settings.fontSize" :min="12" :max="64"/>
       <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
         <!-- n-input-number 好像有点问题，不能直接在上面加 style，会不生效 -->
-        <n-input-number v-model:value="settings.fontSize"/>
+        <n-input-number v-model:value="settings.fontSize" :min="12"/>
       </div>
     </n-form-item>
     <n-form-item
