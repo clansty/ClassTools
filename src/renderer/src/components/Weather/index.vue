@@ -9,7 +9,7 @@ import Hourly from './Hourly.vue';
 import RainWarning from './RainWarning.vue';
 import Week from './Week.vue';
 
-const PUBLIC_KEY = '0fffcb8f8d144d6294cd5f3c331d53da';
+const PUBLIC_KEY = '0b23abc522ab4c15804ace26ef307466';
 const QWEATHER_H5API = new URL('https://widget-api.heweather.net/s6/plugin/h5');
 const QWEATHER_24HAPI = new URL('https://devapi.qweather.com/v7/weather/24h');
 const QWEATHER_7DAPI = new URL('https://devapi.qweather.com/v7/weather/7d');

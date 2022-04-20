@@ -8,7 +8,7 @@ const useSettings = createAutoUpdateStorage('settings', {
   fontColor: '#303133',
   city: 'CN101240102',
   weatherKey: '',
-  weatherComponents: ['realtime', 'aqi', 'props', '24h', '7days'],
+  weatherComponents: ['realtime', 'rain', 'props', '24h', '7days'],
   weatherColor: '#4a4a4a',
   weatherColorSecondary: '#9b9b9b',
   backgroundType: 'color' as 'image' | 'color' | 'advanced',
@@ -37,7 +37,8 @@ const useSettings = createAutoUpdateStorage('settings', {
     { name: '班务', hasHomework: true },
     { name: '精神食粮', hasHomework: false },
   ],
-  duty: new Array(7).fill(''),
+  dutyTypes: ['黑板', '地面', '窗台'],
+  duty: new Array(7).fill({}),
 });
 
 export default useSettings;
