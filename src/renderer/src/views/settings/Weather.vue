@@ -2,6 +2,7 @@
 import useSettings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import cities from '../../data/cities.json';
+import FontSizeSliderFormItem from '../../components/FontSizeSliderFormItem.vue';
 
 const settings = useSettings();
 </script>
@@ -22,14 +23,9 @@ const settings = useSettings();
     >
       <n-input type="text" v-model:value="settings.weatherKey"/>
     </n-form-item>
-    <n-form-item
-      :label="locale.settings.weatherSize"
-    >
-      <n-slider v-model:value="settings.weatherSize" :min="0.5" :max="10" :step="0.1"/>
-      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-        <n-input-number v-model:value="settings.weatherSize" :min="0.5" :step="0.1"/>
-      </div>
-    </n-form-item>
+    <FontSizeSliderFormItem
+      :label="locale.settings.weatherSize" v-model:value="settings.weatherSize" unit="em"
+    />
     <n-form-item
       :label="locale.settings.weatherColor"
     >

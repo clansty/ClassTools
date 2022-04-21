@@ -35,7 +35,7 @@ const backgroundStyle = computed(() => {
   <n-layout has-sider>
     <n-layout-content>
       <div class="wallpaperContainer" :style="backgroundStyle">
-        <n-grid x-gap="12" cols="3">
+        <n-grid x-gap="20" cols="3">
           <!-- -webkit-right 可以把天气的 div 也居右 -->
           <n-gi style="text-align: -webkit-right">
             <DateAndCountDown/>

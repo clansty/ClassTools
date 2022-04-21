@@ -2,6 +2,7 @@
 import useSettings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import { ref } from 'vue';
+import FontSizeSliderFormItem from '../../components/FontSizeSliderFormItem.vue';
 
 const settings = useSettings();
 const fileSelectorRef = ref<HTMLInputElement>();
@@ -18,28 +19,17 @@ const handleSelectFile = () => {
     label-placement="left"
     label-width="auto"
   >
-    <n-form-item
-      :label="locale.settings.fontSize"
-    >
-      <n-slider v-model:value="settings.fontSize" :min="12" :max="64"/>
-      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-        <!-- n-input-number 好像有点问题，不能直接在上面加 style，会不生效 -->
-        <n-input-number v-model:value="settings.fontSize" :min="12"/>
-      </div>
-    </n-form-item>
+    <FontSizeSliderFormItem
+      :label="locale.settings.fontSize" v-model:value="settings.fontSize" unit="px"
+    />
     <n-form-item
       :label="locale.settings.fontColor"
     >
       <n-color-picker v-model:value="settings.fontColor" :show-alpha="false"/>
     </n-form-item>
-    <n-form-item
-      :label="locale.settings.dateSize"
-    >
-      <n-slider v-model:value="settings.dateSize" :min="0.5" :max="10" :step="0.1"/>
-      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-        <n-input-number v-model:value="settings.dateSize" :min="0.5" :step="0.1"/>
-      </div>
-    </n-form-item>
+    <FontSizeSliderFormItem
+      :label="locale.settings.dateSize" v-model:value="settings.dateSize" unit="em"
+    />
     <n-form-item
       :label="locale.settings.countDownName"
     >
@@ -50,14 +40,9 @@ const handleSelectFile = () => {
     >
       <n-date-picker v-model:value="settings.countDownDate" type="date"/>
     </n-form-item>
-    <n-form-item
-      :label="locale.settings.countDownSize"
-    >
-      <n-slider v-model:value="settings.countDownSize" :min="0.5" :max="10" :step="0.1"/>
-      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-        <n-input-number v-model:value="settings.countDownSize" :min="0.5" :step="0.1"/>
-      </div>
-    </n-form-item>
+    <FontSizeSliderFormItem
+      :label="locale.settings.countDownSize" v-model:value="settings.countDownSize" unit="em"
+    />
     <n-form-item
       :label="locale.settings.countDownColor"
     >

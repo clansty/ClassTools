@@ -6,6 +6,8 @@ declare module 'vue' {
   export interface GlobalComponents {
     DateAndCountDown: typeof import('./src/components/DateAndCountDown.vue')['default']
     Degree: typeof import('./src/components/Weather/Degree.vue')['default']
+    FontSizeSliderFormItem: typeof import('./src/components/FontSizeSliderFormItem.vue')['default']
+    FontSlider: typeof import('./src/components/FontSlider.vue')['default']
     HomeworkDisplay: typeof import('./src/components/HomeworkDisplay.vue')['default']
     Hourly: typeof import('./src/components/Weather/Hourly.vue')['default']
     NButton: typeof import('naive-ui')['NButton']

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import useSlogan from '../stores/slogan';
 import locale from '../language/zh_CN.yaml';
+import FontSizeSliderFormItem from '../components/FontSizeSliderFormItem.vue';
 
 const slogan = useSlogan();
 </script>
@@ -22,22 +23,12 @@ const slogan = useSlogan();
         >
           <n-input v-model:value="slogan.author"/>
         </n-form-item>
-        <n-form-item
-          :label="locale.slogan.size"
-        >
-          <n-slider v-model:value="slogan.size" :min="0.5" :max="10" :step="0.1"/>
-          <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-            <n-input-number v-model:value="slogan.size" :min="0.5" :step="0.1"/>
-          </div>
-        </n-form-item>
-        <n-form-item
-          :label="locale.slogan.authorSize"
-        >
-          <n-slider v-model:value="slogan.authorSize" :min="0.5" :max="10" :step="0.1"/>
-          <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
-            <n-input-number v-model:value="slogan.authorSize" :min="0.5" :step="0.1"/>
-          </div>
-        </n-form-item>
+        <FontSizeSliderFormItem
+          :label="locale.slogan.size" v-model:value="slogan.size" unit="em"
+        />
+        <FontSizeSliderFormItem
+          :label="locale.slogan.authorSize" v-model:value="slogan.authorSize" unit="em"
+        />
         <n-form-item
           :label="locale.slogan.color"
         >
