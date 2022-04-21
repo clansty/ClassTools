@@ -3,9 +3,13 @@ import createAutoUpdateStorage from '../hooks/createAutoUpdateStorage';
 const useSettings = createAutoUpdateStorage('settings', {
   countDownName: '高考',
   countDownDate: 1686067200000,
+  // 这里是 em
+  countDownSize: 1.5,
+  countDownColor: '#ff0000',
   // 这个字体大小大概在壁纸页面的最外层使用，然后内层使用 em
   fontSize: 26,
   fontColor: '#303133',
+  dateSize: 1.7,
   city: 'CN101240102',
   weatherKey: '',
   weatherComponents: ['realtime', 'rain', 'props', '24h', '7days'],

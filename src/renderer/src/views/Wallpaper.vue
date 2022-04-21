@@ -5,11 +5,10 @@ import useSettings from '../stores/settings';
 import { useNow } from '@vueuse/core';
 import Weather from '../components/Weather/index.vue';
 import SloganDisplay from '../components/SloganDisplay.vue';
+import DateAndCountDown from '../components/DateAndCountDown.vue';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
-
-const now = useNow();
 
 const backgroundStyle = computed(() => {
   let css = '';
@@ -36,7 +35,9 @@ const backgroundStyle = computed(() => {
     <n-layout-content>
       <div class="wallpaperContainer" :style="backgroundStyle">
         <n-grid x-gap="12" cols="3">
-          <n-gi>
+          <!-- -webkit-right 可以把天气的 div 也居右 -->
+          <n-gi style="text-align: -webkit-right">
+            <DateAndCountDown/>
             <Weather/>
           </n-gi>
           <n-gi>

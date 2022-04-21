@@ -19,16 +19,6 @@ const handleSelectFile = () => {
     label-width="auto"
   >
     <n-form-item
-      :label="locale.settings.countDownName"
-    >
-      <n-input type="text" v-model:value="settings.countDownName"/>
-    </n-form-item>
-    <n-form-item
-      :label="locale.settings.countDownDate"
-    >
-      <n-date-picker v-model:value="settings.countDownDate" type="date"/>
-    </n-form-item>
-    <n-form-item
       :label="locale.settings.fontSize"
     >
       <n-slider v-model:value="settings.fontSize" :min="12" :max="64"/>
@@ -41,6 +31,37 @@ const handleSelectFile = () => {
       :label="locale.settings.fontColor"
     >
       <n-color-picker v-model:value="settings.fontColor" :show-alpha="false"/>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.dateSize"
+    >
+      <n-slider v-model:value="settings.dateSize" :min="0.5" :max="10" :step="0.1"/>
+      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
+        <n-input-number v-model:value="settings.dateSize" :min="0.5" :step="0.1"/>
+      </div>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.countDownName"
+    >
+      <n-input type="text" v-model:value="settings.countDownName"/>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.countDownDate"
+    >
+      <n-date-picker v-model:value="settings.countDownDate" type="date"/>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.countDownSize"
+    >
+      <n-slider v-model:value="settings.countDownSize" :min="0.5" :max="10" :step="0.1"/>
+      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
+        <n-input-number v-model:value="settings.countDownSize" :min="0.5" :step="0.1"/>
+      </div>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.countDownColor"
+    >
+      <n-color-picker v-model:value="settings.countDownColor" :show-alpha="false"/>
     </n-form-item>
     <n-form-item
       :label="locale.settings.backgroundType"
