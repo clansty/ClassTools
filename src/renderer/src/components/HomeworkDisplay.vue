@@ -15,10 +15,10 @@ const homeworks = computed(() =>
 <template>
   <div>
     <div v-for="(content, subject) in homeworks" style="margin-bottom: 1em">
-      <n-h5 style="margin-bottom: 0">{{ subject }}</n-h5>
-      <n-text tag="div" style="padding-left: 1em">
+      <h5 style="margin-block: 0">{{ subject }}</h5>
+      <div style="padding: 0 1em; word-wrap: break-word; white-space: pre-wrap">
         {{ content }}
-      </n-text>
+      </div>
     </div>
   </div>
 </template>

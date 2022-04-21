@@ -15,8 +15,7 @@ const countDownStyle = computed(() => ({
 }));
 const dateStyle = computed(() => ({
   fontSize: settings.value.dateSize + 'em',
-  marginBlockStart: '0.2em',
-  marginBlockEnd: '0.2em',
+  marginBlock: '0.2em',
 }));
 </script>
 
