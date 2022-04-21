@@ -15,7 +15,7 @@ const containerStyle = computed(() => ({
 <template>
   <div :style="containerStyle">
     <pre>{{ slogan.content }}</pre>
-    <p>——{{ slogan.author }}</p>
+    <p v-if="slogan.author">——{{ slogan.author }}</p>
   </div>
 </template>
 

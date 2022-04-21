@@ -4,7 +4,6 @@
 
 declare module 'vue' {
   export interface GlobalComponents {
-    CountDown: typeof import('./src/components/CountDown.vue')['default']
     DateAndCountDown: typeof import('./src/components/DateAndCountDown.vue')['default']
     Degree: typeof import('./src/components/Weather/Degree.vue')['default']
     HomeworkDisplay: typeof import('./src/components/HomeworkDisplay.vue')['default']

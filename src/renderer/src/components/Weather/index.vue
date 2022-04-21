@@ -62,7 +62,7 @@ watch([() => settings.value.weatherKey, () => settings.value.city], updateWeathe
 .weatherContainer {
   // 还是这个字体放在天气上好看qwq
   // 华文黑体永远滴神
-  font-family: STHeiti, 华文细黑, "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", MingLiu, sans-serif;
+  font-family: STHeiti, 华文细黑, 华文黑体, "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", MingLiu, sans-serif;
   width: 21em;
 
   .secondary {
