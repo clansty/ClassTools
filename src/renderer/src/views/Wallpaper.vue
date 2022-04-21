@@ -6,6 +6,7 @@ import { useNow } from '@vueuse/core';
 import Weather from '../components/Weather/index.vue';
 import SloganDisplay from '../components/SloganDisplay.vue';
 import DateAndCountDown from '../components/DateAndCountDown.vue';
+import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
@@ -44,6 +45,7 @@ const backgroundStyle = computed(() => {
             <SloganDisplay/>
           </n-gi>
           <n-gi>
+            <HomeworkDisplay :homeworks="homeworks.homeworks"/>
           </n-gi>
         </n-grid>
       </div>
