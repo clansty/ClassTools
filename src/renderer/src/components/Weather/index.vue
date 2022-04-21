@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import useSettings from '../../stores/settings';
 import { useIntervalFn } from '@vueuse/core';
-import { ref, watch } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { QWeather24h, QWeather7d, QWeatherH5 } from '../../types/QWeather';
 import Realtime from './Realtime.vue';
 import Props from './Props.vue';
@@ -37,11 +37,16 @@ const updateWeather = async () => {
 };
 useIntervalFn(updateWeather, 1000 * 60 * 5, { immediateCallback: true });
 watch([() => settings.value.weatherKey, () => settings.value.city], updateWeather);
+
+const containerStyle = computed(() => ({
+  color: settings.value.weatherColor,
+  '--color-secondary': settings.value.weatherColorSecondary,
+  fontSize: settings.value.weatherSize + 'em',
+}));
 </script>
 
 <template>
-  <div class="weatherContainer"
-       :style="`color: ${settings.weatherColor}; --color-secondary: ${settings.weatherColorSecondary}`">
+  <div class="weatherContainer" :style="containerStyle">
     <!-- 第一行，左边显示温度和天气状态，右边显示原版第二行的参数 -->
     <div style="display: flex" v-if="dataH5">
       <Realtime :now="dataH5.now" v-if="settings.weatherComponents.includes('realtime')"/>

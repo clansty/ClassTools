@@ -23,6 +23,14 @@ const settings = useSettings();
       <n-input type="text" v-model:value="settings.weatherKey"/>
     </n-form-item>
     <n-form-item
+      :label="locale.settings.weatherSize"
+    >
+      <n-slider v-model:value="settings.weatherSize" :min="0.5" :max="10" :step="0.1"/>
+      <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
+        <n-input-number v-model:value="settings.weatherSize" :min="0.5" :step="0.1"/>
+      </div>
+    </n-form-item>
+    <n-form-item
       :label="locale.settings.weatherColor"
     >
       <n-color-picker v-model:value="settings.weatherColor" :show-alpha="false"/>
