@@ -45,3 +45,11 @@ weather:
     hum: 湿度
     pres: 气压
     aqi: 空气质量
+
+slogan:
+  content: 标语内容
+  author: 作者
+  size: 标语字体大小
+  authorSize: 作者字体大小
+  color: 标语颜色
+  authorColor: 作者颜色

@@ -40,6 +40,7 @@ declare module 'vue' {
     Props: typeof import('./src/components/Weather/Props.vue')['default']
     RainWarning: typeof import('./src/components/Weather/RainWarning.vue')['default']
     Realtime: typeof import('./src/components/Weather/Realtime.vue')['default']
+    SloganDisplay: typeof import('./src/components/SloganDisplay.vue')['default']
     Weather: typeof import('./src/components/Weather/index.vue')['default']
     WeatherIcon: typeof import('./src/components/Weather/WeatherIcon.vue')['default']
     Week: typeof import('./src/components/Weather/Week.vue')['default']

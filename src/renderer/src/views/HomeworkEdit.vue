@@ -49,7 +49,7 @@ const newDay = () => {
           :label="subject"
         >
           <n-input type="textarea" v-model:value="homeworks.homeworks[subject]"
-                   :placeholder="`${subject}作业`" :autosize="{minRows:2}"/>
+                   :placeholder="`${subject}作业`" :autosize="{ minRows: 2 }"/>
         </n-form-item>
       </n-form>
     </n-layout-content>

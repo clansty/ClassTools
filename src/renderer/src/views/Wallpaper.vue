@@ -4,6 +4,7 @@ import { computed } from 'vue';
 import useSettings from '../stores/settings';
 import { useNow } from '@vueuse/core';
 import Weather from '../components/Weather/index.vue';
+import SloganDisplay from '../components/SloganDisplay.vue';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
@@ -33,22 +34,15 @@ const backgroundStyle = computed(() => {
 <template>
   <n-layout has-sider>
     <n-layout-content>
-      <div class="container" :style="backgroundStyle">
+      <div class="wallpaperContainer" :style="backgroundStyle">
         <n-grid x-gap="12" cols="3">
           <n-gi>
-            <div>高考倒计时</div>
-            <p>
-              <n-time :time="now" format="yyyy-M-d H:mm:ss"/>
-            </p>
             <Weather/>
           </n-gi>
           <n-gi>
-            <div>天气</div>
+            <SloganDisplay/>
           </n-gi>
           <n-gi>
-            <div>作业</div>
-            <p>
-            </p>
           </n-gi>
         </n-grid>
       </div>
@@ -56,8 +50,8 @@ const backgroundStyle = computed(() => {
   </n-layout>
 </template>
 
-<style lang="scss" scoped>
-.container {
+<style lang="scss">
+.wallpaperContainer {
   min-height: 100vh;
   max-height: 100vh;
   overflow: hidden;

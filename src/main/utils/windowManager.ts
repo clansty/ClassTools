@@ -108,8 +108,14 @@ class WindowManager {
       this.sloganEditWindow.show();
       return this.sloganEditWindow;
     }
+    const screenSize = screen.getPrimaryDisplay().size;
     this.sloganEditWindow = this.createWindow('sloganEdit', {
       title: '标语编辑',
+      // 显示在屏幕左边三分之一的位置，就像 C8UI 标语编辑器的左半边
+      height: screenSize.height,
+      width: screenSize.width / 3,
+      x: 0,
+      y: 0,
     }, () => {
       this.sloganEditWindow.maximize();
     });
