@@ -3,8 +3,8 @@ import useHomeworks from '../stores/homeworks';
 import useSettings from '../stores/settings';
 import { computed } from 'vue';
 import { isToday } from 'date-fns';
-import useHistoryHomeworkList from '../stores/historyHomeworkList';
-import useHistoryHomeworks from '../stores/historyHomeworks';
+import useHistoryHomeworkList from '../stores/homeworkHistoryList';
+import useHistoryHomeworks from '../stores/homeworkHistory';
 
 const homeworks = useHomeworks();
 const historyHomeworkList = useHistoryHomeworkList();

@@ -1,9 +1,9 @@
 <script setup lang="ts">
-import useHistoryHomeworks from '../stores/historyHomeworks';
+import useHistoryHomeworks from '../stores/homeworkHistory';
 import { useRoute, useRouter } from 'vue-router';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 import useHomeworks from '../stores/homeworks';
-import useHistoryHomeworkList from '../stores/historyHomeworkList';
+import useHistoryHomeworkList from '../stores/homeworkHistoryList';
 
 const route = useRoute();
 const router = useRouter();

@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 import { RouterLink, useRoute, useRouter } from 'vue-router';
-import useHistoryHomeworkList from '../stores/historyHomeworkList';
+import useHistoryHomeworkList from '../stores/homeworkHistoryList';
 import { MenuOption, NTime } from 'naive-ui';
 import { h, Fragment } from 'vue';
 
