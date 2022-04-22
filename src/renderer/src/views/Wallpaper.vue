@@ -2,11 +2,11 @@
 import useHomeworks from '../stores/homeworks';
 import { computed } from 'vue';
 import useSettings from '../stores/settings';
-import { useNow } from '@vueuse/core';
 import Weather from '../components/Weather/index.vue';
 import SloganDisplay from '../components/SloganDisplay.vue';
 import DateAndCountDown from '../components/DateAndCountDown.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
+import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 
 const homeworks = useHomeworks();
 const settings = useSettings();
@@ -35,7 +35,7 @@ const backgroundStyle = computed(() => {
   <n-layout has-sider>
     <n-layout-content>
       <div class="wallpaperContainer" :style="backgroundStyle">
-        <n-grid x-gap="20" cols="3">
+        <n-grid x-gap="20" cols="4">
           <!-- -webkit-right 可以把天气的 div 也居右 -->
           <n-gi style="text-align: -webkit-right">
             <DateAndCountDown/>
@@ -46,6 +46,9 @@ const backgroundStyle = computed(() => {
           </n-gi>
           <n-gi>
             <HomeworkDisplay :homeworks="homeworks.homeworks"/>
+          </n-gi>
+          <n-gi>
+            <ScheduleDisplay/>
           </n-gi>
         </n-grid>
       </div>

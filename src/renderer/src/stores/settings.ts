@@ -42,7 +42,7 @@ const useSettings = createAutoUpdateStorage('settings', {
     { name: '班务', hasHomework: true },
     { name: '精神食粮', hasHomework: false },
   ],
-  dutyTypes: ['黑板', '地面', '窗台'],
+  dutyTypes: ['教室', '包干区'],
   duty: new Array(7).fill({}),
 });
 
