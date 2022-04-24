@@ -10,7 +10,7 @@ const useSettings = createAutoUpdateStorage('settings', {
   fontSize: 26,
   fontColor: '#303133',
   dateSize: 1.7,
-  city: 'CN101240102',
+  city: 'CN101010100',
   weatherKey: '',
   weatherComponents: ['realtime', 'rain', 'props', '24h', '7days'],
   weatherSize: 1,
