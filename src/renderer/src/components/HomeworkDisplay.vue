@@ -16,7 +16,7 @@ const homeworks = computed(() =>
   <div>
     <div v-for="(content, subject) in homeworks" style="margin-bottom: 1em">
       <h5 style="margin-block: 0">{{ subject }}</h5>
-      <div style="padding: 0 1em; word-wrap: break-word; white-space: pre-wrap">
+      <div style="padding-left: 1em; word-wrap: break-word; white-space: pre-wrap">
         {{ content }}
       </div>
     </div>

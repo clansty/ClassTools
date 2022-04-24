@@ -27,7 +27,7 @@ const useSettings = createAutoUpdateStorage('settings', {
     'linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%)',
   // 外层：第几节课 内层：周几。这样的话，加减节次会比较方便
   // 我反复改了好几遍这个（（
-  schedule: new Array(10).fill(new Array(7).fill('')),
+  schedule: new Array(10).fill(new Array(7).fill('')) as string[][],
   lessons: [
     { name: '语文', hasHomework: true },
     { name: '数学', hasHomework: true },

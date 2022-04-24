@@ -35,7 +35,7 @@ const backgroundStyle = computed(() => {
   <n-layout has-sider>
     <n-layout-content>
       <div class="wallpaperContainer" :style="backgroundStyle">
-        <n-grid x-gap="20" cols="4">
+        <n-grid x-gap="20" cols="3">
           <!-- -webkit-right 可以把天气的 div 也居右 -->
           <n-gi style="text-align: -webkit-right">
             <DateAndCountDown/>
@@ -44,11 +44,9 @@ const backgroundStyle = computed(() => {
           <n-gi>
             <SloganDisplay/>
           </n-gi>
-          <n-gi>
-            <HomeworkDisplay :homeworks="homeworks.homeworks"/>
-          </n-gi>
-          <n-gi>
-            <ScheduleDisplay/>
+          <n-gi style="display: flex">
+            <HomeworkDisplay :homeworks="homeworks.homeworks" style="width: 0; flex-grow: 1"/>
+            <ScheduleDisplay style="flex-shrink: 0"/>
           </n-gi>
         </n-grid>
       </div>
