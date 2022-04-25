@@ -46,6 +46,7 @@ class AppTray {
         },
       },
     ]));
+    this.tray.on('click', () => this.tray.popUpContextMenu());
   }
 }
 

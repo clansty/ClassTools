@@ -23,6 +23,7 @@ const containerStyle = computed(() => ({
 pre {
   color: var(--color);
   font-size: var(--size);
+  font-family: unset;
   margin: 0.7em 0;
   word-wrap: break-word;
   white-space: pre-wrap;

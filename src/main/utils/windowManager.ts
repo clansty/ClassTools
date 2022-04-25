@@ -49,7 +49,6 @@ class WindowManager {
     }
     this.wallpaperWindow = this.createWindow('wallpaper', {
       fullscreen: process.platform === 'win32',
-      show: true,
     });
     this.wallpaperWindow.on('closed', () => {
       this.wallpaperWindow = undefined;
@@ -65,7 +64,7 @@ class WindowManager {
     const screenSize = screen.getPrimaryDisplay().size;
     this.homeworkEditWindow = this.createWindow('homeworkEdit', {
       width: 600,
-      height: screenSize.height - 400,
+      height: screenSize.height - 100,
       title: '作业编辑',
     });
     this.homeworkEditWindow.on('close', () => {
@@ -96,6 +95,8 @@ class WindowManager {
     }
     this.settingsWindow = this.createWindow('settings', {
       title: '设置',
+      width: 1024,
+      height: 768,
     });
     this.settingsWindow.on('close', () => {
       this.settingsWindow = undefined;
@@ -116,8 +117,6 @@ class WindowManager {
       width: screenSize.width / 3,
       x: 0,
       y: 0,
-    }, () => {
-      this.sloganEditWindow.maximize();
     });
     this.sloganEditWindow.on('closed', () => {
       this.sloganEditWindow = undefined;

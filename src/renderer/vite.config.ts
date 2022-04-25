@@ -39,7 +39,6 @@ export default defineConfig({
   base: './',
   build: {
     emptyOutDir: true,
-    sourcemap: true,
     outDir: '../../dist/renderer',
   },
   server: {

@@ -19,7 +19,7 @@ const menuOptions: MenuOption[] = Object.entries(locale.settings.routes)
 </script>
 
 <template>
-  <n-layout has-sider>
+  <n-layout position="absolute" has-sider>
     <n-layout-sider content-style="padding: 10px 5px;">
       <n-menu :options="menuOptions" :value="route.name"/>
     </n-layout-sider>
