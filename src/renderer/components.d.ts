@@ -40,6 +40,7 @@ declare module 'vue' {
     NSelect: typeof import('naive-ui')['NSelect']
     NSlider: typeof import('naive-ui')['NSlider']
     NSpace: typeof import('naive-ui')['NSpace']
+    NSwitch: typeof import('naive-ui')['NSwitch']
     NText: typeof import('naive-ui')['NText']
     NTime: typeof import('naive-ui')['NTime']
     Props: typeof import('./src/components/Weather/Props.vue')['default']

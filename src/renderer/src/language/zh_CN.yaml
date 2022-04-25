@@ -27,8 +27,12 @@ settings:
   backgroundColor: 背景颜色
   backgroundCss: 背景 CSS
   dutyTypes: 类型
+  homeworkViewerSize: 字体大小
+  homeworkViewerCols: 作业列数
+  showTomorrowSchedule: 显示明日课表
   routes:
     basic: 基础设置
+    homeworkViewer: 作业看板
     weather: 天气设置
     lessons: 课程配置
     schedule: 课表编辑

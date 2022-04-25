@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import Minimize from '../assets/icons/Minimize.svg';
 import Close from '../assets/icons/Close.svg';
+import Edit from '../assets/icons/Edit.svg';
 import useSettings from '../stores/settings';
 import { useNow } from '@vueuse/core';
 import useHomeworks from '../stores/homeworks';
 import { computed } from 'vue';
+import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 
 const settings = useSettings();
 const homeworks = useHomeworks();
@@ -29,17 +31,21 @@ const groupedHomeworks = computed(() => {
   }
   return result;
 });
+const tomorrowWeekday = computed(() =>
+  new Date(now.value.getTime() + 1000 * 60 * 60 * 24).getDay());
+const isScheduleShown = computed(() => // 要确保明天有课
+  settings.value.showTomorrowSchedule && settings.value.schedule.some(session => session[tomorrowWeekday.value]));
 
 const close = () => window.close();
 </script>
 
 <template>
-  <n-layout position="absolute" :style="`font-size: ${settings.fontSize}vw`">
+  <n-layout position="absolute" :style="`font-size: ${settings.homeworkViewerSize}vw`">
     <n-layout-header class="header">
-      <n-time :time="now" format="yyyy 年 M 月 d 日"/>
+      <n-time :time="homeworks.date" format="yyyy 年 M 月 d 日作业" style="font-size: 1.3em"/>
       <!-- TODO: 值日生显示在这里 -->
     </n-layout-header>
-    <n-layout-content has-sider position="absolute" style="top: 3em; bottom: 40px" content-style="padding: 0 1em">
+    <n-layout-content has-sider position="absolute" style="top: 3.5em; bottom: 40px" content-style="padding: 0 1em">
       <!-- 不加这个 style 的话，子容器会被上下撑开 -->
       <n-grid x-gap="16" :cols="settings.homeworkViewerCols" style="align-items: flex-start;">
         <n-gi v-for="i in settings.homeworkViewerCols" style="display: grid; gap: 16px; grid-template-columns: 100%">
@@ -51,9 +57,17 @@ const close = () => window.close();
           </n-card>
         </n-gi>
       </n-grid>
+      <!-- 把外层的 padding 抵掉，因为课表显示的时候不需要 padding -->
+      <div style="flex-shrink: 0; margin-right: -1em" v-if="isScheduleShown">
+        <p style="text-align: center; margin-top: 0"><b>明日课表</b></p>
+        <ScheduleDisplay :weekday="tomorrowWeekday"/>
+      </div>
     </n-layout-content>
     <n-layout-footer position="absolute" class="controlButtons">
       <!-- 控制按钮 -->
+      <div style="font-size: 16px">
+        <Edit/>
+      </div>
       <div>
         <Minimize/>
       </div>
@@ -66,7 +80,7 @@ const close = () => window.close();
 
 <style scoped lang="scss">
 .header {
-  height: 3em;
+  height: 3.5em;
   padding: 0 1em;
   display: flex;
   align-items: center;
