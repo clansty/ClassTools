@@ -36,6 +36,8 @@ const tomorrowWeekday = computed(() =>
 const isScheduleShown = computed(() => // 要确保明天有课
   settings.value.showTomorrowSchedule && settings.value.schedule.some(session => session[tomorrowWeekday.value]));
 
+const editHomework = () => window.ipcRenderer.send('window:open', 'homeworkEdit');
+const minimize = () => window.ipcRenderer.send('window:minimize');
 const close = () => window.close();
 </script>
 
@@ -65,10 +67,10 @@ const close = () => window.close();
     </n-layout-content>
     <n-layout-footer position="absolute" class="controlButtons">
       <!-- 控制按钮 -->
-      <div style="font-size: 16px">
+      <div style="font-size: 16px" @click="editHomework">
         <Edit/>
       </div>
-      <div>
+      <div @click="minimize">
         <Minimize/>
       </div>
       <div class="close" @click="close">

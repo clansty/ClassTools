@@ -34,6 +34,7 @@ class AppTray {
           windowManager.createSettingsWindow();
         },
       },
+      { type: 'separator' },
       {
         label: '退出',
         click: () => {

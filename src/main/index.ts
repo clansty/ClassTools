@@ -2,6 +2,7 @@ import { app, Menu } from 'electron';
 import os from 'os';
 import windowManager from './utils/windowManager';
 import tray from './components/tray';
+import ipcWindow from './ipc/window';
 
 // Disable GPU Acceleration for Windows 7
 if (os.release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -19,6 +20,7 @@ app.whenReady().then(async () => {
   if (process.env.NODE_ENV !== 'development') {
     Menu.setApplicationMenu(null);
   }
+  ipcWindow.register();
   const wallPaperWindow = windowManager.createWallpaperWindow();
   if (process.platform === 'win32') {
     const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
