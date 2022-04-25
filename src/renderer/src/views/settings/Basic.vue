@@ -20,7 +20,7 @@ const handleSelectFile = () => {
     label-width="auto"
   >
     <FontSizeSliderFormItem
-      :label="locale.settings.fontSize" v-model:value="settings.fontSize" unit="px"
+      :label="locale.settings.fontSize" v-model:value="settings.fontSize" unit="vw"
     />
     <n-form-item
       :label="locale.settings.fontColor"

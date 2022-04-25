@@ -7,7 +7,8 @@ const useSettings = createAutoUpdateStorage('settings', {
   countDownSize: 1.5,
   countDownColor: '#ff0000',
   // 这个字体大小大概在壁纸页面的最外层使用，然后内层使用 em
-  fontSize: 26,
+  // 这里用 vw，这样所有设备上看起来都是一样的
+  fontSize: 1.2,
   fontColor: '#303133',
   dateSize: 1.7,
   city: 'CN101010100',

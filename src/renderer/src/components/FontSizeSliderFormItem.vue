@@ -6,7 +6,7 @@ const props = defineProps<{
   value: number,
   label: string,
   // px 和 em 有不同的范围和步长
-  unit: 'px' | 'em'
+  unit: 'vw' | 'em'
 }>();
 const emit = defineEmits<{
   (e: 'update:value', value: number): void
@@ -15,9 +15,9 @@ const emit = defineEmits<{
 const inputProps = computed(() => {
   switch (props.unit) {
     case 'em':
-      return { min: 0.5, max: 10, sliderStep: 0.01, inputStep: 0.05 };
-    case 'px':
-      return { min: 12, max: 64, sliderStep: 1, inputStep: 1 };
+      return { min: 0.3, max: 10, sliderStep: 0.01, inputStep: 0.05 };
+    case 'vw':
+      return { min: 0.5, max: 3, sliderStep: 0.01, inputStep: 0.05 };
   }
 });
 // 用于 v-model，也可以把下面组件的 v-model 换成 :value= 和 @update:value（这样难看）
