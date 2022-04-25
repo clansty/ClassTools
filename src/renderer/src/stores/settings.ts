@@ -45,6 +45,8 @@ const useSettings = createAutoUpdateStorage('settings', {
   ],
   dutyTypes: ['教室', '包干区'],
   duty: new Array(7).fill({}),
+  homeworkViewerSize: 1.2,
+  homeworkViewerCols: 3,
 });
 
 export default useSettings;
