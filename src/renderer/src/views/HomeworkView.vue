@@ -7,6 +7,7 @@ import { useNow } from '@vueuse/core';
 import useHomeworks from '../stores/homeworks';
 import { computed } from 'vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
+import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 
 const settings = useSettings();
 const homeworks = useHomeworks();
@@ -29,12 +30,21 @@ const groupedHomeworks = computed(() => {
     current++;
     if (current === settings.value.homeworkViewerCols) current = 0;
   }
+  if (isDutyShown.value) {
+    result[current].今日值日生 = '';
+  }
   return result;
 });
 const tomorrowWeekday = computed(() =>
   new Date(now.value.getTime() + 1000 * 60 * 60 * 24).getDay());
 const isScheduleShown = computed(() => // 要确保明天有课
   settings.value.showTomorrowSchedule && settings.value.schedule.some(session => session[tomorrowWeekday.value]));
+const isDutyShown = computed(() =>
+  settings.value.showDuty &&
+  Object.entries(settings.value.duty[now.value.getDay()])
+    .some(([type, student]) => student));
+
+console.log(Object.entries(settings.value.duty[now.value.getDay()]));
 
 const editHomework = () => window.ipcRenderer.send('window:open', 'homeworkEdit');
 const minimize = () => window.ipcRenderer.send('window:minimize');
@@ -45,7 +55,6 @@ const close = () => window.close();
   <n-layout position="absolute" :style="`font-size: ${settings.homeworkViewerSize}vw`">
     <n-layout-header class="header">
       <n-time :time="homeworks.date" format="yyyy 年 M 月 d 日作业" style="font-size: 1.3em"/>
-      <!-- TODO: 值日生显示在这里 -->
     </n-layout-header>
     <n-layout-content has-sider position="absolute" style="top: 3.5em; bottom: 40px" content-style="padding: 0 1em">
       <!-- 不加这个 style 的话，子容器会被上下撑开 -->
@@ -56,6 +65,8 @@ const close = () => window.close();
                   style="--n-font-size: 1em; --n-title-font-size: 1.2em"
                   content-style="word-wrap: break-word; white-space: pre-wrap; font-size: 1em">
             {{ content }}
+            <!-- 值日生显示，借一下作业组件 -->
+            <HomeworkDisplay :homeworks="settings.duty[now.getDay()]" v-if="subject==='今日值日生'"/>
           </n-card>
         </n-gi>
       </n-grid>

@@ -48,6 +48,7 @@ const useSettings = createAutoUpdateStorage('settings', {
   homeworkViewerSize: 1.2,
   homeworkViewerCols: 3,
   showTomorrowSchedule: true,
+  showDuty: true,
 });
 
 export default useSettings;
