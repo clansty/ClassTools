@@ -18,7 +18,9 @@ settings:
   weatherSize: 字体大小
   weatherColor: 字体颜色
   weatherColorSecondary: 次要字体颜色
-  sessionCount: 节次设置
+  sessionsMorning: 上午节次
+  sessionsAfternoon: 下午节次
+  sessionsEvening: 晚上节次
   backgroundType: 背景类型
   backgroundTypeImage: 图片
   backgroundTypeColor: 纯色

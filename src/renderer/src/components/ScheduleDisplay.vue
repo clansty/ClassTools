@@ -16,8 +16,16 @@ const scheduleToday = computed(() => // 这里不能用 ||，因为 0 也是假�
 
 <template>
   <div>
-    <p v-for="session in scheduleToday" style="margin: 0.5em 2em">
-      {{ session }}
+    <p v-for="session in settings.sessionsMorning" style="margin: 0.5em 2em">
+      {{ scheduleToday[session - 1] }}
+    </p>
+    <div style="height: 0.5em;"/>
+    <p v-for="session in settings.sessionsAfternoon" style="margin: 0.5em 2em">
+      {{ scheduleToday[session - 1 + settings.sessionsMorning] }}
+    </p>
+    <div style="height: 0.5em;"/>
+    <p v-for="session in settings.sessionsEvening" style="margin: 0.5em 2em">
+      {{ scheduleToday[session - 1 + settings.sessionsMorning + settings.sessionsAfternoon] }}
     </p>
   </div>
 </template>

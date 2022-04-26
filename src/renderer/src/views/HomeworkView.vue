@@ -87,8 +87,8 @@ const close = () => window.close();
       </n-grid>
       <!-- 把外层的 padding 抵掉，因为课表显示的时候不需要 padding -->
       <div style="flex-shrink: 0; margin-right: -1em" v-if="isScheduleShown">
-        <p style="text-align: center; margin-top: 0">
-          <b>{{ showTomorrowSchedule ? '明' : '今' }}日课表</b>
+        <p style="text-align: center; margin-top: 0; font-weight: bold">
+          {{ showTomorrowSchedule ? '明' : '今' }}日课表
         </p>
         <ScheduleDisplay :weekday="scheduleWeekday"/>
       </div>

@@ -29,6 +29,11 @@ const useSettings = createAutoUpdateStorage('settings', {
   // 外层：第几节课 内层：周几。这样的话，加减节次会比较方便
   // 我反复改了好几遍这个（（
   schedule: new Array(10).fill(new Array(7).fill('')) as string[][],
+  // 上午和下午的节数
+  sessionsMorning: 5,
+  sessionsAfternoon: 5,
+  // 晚上上课，丧尽天良
+  sessionsEvening: 0,
   lessons: [
     { name: '语文', hasHomework: true },
     { name: '数学', hasHomework: true },
