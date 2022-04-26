@@ -29,7 +29,8 @@ settings:
   dutyTypes: 类型
   homeworkViewerSize: 字体大小
   homeworkViewerCols: 作业列数
-  showTomorrowSchedule: 显示明日课表
+  showSchedule: 显示课表
+  showTomorrowScheduleAfter: 在之后显示明日课表
   showDuty: 显示值日生
   routes:
     basic: 基础设置

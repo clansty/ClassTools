@@ -9,6 +9,16 @@ import { computed } from 'vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 
+// 获取从今天 0 点到现在到秒数
+const getTime = (time: number | Date) => {
+  if (typeof time === 'object') {
+    time = time.getTime();
+  }
+  // 转换为中国时间秒数
+  time += 1000 * 60 * 60 * 8;
+  return time % (1000 * 60 * 60 * 24);
+};
+
 const settings = useSettings();
 const homeworks = useHomeworks();
 const now = useNow();
@@ -35,10 +45,15 @@ const groupedHomeworks = computed(() => {
   }
   return result;
 });
-const tomorrowWeekday = computed(() =>
-  new Date(now.value.getTime() + 1000 * 60 * 60 * 24).getDay());
+// 现在的时间大于设定的时间，把这个分出来因为下面的文字要显示 今日/明日
+const showTomorrowSchedule = computed(() =>
+  getTime(now.value.getTime()) > getTime(settings.value.showTomorrowScheduleAfter));
+const scheduleWeekday = computed(() =>
+  new Date(now.value.getTime() +
+    (showTomorrowSchedule.value ? 1000 * 60 * 60 * 24 : 0),
+  ).getDay());
 const isScheduleShown = computed(() => // 要确保明天有课
-  settings.value.showTomorrowSchedule && settings.value.schedule.some(session => session[tomorrowWeekday.value]));
+  settings.value.showSchedule && settings.value.schedule.some(session => session[scheduleWeekday.value]));
 const isDutyShown = computed(() =>
   settings.value.showDuty &&
   Object.entries(settings.value.duty[now.value.getDay()])
@@ -72,8 +87,10 @@ const close = () => window.close();
       </n-grid>
       <!-- 把外层的 padding 抵掉，因为课表显示的时候不需要 padding -->
       <div style="flex-shrink: 0; margin-right: -1em" v-if="isScheduleShown">
-        <p style="text-align: center; margin-top: 0"><b>明日课表</b></p>
-        <ScheduleDisplay :weekday="tomorrowWeekday"/>
+        <p style="text-align: center; margin-top: 0">
+          <b>{{ showTomorrowSchedule ? '明' : '今' }}日课表</b>
+        </p>
+        <ScheduleDisplay :weekday="scheduleWeekday"/>
       </div>
     </n-layout-content>
     <n-layout-footer position="absolute" class="controlButtons">

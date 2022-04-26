@@ -41,6 +41,7 @@ declare module '@vue/runtime-core' {
     NSpace: typeof import('naive-ui')['NSpace']
     NSwitch: typeof import('naive-ui')['NSwitch']
     NTime: typeof import('naive-ui')['NTime']
+    NTimePicker: typeof import('naive-ui')['NTimePicker']
     Props: typeof import('./src/components/Weather/Props.vue')['default']
     RainWarning: typeof import('./src/components/Weather/RainWarning.vue')['default']
     Realtime: typeof import('./src/components/Weather/Realtime.vue')['default']

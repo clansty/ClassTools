@@ -28,9 +28,14 @@ const handleSelectFile = () => {
       <n-input-number v-model:value="settings.homeworkViewerCols" :min="1"/>
     </n-form-item>
     <n-form-item
-      :label="locale.settings.showTomorrowSchedule"
+      :label="locale.settings.showSchedule"
     >
-      <n-switch v-model:value="settings.showTomorrowSchedule"/>
+      <n-switch v-model:value="settings.showSchedule"/>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.showTomorrowScheduleAfter"
+    >
+      <n-time-picker v-model:value="settings.showTomorrowScheduleAfter"/>
     </n-form-item>
     <n-form-item
       :label="locale.settings.showDuty"
