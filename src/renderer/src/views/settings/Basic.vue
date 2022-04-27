@@ -31,24 +31,6 @@ const handleSelectFile = () => {
       :label="locale.settings.dateSize" v-model:value="settings.dateSize" unit="em"
     />
     <n-form-item
-      :label="locale.settings.countDownName"
-    >
-      <n-input type="text" v-model:value="settings.countDownName"/>
-    </n-form-item>
-    <n-form-item
-      :label="locale.settings.countDownDate"
-    >
-      <n-date-picker v-model:value="settings.countDownDate" type="date"/>
-    </n-form-item>
-    <FontSizeSliderFormItem
-      :label="locale.settings.countDownSize" v-model:value="settings.countDownSize" unit="em"
-    />
-    <n-form-item
-      :label="locale.settings.countDownColor"
-    >
-      <n-color-picker v-model:value="settings.countDownColor" :show-alpha="false"/>
-    </n-form-item>
-    <n-form-item
       :label="locale.settings.backgroundType"
     >
       <n-radio-group v-model:value="settings.backgroundType">

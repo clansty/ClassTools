@@ -1,8 +1,8 @@
 settings:
-  countDownName: 倒计时目标
-  countDownDate: 倒计时日期
-  countDownSize: 倒计时数字大小
-  countDownColor: 倒计时数字颜色
+  countDownName: 目标
+  countDownDate: 日期
+  countDownSize: 数字大小
+  countDownColor: 数字颜色
   dateSize: 日期大小
   fontSize: 字体大小
   fontColor: 字体颜色
@@ -36,6 +36,7 @@ settings:
   showDuty: 显示值日生
   routes:
     basic: 基础设置
+    countdown: 倒计时设置
     homeworkViewer: 作业看板
     weather: 天气设置
     lessons: 课程配置
