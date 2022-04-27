@@ -1,23 +1,12 @@
 <script setup lang="ts">
 import useSettings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
-import { ref } from 'vue';
-import FontSizeSliderFormItem from '../../components/FontSizeSliderFormItem.vue';
 import { formatDate } from '@vueuse/core';
 
 const settings = useSettings();
-const wallpaperSelectorRef = ref<HTMLInputElement>();
-const configSelectorRef = ref<HTMLInputElement>();
 
-const handleSelectWallpaper = () => {
-  const files = wallpaperSelectorRef.value.files;
-  if (!files.length) return;
-  settings.value.backgroundImage = files[0].path;
-};
-const handleSelectConfig = async () => {
-  const files = configSelectorRef.value.files;
-  if (!files.length) return;
-  settings.value = JSON.parse(await files[0].text());
+const handleSelectConfig = async (file: File) => {
+  settings.value = JSON.parse(await file.text());
 };
 const configExport = () => {
   const blob = new Blob([JSON.stringify(settings.value)]);
@@ -60,8 +49,12 @@ const configExport = () => {
     >
       <n-input-group>
         <n-input v-model:value="settings.backgroundImage" disabled/>
-        <input type="file" accept="image/*" v-show="false" ref="wallpaperSelectorRef" @change="handleSelectWallpaper">
-        <n-button @click="wallpaperSelectorRef.click()">选择</n-button>
+        <FileSelectButton
+          accept="image/*"
+          @select="file => settings.backgroundImage = file.path"
+        >
+          选择
+        </FileSelectButton>
       </n-input-group>
     </n-form-item>
     <n-form-item
@@ -79,10 +72,11 @@ const configExport = () => {
     <n-form-item
       :label="locale.settings.configImportExport"
     >
-      <input type="file" accept="application/json" v-show="false" ref="configSelectorRef" @change="handleSelectConfig">
       <n-space>
         <n-button @click="configExport">{{ locale.settings.export }}</n-button>
-        <n-button @click="configSelectorRef.click()">{{ locale.settings.import }}</n-button>
+        <FileSelectButton accept="application/json" @select="handleSelectConfig">
+          {{ locale.settings.import }}
+        </FileSelectButton>
       </n-space>
     </n-form-item>
   </n-form>

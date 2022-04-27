@@ -7,6 +7,7 @@ declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DateAndCountDown: typeof import('./src/components/DateAndCountDown.vue')['default']
     Degree: typeof import('./src/components/Weather/Degree.vue')['default']
+    FileSelectButton: typeof import('./src/components/FileSelectButton.vue')['default']
     FontSizeSliderFormItem: typeof import('./src/components/FontSizeSliderFormItem.vue')['default']
     HomeworkDisplay: typeof import('./src/components/HomeworkDisplay.vue')['default']
     Hourly: typeof import('./src/components/Weather/Hourly.vue')['default']
