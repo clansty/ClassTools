@@ -34,6 +34,9 @@ settings:
   showSchedule: 显示课表
   showTomorrowScheduleAfter: 在之后显示明日课表
   showDuty: 显示值日生
+  configImportExport: 配置项
+  import: 导入
+  export: 导出
   routes:
     basic: 基础设置
     countdown: 倒计时设置
