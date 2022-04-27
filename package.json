@@ -15,6 +15,7 @@
   },
   "devDependencies": {
     "@originjs/vite-plugin-content": "^1.0.1",
+    "@types/js-yaml": "^4.0.5",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/core": "^8.3.1",
     "electron": "^18.1.0",
@@ -36,6 +37,7 @@
   "packageManager": "yarn@3.2.0",
   "dependencies": {
     "ffi-napi": "^4.0.3",
+    "js-yaml": "^4.1.0",
     "ref-napi": "^3.0.3"
   }
 }

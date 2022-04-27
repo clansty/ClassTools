@@ -1,8 +1,11 @@
 import fs from 'fs';
 import { contextBridge, ipcRenderer } from 'electron';
+import path from 'path';
 
 // --------- Expose some API to the Renderer process. ---------
 contextBridge.exposeInMainWorld('fs', fs);
+contextBridge.exposeInMainWorld('path', path);
+contextBridge.exposeInMainWorld('exePath', process.execPath);
 contextBridge.exposeInMainWorld('ipcRenderer', withPrototype(ipcRenderer));
 
 // `exposeInMainWorld` can't detect attributes and methods of `prototype`, manually patching it.
