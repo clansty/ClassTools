@@ -5,7 +5,8 @@
     "output": "release/${version}"
   },
   "files": [
-    "dist"
+    "dist",
+    "static"
   ],
   "mac": {
     "target": [
