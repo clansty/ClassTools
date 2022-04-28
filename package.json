@@ -1,5 +1,6 @@
 {
-  "name": "class-tools-reborn",
+  "name": "class-tools",
+  "productName": "ClassTools",
   "version": "3.0.0",
   "main": "dist/main/index.cjs",
   "author": "Clansty <i@gao4.pw> & RainbowBird <rbxin2003@outlook.com>",
@@ -16,10 +17,13 @@
   "devDependencies": {
     "@originjs/vite-plugin-content": "^1.0.1",
     "@types/js-yaml": "^4.0.5",
+    "@types/minimist": "^1.2.2",
     "@vitejs/plugin-vue": "^2.3.1",
     "@vueuse/core": "^8.3.1",
     "electron": "^18.1.0",
     "electron-builder": "^23.0.3",
+    "js-yaml": "^4.1.0",
+    "minimist": "^1.2.6",
     "naive-ui": "^2.28.2",
     "sass": "^1.50.1",
     "typescript": "^4.6.3",
@@ -37,7 +41,6 @@
   "packageManager": "yarn@3.2.0",
   "dependencies": {
     "ffi-napi": "^4.0.3",
-    "js-yaml": "^4.1.0",
     "ref-napi": "^3.0.3"
   }
 }

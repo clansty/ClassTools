@@ -1,5 +1,6 @@
 import { BrowserWindow, BrowserWindowConstructorOptions, shell, screen } from 'electron';
 import path from 'path';
+import WindowName from '../types/WindowName';
 
 class WindowManager {
   // 这些都设置成 private 了，要用这些窗口的时候用下面那些 create 的方法，会返回需要的窗口，这样保证它们都是存在的
@@ -139,6 +140,19 @@ class WindowManager {
     }
     if (this.sloganEditWindow) {
       this.sloganEditWindow.destroy();
+    }
+  }
+
+  public createByName(name: WindowName) {
+    switch (name) {
+      case 'homeworkEdit':
+        return this.createHomeworkEditWindow();
+      case 'homeworkView':
+        return this.createHomeworkViewWindow();
+      case 'sloganEdit':
+        return this.createSloganEditWindow();
+      case 'settings':
+        return this.createSettingsWindow();
     }
   }
 }

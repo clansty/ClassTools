@@ -1,7 +1,6 @@
 import { ipcMain, BrowserWindow } from 'electron';
 import windowManager from '../utils/windowManager';
-
-type WindowName = 'homeworkEdit' | 'homeworkView' | 'settings' | 'sloganEdit';
+import WindowName from '../types/WindowName';
 
 const ipcWindow = {
   register() {
@@ -10,16 +9,7 @@ const ipcWindow = {
       window.minimize();
     });
     ipcMain.on('window:open', (event, name: WindowName) => {
-      switch (name) {
-        case 'homeworkEdit':
-          return windowManager.createHomeworkEditWindow();
-        case 'homeworkView':
-          return windowManager.createHomeworkViewWindow();
-        case 'sloganEdit':
-          return windowManager.createSloganEditWindow();
-        case 'settings':
-          return windowManager.createSettingsWindow();
-      }
+      return windowManager.createByName(name);
     });
   },
 };

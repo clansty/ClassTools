@@ -3,6 +3,8 @@ import os from 'os';
 import windowManager from './utils/windowManager';
 import tray from './components/tray';
 import ipcWindow from './ipc/window';
+import minimist from 'minimist';
+import WindowName from './types/WindowName';
 
 // Disable GPU Acceleration for Windows 7
 if (os.release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -32,6 +34,15 @@ app.on('window-all-closed', () => {
   app.quit();
 });
 
-app.on('second-instance', () => {
-  // TODO: 通过第二个实例传递的参数打开相应的窗口，针对给功能窗口创建桌面快捷方式的情况（准备可以用过桌面快捷方式或者托盘菜单打开功能窗口）
+app.on('second-instance', (event, argv) => {
+  // 接收快捷方式传入的参数 --window=homeworkEdit 之类，打开指定窗口
+  const argvParsed = minimist(argv, {
+    string: ['window'],
+  }) as {
+    window?: WindowName;
+  };
+
+  if (argvParsed.window) {
+    windowManager.createByName(argvParsed.window);
+  }
 });
