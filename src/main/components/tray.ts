@@ -29,10 +29,17 @@ class AppTray {
           windowManager.createSloganEditWindow();
         },
       },
+      { type: 'separator' },
       {
         label: '设置',
         click: () => {
           windowManager.createSettingsWindow();
+        },
+      },
+      {
+        label: '关于',
+        click: () => {
+          windowManager.createAboutWindow();
         },
       },
       { type: 'separator' },

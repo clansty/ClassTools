@@ -7,5 +7,6 @@ declare global {
     path: typeof import('path');
     exePath: string;
     ipcRenderer: import('electron').IpcRenderer;
+    COMMIT_HASH: string;
   }
 }

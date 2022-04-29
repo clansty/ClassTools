@@ -7,11 +7,18 @@ import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
 import Content from '@originjs/vite-plugin-content';
 import SvgLoader from 'vite-svg-loader';
+import { execSync } from 'child_process';
+
+const COMMIT_HASH = JSON.stringify(execSync('git rev-parse --short HEAD').toString()
+  .replace(/[\n\r\s]/g, ''));
 
 // https://vitejs.dev/config/
 export default defineConfig({
   mode: process.env.NODE_ENV,
   root: __dirname,
+  define: {
+    COMMIT_HASH,
+  },
   plugins: [
     vue(),
     resolveElectron(
@@ -58,6 +65,7 @@ export function resolveElectron(
   /**
    * @see https://github.com/caoxiemeihao/vite-plugins/tree/main/packages/resolve#readme
    */
+  // @ts-ignore
   return resolve({
     electron: electronExport(),
     ...builtinModulesExport(builtins),

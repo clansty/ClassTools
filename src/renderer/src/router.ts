@@ -6,6 +6,7 @@ import HomeworkHistory from './views/HomeworkHistory.vue';
 import HomeworkHistoryView from './views/HomeworkHistoryView.vue';
 import Settings from './views/Settings.vue';
 import SloganEdit from './views/SloganEdit.vue';
+import About from './views/About.vue';
 import SettingsBasic from './views/settings/Basic.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
 import SettingsLessons from './views/settings/Lessons.vue';
@@ -21,6 +22,7 @@ export default createRouter({
     { path: '/wallpaper', component: Wallpaper },
     { path: '/homeworkEdit', component: HomeworkEdit },
     { path: '/homeworkView', component: HomeworkView },
+    { path: '/about', component: About },
     {
       path: '/homeworkHistory', component: HomeworkHistory, children: [
         { path: ':date', component: HomeworkHistoryView },

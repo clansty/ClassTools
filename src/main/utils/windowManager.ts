@@ -9,6 +9,7 @@ class WindowManager {
   private homeworkViewWindow?: BrowserWindow;
   private settingsWindow?: BrowserWindow;
   private sloganEditWindow?: BrowserWindow;
+  private aboutWindow?: BrowserWindow;
 
   private createWindow(route: string, options: Partial<BrowserWindowConstructorOptions> = {}, onReadyToShow?: () => any) {
     const win = new BrowserWindow({
@@ -105,6 +106,20 @@ class WindowManager {
     return this.settingsWindow;
   }
 
+  public createAboutWindow() {
+    if (this.aboutWindow) {
+      this.aboutWindow.show();
+      return this.aboutWindow;
+    }
+    this.aboutWindow = this.createWindow('about', {
+      title: '关于 ClassTools',
+    });
+    this.aboutWindow.on('close', () => {
+      this.aboutWindow = undefined;
+    });
+    return this.aboutWindow;
+  }
+
   public createSloganEditWindow() {
     if (this.sloganEditWindow) {
       this.sloganEditWindow.show();
@@ -153,6 +168,8 @@ class WindowManager {
         return this.createSloganEditWindow();
       case 'settings':
         return this.createSettingsWindow();
+      case 'about':
+        return this.createAboutWindow();
     }
   }
 }
