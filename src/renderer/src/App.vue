@@ -15,6 +15,7 @@ body {
   margin: 0;
   user-select: none;
   -webkit-font-smoothing: antialiased;
+  font-family: BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", "MicrosoftJhengHei", sans-serif;
 }
 
 * {

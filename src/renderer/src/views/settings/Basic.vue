@@ -35,6 +35,11 @@ const configExport = () => {
       :label="locale.settings.dateSize" v-model:value="settings.dateSize" unit="em"
     />
     <n-form-item
+      :label="locale.settings.font"
+    >
+      <FontSelector v-model:value="settings.font"/>
+    </n-form-item>
+    <n-form-item
       :label="locale.settings.backgroundType"
     >
       <n-radio-group v-model:value="settings.backgroundType">

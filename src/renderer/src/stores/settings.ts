@@ -3,7 +3,7 @@ import yaml from 'js-yaml';
 
 const useSettings = () => {
   // 如果软件目录存在 init.yaml 并且 settings 还没有初始化，就导入它
-  let init: object;
+  let init;
   if (window.fs && !localStorage.getItem('settings')) {
     const initPath = window.path.join(window.path.dirname(window.exePath), 'init.yaml');
     if (window.fs.existsSync(initPath)) {
@@ -20,6 +20,7 @@ const useSettings = () => {
     // 这里用 vw，这样所有设备上看起来都是一样的
     fontSize: 1.2,
     fontColor: '#303133',
+    font: 'BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", "MicrosoftJhengHei", sans-serif',
     dateSize: 1.7,
     city: 'CN101010100',
     weatherKey: '',
@@ -27,6 +28,8 @@ const useSettings = () => {
     weatherSize: 1,
     weatherColor: '#4a4a4a',
     weatherColorSecondary: '#9b9b9b',
+    // 华文黑体永远滴神
+    weatherFont: 'STHeiti, 华文细黑, 华文黑体, "Microsoft YaHei", "MicrosoftJhengHei", MingLiu, sans-serif',
     backgroundType: 'color' as 'image' | 'color' | 'advanced',
     // image 时使用
     backgroundImage: '',

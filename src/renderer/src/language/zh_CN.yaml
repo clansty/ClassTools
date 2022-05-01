@@ -6,7 +6,9 @@ settings:
   dateSize: 日期大小
   fontSize: 字体大小
   fontColor: 字体颜色
+  font: 字体
   city: 天气城市
+  weatherFont: 字体
   weatherKey: 和风天气 KEY
   weatherComponents: 组件开关
   weatherComponentsGroup:

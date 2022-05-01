@@ -27,6 +27,11 @@ const settings = useSettings();
       :label="locale.settings.weatherSize" v-model:value="settings.weatherSize" unit="em"
     />
     <n-form-item
+      :label="locale.settings.weatherFont"
+    >
+      <FontSelector v-model:value="settings.weatherFont"/>
+    </n-form-item>
+    <n-form-item
       :label="locale.settings.weatherColor"
     >
       <n-color-picker v-model:value="settings.weatherColor" :show-alpha="false"/>

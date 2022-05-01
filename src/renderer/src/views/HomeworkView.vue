@@ -64,10 +64,15 @@ console.log(Object.entries(settings.value.duty[now.value.getDay()]));
 const editHomework = () => window.ipcRenderer.send('window:open', 'homeworkEdit');
 const minimize = () => window.ipcRenderer.send('window:minimize');
 const close = () => window.close();
+
+const containerStyle = computed(() => ({
+  fontSize: settings.value.fontSize,
+  fontFamily: settings.value.font,
+}));
 </script>
 
 <template>
-  <n-layout position="absolute" :style="`font-size: ${settings.homeworkViewerSize}vw`">
+  <n-layout position="absolute" :style="containerStyle">
     <n-layout-header class="header">
       <n-time :time="homeworks.date" format="yyyy 年 M 月 d 日作业" style="font-size: 1.3em"/>
     </n-layout-header>

@@ -26,6 +26,7 @@ const backgroundStyle = computed(() => {
   }
   css += `font-size: ${settings.value.fontSize}vw;`;
   css += `color: ${settings.value.fontColor};`;
+  css += `font-family: ${settings.value.font};`;
   return css;
 });
 
