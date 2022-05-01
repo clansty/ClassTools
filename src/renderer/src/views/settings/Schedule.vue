@@ -7,12 +7,15 @@ const settings = useSettings();
 const selectOptions = computed(() =>
   settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })));
 
-watch([() => settings.value.sessionsMorning, () => settings.value.sessionsMorning], ([morning, afternoon]) => {
-  while (settings.value.schedule.length < morning + afternoon) {
-    settings.value.schedule.push(new Array(7).fill(''));
-  }
-  // 多出来的话就不删了，这样减错了还能加回来
-});
+watch([() => settings.value.sessionsMorning,
+    () => settings.value.sessionsAfternoon,
+    () => settings.value.sessionsEvening],
+  ([morning, afternoon, evening]) => {
+    while (settings.value.schedule.length < morning + afternoon + evening) {
+      settings.value.schedule.push(new Array(7).fill(''));
+    }
+    // 多出来的话就不删了，这样减错了还能加回来
+  });
 </script>
 
 <template>
