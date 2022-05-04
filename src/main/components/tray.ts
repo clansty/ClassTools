@@ -1,4 +1,4 @@
-import { app, Menu, Tray } from 'electron';
+import { app, Menu, Tray, nativeImage } from 'electron';
 import windowManager from '../utils/windowManager';
 import path from 'path';
 import { STATIC_PATH } from '../constants';
@@ -7,7 +7,9 @@ class AppTray {
   private tray?: Tray;
 
   public init() {
-    this.tray = new Tray(path.join(STATIC_PATH, 'tray.ico'));
+    this.tray = new Tray(process.platform === 'darwin' ?
+      nativeImage.createFromNamedImage('NSImageNameActionTemplate') :
+      path.join(STATIC_PATH, 'tray.ico'));
     this.tray.setToolTip('ClassTools');
     // 还可以从桌面快捷方式进入功能窗口，以后做
     this.tray.setContextMenu(Menu.buildFromTemplate([
