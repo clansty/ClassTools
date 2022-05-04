@@ -1,12 +1,13 @@
 # ClassTools
 
-这是一个用在班级电脑上面的教室系统🎉，以动态壁纸方式呈现高考倒计时，作业，课程表，值日生等看板。
+这是一个用在班级电脑上面的教室系统🎉，以动态壁纸方式呈现高考倒计时、作业、课程表、值日生等看板，并提供简单易用的设置界面。
 
-本项目使用 Electron Vue3 [NaiveUI](https://www.naiveui.com) 等工具构建。
+本项目使用 [Electron](https://www.electronjs.org/) [Vue3](https://vuejs.org/) [NaiveUI](https://www.naiveui.com) 等工具构建。
 
 [2.0版本](https://github.com/luoling8192/ClassTools)
 
 ## 实现功能
+
 - [x] 时钟显示
 - [x] 高考倒计时
 - [x] 实时天气
@@ -20,11 +21,10 @@
 
 ![壁纸主界面](./introduction/wallpaper.png)
 
-![](./introduction/views.png)
+![作业看板](./introduction/views.png)
 
 ## 开源协议
 
-![](./introduction/gplv3.png)
+![GPL 3.0](./introduction/gplv3.png)
 
 本项目使用 GPLv3 开源许可证开源。
-
