@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "Clansty",
+      "name": "凌莞~(=^▽^=)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/18461360?v=4",
+      "profile": "https://0w.al",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ClassTools",
+  "projectOwner": "ClassToolsOfficial",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
