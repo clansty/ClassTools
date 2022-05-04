@@ -1,8 +1,8 @@
 {
-  "appId": "Class-Tools",
-  "asar": true,
+  "appId": "ClassTools",
+  "asar": false,
   "directories": {
-    "output": "release/${version}"
+    "output": "release"
   },
   "files": [
     "dist",
@@ -14,11 +14,13 @@
     ]
   },
   "win": {
+    "icon": "build/app.ico",
     "target": [
       {
-        "target": "nsis",
+        "target": "dir",
         "arch": [
-          "x64"
+          "x64",
+          "ia32"
         ]
       }
     ],
