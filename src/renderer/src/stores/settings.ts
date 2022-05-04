@@ -5,8 +5,8 @@ const useSettings = () => {
   // 如果软件目录存在 init.yaml 并且 settings 还没有初始化，就导入它
   let init;
   if (window.fs && !localStorage.getItem('settings')) {
-    const initPath = window.path.join(window.path.dirname(window.exePath), 'init.yaml');
-    if (window.fs.existsSync(initPath)) {
+    const initPath = window.path.join(window.path.dirname(window.exePath), '..', 'init.yaml');
+    if (window.isAppx && window.fs.existsSync(initPath)) {
       init = yaml.load(window.fs.readFileSync(initPath, 'utf-8'));
     }
   }

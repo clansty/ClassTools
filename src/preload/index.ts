@@ -6,6 +6,7 @@ import path from 'path';
 contextBridge.exposeInMainWorld('fs', fs);
 contextBridge.exposeInMainWorld('path', path);
 contextBridge.exposeInMainWorld('exePath', process.execPath);
+contextBridge.exposeInMainWorld('isAppx', process.windowsStore);
 contextBridge.exposeInMainWorld('ipcRenderer', withPrototype(ipcRenderer));
 
 // `exposeInMainWorld` can't detect attributes and methods of `prototype`, manually patching it.
