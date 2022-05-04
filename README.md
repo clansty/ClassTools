@@ -42,6 +42,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tr>
     <td align="center"><a href="https://0w.al"><img src="https://avatars.githubusercontent.com/u/18461360?v=4?s=100" width="100px;" alt=""/><br /><sub><b>凌莞~(=^▽^=)</b></sub></a><br /><a href="https://github.com/ClassToolsOfficial/ClassTools/commits?author=Clansty" title="Code">💻</a></td>
+    <td align="center"><a href="https://blog.luoling8192.top/"><img src="https://avatars.githubusercontent.com/u/44741987?v=4?s=100" width="100px;" alt=""/><br /><sub><b>RainbowBird</b></sub></a><br /><a href="https://github.com/ClassToolsOfficial/ClassTools/commits?author=luoling8192" title="Code">💻</a></td>
   </tr>
 </table>
 
