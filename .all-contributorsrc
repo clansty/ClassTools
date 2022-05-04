@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "luoling8192",
+      "name": "RainbowBird",
+      "avatar_url": "https://avatars.githubusercontent.com/u/44741987?v=4",
+      "profile": "https://blog.luoling8192.top/",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "ClassTools",
+  "projectOwner": "ClassToolsOfficial",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
