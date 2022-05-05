@@ -9,21 +9,21 @@ import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 
 const backgroundStyle = computed(() => {
-  let css = '';
+  let css: { [p: string]: string } = {};
   switch (settings.value.backgroundType) {
     case 'image':
-      css += `background-image: url('file://${settings.value.backgroundImage}');`;
+      css.backgroundImage = `url('file://${settings.value.backgroundImage}')`;
       break;
     case 'color':
-      css += `background-color: ${settings.value.backgroundColor};`;
+      css.backgroundColor = settings.value.backgroundColor;
       break;
     case 'advanced':
-      css += `background: ${settings.value.backgroundCss};`;
+      css.background = settings.value.backgroundCss;
       break;
   }
-  css += `font-size: ${settings.value.fontSize}vw;`;
-  css += `color: ${settings.value.fontColor};`;
-  css += `font-family: ${settings.value.font};`;
+  css.fontSize = settings.value.fontSize + 'vw';
+  css.color = settings.value.fontColor;
+  css.fontFamily = settings.value.font;
   return css;
 });
 
