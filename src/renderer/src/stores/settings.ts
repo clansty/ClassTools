@@ -13,8 +13,8 @@ const useSettings = () => {
   const settings = createAutoUpdateStorage('settings', {
     countDownName: '高考',
     countDownDate: 1686067200000,
-    dateFormat: 'yyyy-MM-dd',
-    timeFormat: 'HH:mm:ss',
+    dateFormat: 'yyyy 年 M 月 d 日',
+    timeFormat: 'H:mm:ss',
     // 这里是 em
     countDownSize: 1.5,
     countDownColor: '#ff0000',

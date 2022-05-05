@@ -17,7 +17,7 @@ const configExport = () => {
   link.click();
 };
 
-const dateFormats = ['yyyy-MM-dd', 'yyyy年MM月dd日', 'yyyy 年 MM 月 dd 日'];
+const dateFormats = ['yyyy-MM-dd', 'yyyy/MM/dd', 'yyyy 年 M 月 d 日'];
 const dateFormatOption = dateFormats.map((value) => ({
   label: value,
   value: value,

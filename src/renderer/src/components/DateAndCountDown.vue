@@ -16,10 +16,11 @@ const countDownStyle = computed(() => ({
 }));
 const conutDownTimeStyle = computed(() => ({
   color: settings.value.countDownColor,
-}))
+}));
 const dateStyle = computed(() => ({
   fontSize: settings.value.dateSize + 'em',
   marginBlock: '0.2em',
+  fontVariantNumeric: 'tabular-nums',
 }));
 </script>
 
