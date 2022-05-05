@@ -1,8 +1,10 @@
 settings:
   countDownName: 目标
   countDownDate: 日期
-  countDownSize: 数字大小
+  countDownSize: 字体大小
   countDownColor: 数字颜色
+  dateFormat: 日期格式
+  timeFormat: 时间格式
   dateSize: 日期大小
   fontSize: 字体大小
   fontColor: 字体颜色

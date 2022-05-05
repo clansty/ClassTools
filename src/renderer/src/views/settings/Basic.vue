@@ -16,6 +16,18 @@ const configExport = () => {
   link.download = `classtools-config_${formatDate(new Date(), 'YYYYMMDDHHmmss')}.json`;
   link.click();
 };
+
+const dateFormats = ['yyyy-MM-dd', 'yyyy年MM月dd日', 'yyyy 年 MM 月 dd 日'];
+const dateFormatOption = dateFormats.map((value) => ({
+  label: value,
+  value: value,
+}));
+
+const timeFormats = ['H:mm:ss', 'HH:mm:ss', 'H:mm', 'HH:mm'];
+const timeFormatOption = timeFormats.map((value) => ({
+  label: value,
+  value: value,
+}));
 </script>
 
 <template>
@@ -23,6 +35,12 @@ const configExport = () => {
     label-placement="left"
     label-width="auto"
   >
+    <n-form-item :label="locale.settings.dateFormat">
+      <n-select v-model:value="settings.dateFormat" :options="dateFormatOption"/>
+    </n-form-item>
+    <n-form-item :label="locale.settings.timeFormat">
+      <n-select v-model:value="settings.timeFormat" :options="[...timeFormatOption, {label:'不显示', value: ''}]"/>
+    </n-form-item>
     <FontSizeSliderFormItem
       :label="locale.settings.fontSize" v-model:value="settings.fontSize" unit="vw"
     />

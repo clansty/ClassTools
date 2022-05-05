@@ -11,8 +11,12 @@ const countDown = computed(() =>
 
 const countDownStyle = computed(() => ({
   fontSize: settings.value.countDownSize + 'em',
-  color: settings.value.countDownColor,
+  marginBlockStart: 0,
+  marginBlockEnd: 1.5 + 'em',
 }));
+const conutDownTimeStyle = computed(() => ({
+  color: settings.value.countDownColor,
+}))
 const dateStyle = computed(() => ({
   fontSize: settings.value.dateSize + 'em',
   marginBlock: '0.2em',
@@ -22,11 +26,14 @@ const dateStyle = computed(() => ({
 <template>
   <div>
     <p :style="dateStyle">
-      <n-time :time="now" format="yyyy 年 M 月 d 日"/>
+      <n-time :time="now" :format="settings.dateFormat"/>
     </p>
-    <p style="margin-block-start: 0; margin-block-end: 1.5em">
+    <p :style="dateStyle" v-if="settings.timeFormat">
+      <n-time :time="now" :format="settings.timeFormat"/>
+    </p>
+    <p :style="countDownStyle">
       距离{{ settings.countDownName }}
-      <span :style="countDownStyle">{{ countDown }}</span>
+      <span :style="conutDownTimeStyle">{{ countDown }}</span>
       天
     </p>
   </div>
