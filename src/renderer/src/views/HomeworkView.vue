@@ -74,7 +74,8 @@ const containerStyle = computed(() => ({
 <template>
   <n-layout position="absolute" :style="containerStyle">
     <n-layout-header class="header">
-      <n-time :time="homeworks.date" format="yyyy 年 M 月 d 日作业" style="font-size: 1.3em"/>
+      <n-time :time="homeworks.date" format="yyyy 年 M 月 d 日作业" style="font-size: 1.3em"/>&nbsp;
+      <n-time :time="now" :format="settings.timeFormat" style="font-size: 1.3em"/>
     </n-layout-header>
     <n-layout-content has-sider position="absolute" style="top: 3.5em; bottom: 40px" content-style="padding: 0 1em">
       <!-- 不加这个 style 的话，子容器会被上下撑开 -->
