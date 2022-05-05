@@ -1,9 +1,7 @@
 <script setup lang="ts">
-import useSettings from '../../stores/settings';
+import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import { formatDate } from '@vueuse/core';
-
-const settings = useSettings();
 
 const handleSelectConfig = async (file: File) => {
   settings.value = JSON.parse(await file.text());

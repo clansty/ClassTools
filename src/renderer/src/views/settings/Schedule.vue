@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import useSettings from '../../stores/settings';
+import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import { computed, ref, watch } from 'vue';
 
-const settings = useSettings();
 const selectOptions = computed(() =>
   settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })));
 

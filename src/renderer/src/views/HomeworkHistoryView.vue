@@ -2,15 +2,13 @@
 import useHistoryHomeworks from '../stores/homeworkHistory';
 import { useRoute, useRouter } from 'vue-router';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
-import useHomeworks from '../stores/homeworks';
-import useHistoryHomeworkList from '../stores/homeworkHistoryList';
+import currentHomeworks from '../stores/homeworks';
+import historyHomeworkList from '../stores/homeworkHistoryList';
 
 const route = useRoute();
 const router = useRouter();
 const date = Number(route.params.date);
 const homeworks = useHistoryHomeworks(date);
-const currentHomeworks = useHomeworks();
-const historyHomeworkList = useHistoryHomeworkList();
 
 const setAsCurrent = () => {
   currentHomeworks.value = homeworks.value;

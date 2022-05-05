@@ -1,10 +1,9 @@
 <script setup lang="ts">
-import useSettings from '../../stores/settings';
+import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import cities from '../../data/cities.json';
 import FontSizeSliderFormItem from '../../components/FontSizeSliderFormItem.vue';
 
-const settings = useSettings();
 </script>
 
 <template>

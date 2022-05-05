@@ -1,6 +1,6 @@
 import { RemovableRef, useStorage } from '@vueuse/core';
 
-export default <T extends {}>(name: string, initialValue: T): (() => RemovableRef<T>) => (() => {
+export default <T extends {}>(name: string, initialValue: T): RemovableRef<T> => {
   const storage = useStorage(name, initialValue);
   for (const initialValueKey in initialValue) {
     if (!(initialValueKey in storage.value)) {
@@ -8,4 +8,4 @@ export default <T extends {}>(name: string, initialValue: T): (() => RemovableRe
     }
   }
   return storage;
-});
+};

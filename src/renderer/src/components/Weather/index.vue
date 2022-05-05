@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import useSettings from '../../stores/settings';
+import settings from '../../stores/settings';
 import { useIntervalFn } from '@vueuse/core';
 import { computed, ref, watch } from 'vue';
 import { QWeather24h, QWeather7d, QWeatherH5 } from '../../types/QWeather';
@@ -14,7 +14,6 @@ const QWEATHER_H5API = new URL('https://widget-api.heweather.net/s6/plugin/h5');
 const QWEATHER_24HAPI = new URL('https://devapi.qweather.com/v7/weather/24h');
 const QWEATHER_7DAPI = new URL('https://devapi.qweather.com/v7/weather/7d');
 
-const settings = useSettings();
 
 const dataH5 = ref<QWeatherH5>();
 const data24h = ref<QWeather24h>();

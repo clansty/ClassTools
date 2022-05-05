@@ -1,9 +1,8 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import useSettings from '../stores/settings';
+import settings from '../stores/settings';
 import { useNow } from '@vueuse/core';
 
-const settings = useSettings();
 const now = useNow();
 
 const countDown = computed(() =>

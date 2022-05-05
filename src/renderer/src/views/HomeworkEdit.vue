@@ -1,14 +1,10 @@
 <script setup lang="ts">
-import useHomeworks from '../stores/homeworks';
-import useSettings from '../stores/settings';
+import homeworks from '../stores/homeworks';
+import settings from '../stores/settings';
 import { computed } from 'vue';
 import { isToday } from 'date-fns';
-import useHistoryHomeworkList from '../stores/homeworkHistoryList';
+import historyHomeworkList from '../stores/homeworkHistoryList';
 import useHistoryHomeworks from '../stores/homeworkHistory';
-
-const homeworks = useHomeworks();
-const historyHomeworkList = useHistoryHomeworkList();
-const settings = useSettings();
 
 const subjects = computed(() => settings.value.lessons
   .filter(lesson => lesson.hasHomework)

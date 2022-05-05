@@ -1,15 +1,12 @@
 <script setup lang="ts">
-import useHomeworks from '../stores/homeworks';
+import homeworks from '../stores/homeworks';
 import { computed } from 'vue';
-import useSettings from '../stores/settings';
+import settings from '../stores/settings';
 import Weather from '../components/Weather/index.vue';
 import SloganDisplay from '../components/SloganDisplay.vue';
 import DateAndCountDown from '../components/DateAndCountDown.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
-
-const homeworks = useHomeworks();
-const settings = useSettings();
 
 const backgroundStyle = computed(() => {
   let css = '';

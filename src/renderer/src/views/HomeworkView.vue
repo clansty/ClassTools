@@ -2,9 +2,9 @@
 import Minimize from '../assets/icons/Minimize.svg';
 import Close from '../assets/icons/Close.svg';
 import Edit from '../assets/icons/Edit.svg';
-import useSettings from '../stores/settings';
+import settings from '../stores/settings';
 import { useNow } from '@vueuse/core';
-import useHomeworks from '../stores/homeworks';
+import homeworks from '../stores/homeworks';
 import { computed } from 'vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
@@ -19,8 +19,6 @@ const getTime = (time: number | Date) => {
   return time % (1000 * 60 * 60 * 24);
 };
 
-const settings = useSettings();
-const homeworks = useHomeworks();
 const now = useNow();
 
 // 需要把作业平均分配到设定好数量到组里

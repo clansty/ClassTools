@@ -1,11 +1,10 @@
 <script setup lang="tsx">
 import { RouterLink, useRoute, useRouter } from 'vue-router';
-import useHistoryHomeworkList from '../stores/homeworkHistoryList';
+import historyHomeworkList from '../stores/homeworkHistoryList';
 import { MenuOption, NTime } from 'naive-ui';
 import { h, Fragment } from 'vue';
 
 const route = useRoute();
-const historyHomeworkList = useHistoryHomeworkList();
 
 const menuOptions: MenuOption[] = historyHomeworkList.value.sort()
   .map(date => ({

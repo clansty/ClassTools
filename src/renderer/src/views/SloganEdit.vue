@@ -1,9 +1,8 @@
 <script setup lang="ts">
-import useSlogan from '../stores/slogan';
+import slogan from '../stores/slogan';
 import locale from '../language/zh_CN.yaml';
 import FontSizeSliderFormItem from '../components/FontSizeSliderFormItem.vue';
 
-const slogan = useSlogan();
 </script>
 
 <template>

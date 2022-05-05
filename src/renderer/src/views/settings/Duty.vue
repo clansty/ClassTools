@@ -1,8 +1,7 @@
 <script setup lang="ts">
-import useSettings from '../../stores/settings';
+import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 
-const settings = useSettings();
 
 </script>
 

@@ -1,8 +1,6 @@
 <script setup lang="ts">
-import useSlogan from '../stores/slogan';
+import slogan from '../stores/slogan';
 import { computed } from 'vue';
-
-const slogan = useSlogan();
 
 const containerStyle = computed(() => ({
   '--size': slogan.value.size + 'em',
