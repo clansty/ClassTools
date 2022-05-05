@@ -25,7 +25,6 @@ pre {
   margin: 0.7em 0;
   word-wrap: break-word;
   white-space: pre-wrap;
-  text-align: center;
 }
 
 p {

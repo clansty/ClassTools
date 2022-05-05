@@ -7,7 +7,9 @@ import SloganDisplay from '../components/SloganDisplay.vue';
 import DateAndCountDown from '../components/DateAndCountDown.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
+import slogan from '../stores/slogan';
 
+const weatherOnLeft = computed(() => !!slogan.value.content);
 const backgroundStyle = computed(() => {
   let css: { [p: string]: string } = {};
   switch (settings.value.backgroundType) {
@@ -26,7 +28,6 @@ const backgroundStyle = computed(() => {
   css.fontFamily = settings.value.font;
   return css;
 });
-
 </script>
 
 <template>
@@ -37,10 +38,11 @@ const backgroundStyle = computed(() => {
           <!-- -webkit-right 可以把天气的 div 也居右 -->
           <n-gi style="text-align: -webkit-right">
             <DateAndCountDown/>
-            <Weather/>
+            <Weather v-if="weatherOnLeft"/>
           </n-gi>
-          <n-gi>
-            <SloganDisplay/>
+          <n-gi style="text-align: -webkit-center">
+            <SloganDisplay v-if="weatherOnLeft"/>
+            <Weather v-else style="margin-top: 1em"/>
           </n-gi>
           <n-gi style="display: flex">
             <HomeworkDisplay :homeworks="homeworks.homeworks" style="width: 0; flex-grow: 1"/>
