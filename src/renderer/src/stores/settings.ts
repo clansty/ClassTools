@@ -25,6 +25,7 @@ const settings = createAutoUpdateStorage('settings', {
   dateSize: 1.7,
   city: 'CN101010100',
   weatherKey: '',
+  weatherKeyHidden: false,
   weatherComponents: ['realtime', 'rain', 'props', '24h', '7days'],
   weatherSize: 1,
   weatherColor: '#4a4a4a',

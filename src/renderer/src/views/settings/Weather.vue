@@ -19,6 +19,7 @@ import FontSizeSliderFormItem from '../../components/FontSizeSliderFormItem.vue'
     </n-form-item>
     <n-form-item
       :label="locale.settings.weatherKey"
+      v-if="settings.weatherKeyHidden"
     >
       <n-input type="text" v-model:value="settings.weatherKey"/>
     </n-form-item>
