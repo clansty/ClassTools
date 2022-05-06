@@ -1,4 +1,9 @@
 # ClassTools
+
+[<img align="right" src="https://user-images.githubusercontent.com/18461360/167066042-8f25b9de-379f-4ea1-bfa3-002d50cf5da6.svg" height="70"/>](https://www.microsoft.com/store/apps/9PC000G9HGQ2)
+[![GitHub release (latest by date including pre-releases)](https://img.shields.io/github/v/release/ClassToolsOfficial/ClassTools?include_prereleases&style=flat-square)](https://github.com/ClassToolsOfficial/ClassTools/releases/latest)
+[![GitHub](https://img.shields.io/github/license/ClassToolsOfficial/ClassTools?style=flat-square)](https://github.com/ClassToolsOfficial/ClassTools/blob/v3.0.0/LICENSE)
+<!-- 这个 all contributors 的 badge 非要换行，因为有那个注释 -->
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 [![All Contributors](https://img.shields.io/badge/all_contributors-2-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
