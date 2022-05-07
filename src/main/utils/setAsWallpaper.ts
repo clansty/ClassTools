@@ -2,6 +2,7 @@ import { BrowserWindow, dialog, app } from 'electron';
 import { CPP, ffi, L, NULL, WinWin } from 'win-win-api/lib';
 import { HANDLE } from 'win-win-api/lib/ts';
 import os from 'os';
+import { exec } from 'child_process';
 
 const winFns = new WinWin().winFns();
 export default function (childWindow: BrowserWindow) {
@@ -49,10 +50,14 @@ export default function (childWindow: BrowserWindow) {
     winFns.SetParent(myAppHwnd, workView);
   }
   else {
-    dialog.showMessageBoxSync({
-      type: 'error',
-      message: '设置壁纸失败',
+    const choice = dialog.showMessageBoxSync({
+      message: '设置壁纸失败，请在「性能设置」中打开「窗口内的动画控件和元素」',
+      buttons: ['去设置', '退出'],
+      defaultId: 1,
     });
+    if (choice === 0) {
+      exec('control sysdm.cpl,,3');
+    }
     app.quit();
   }
 }

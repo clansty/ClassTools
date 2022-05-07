@@ -3,7 +3,6 @@ import windowManager from '../utils/windowManager';
 import path from 'path';
 import { STATIC_PATH } from '../constants';
 import fs from 'fs';
-import { WinWin } from 'win-win-api/lib';
 
 class AppTray {
   private tray?: Tray;
