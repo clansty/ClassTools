@@ -1165,6 +1165,7 @@ __metadata:
     vite-svg-loader: ^3.3.0
     vue: ^3.2.33
     vue-router: ^4.0.14
+    wallpaper: ^6.1.1
     win-win-api: ^0.0.5
   languageName: unknown
   linkType: soft
@@ -4655,6 +4656,13 @@ __metadata:
   peerDependencies:
     vue: ^3.0.11
   checksum: 290be5a6b88ce81d616e15d4c6c0fe540d8b60916089b873724bd43c67294857486401312d951a1666dde5749cb9c2b7422062b415d1d8386d5be48a3ef0fdb5
+  languageName: node
+  linkType: hard
+
+"wallpaper@npm:^6.1.1":
+  version: 6.1.1
+  resolution: "wallpaper@npm:6.1.1"
+  checksum: cf99c3644ea2e18130f8ebfdb1743a5b9c8b249e82d2fc802b20ac8c2a5b3f1567e422c931a8c4369c74140a63f66ceb0002e8a325e1c619547df8a0960d73f5
   languageName: node
   linkType: hard
 

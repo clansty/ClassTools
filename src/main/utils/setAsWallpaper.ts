@@ -52,7 +52,7 @@ export default function (childWindow: BrowserWindow) {
   else {
     if (os.release().startsWith('6.1')) {
       // Win7
-      const choice = dialog.showMessageBoxSync({
+      dialog.showMessageBoxSync({
         message: '设置壁纸失败，请打开 Aero',
       });
     }
@@ -68,7 +68,7 @@ export default function (childWindow: BrowserWindow) {
       }
     }
     else {
-      const choice = dialog.showMessageBoxSync({
+      dialog.showMessageBoxSync({
         message: '设置壁纸失败',
       });
     }

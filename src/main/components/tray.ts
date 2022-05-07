@@ -57,8 +57,14 @@ class AppTray {
     menu.append(new MenuItem({ type: 'separator' }));
     menu.append(new MenuItem({
       label: '退出',
-      click: () => {
+      click: async () => {
         windowManager.destroyAllWindows();
+        if (process.platform === 'win32') {
+          const { getWallpaper, setWallpaper } = // ESM
+            await (Function('return import("wallpaper")')() as Promise<typeof import('wallpaper')>);
+          const wallpaper = await getWallpaper();
+          await setWallpaper(wallpaper);
+        }
         this.tray!.destroy();
         app.quit();
         process.exit(0);
