@@ -1,4 +1,4 @@
-import { BrowserWindow } from 'electron';
+import { BrowserWindow, dialog, app } from 'electron';
 import { CPP, ffi, L, NULL, WinWin } from 'win-win-api/lib';
 import { HANDLE } from 'win-win-api/lib/ts';
 import os from 'os';
@@ -45,6 +45,14 @@ export default function (childWindow: BrowserWindow) {
   }
 
   //将electron窗口设置在壁纸上层
-  if (workView)
+  if (workView) {
     winFns.SetParent(myAppHwnd, workView);
+  }
+  else {
+    dialog.showMessageBoxSync({
+      type: 'error',
+      message: '设置壁纸失败',
+    });
+    app.quit();
+  }
 }
