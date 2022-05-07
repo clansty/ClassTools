@@ -29,7 +29,7 @@ const value = computed({
 
 <template>
   <n-form-item :label="props.label">
-    <n-slider v-model:value="value" :min="inputProps.min" :max="inputProps.max" :step="inputProps.sliderStep"/>
+    <DebouncedSlider v-model:value="value" :min="inputProps.min" :max="inputProps.max" :step="inputProps.sliderStep"/>
     <div style="width: 100px; margin-left: 20px; flex-shrink: 0">
       <!-- n-input-number 好像有点问题，不能直接在上面加 style，会不生效 -->
       <n-input-number v-model:value="value" :min="inputProps.min" :max="inputProps.max" :step="inputProps.inputStep"/>

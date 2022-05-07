@@ -6,6 +6,7 @@ import '@vue/runtime-core'
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     DateAndCountDown: typeof import('./src/components/DateAndCountDown.vue')['default']
+    DebouncedSlider: typeof import('./src/components/DebouncedSlider.vue')['default']
     Degree: typeof import('./src/components/Weather/Degree.vue')['default']
     FileSelectButton: typeof import('./src/components/FileSelectButton.vue')['default']
     FontSelector: typeof import('./src/components/FontSelector.vue')['default']
