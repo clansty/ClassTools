@@ -50,13 +50,27 @@ export default function (childWindow: BrowserWindow) {
     winFns.SetParent(myAppHwnd, workView);
   }
   else {
-    const choice = dialog.showMessageBoxSync({
-      message: '设置壁纸失败，请在「性能设置」中打开「窗口内的动画控件和元素」',
-      buttons: ['去设置', '退出'],
-      defaultId: 1,
-    });
-    if (choice === 0) {
-      exec('control sysdm.cpl,,3');
+    if (os.release().startsWith('6.1')) {
+      // Win7
+      const choice = dialog.showMessageBoxSync({
+        message: '设置壁纸失败，请打开 Aero',
+      });
+    }
+    else if (os.release().startsWith('10.')) {
+      // Win10
+      const choice = dialog.showMessageBoxSync({
+        message: '设置壁纸失败，请在「性能设置」中打开「窗口内的动画控件和元素」',
+        buttons: ['去设置', '退出'],
+        defaultId: 1,
+      });
+      if (choice === 0) {
+        exec('control sysdm.cpl,,3');
+      }
+    }
+    else {
+      const choice = dialog.showMessageBoxSync({
+        message: '设置壁纸失败',
+      });
     }
     app.quit();
   }
