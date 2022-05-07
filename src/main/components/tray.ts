@@ -1,7 +1,9 @@
-import { app, Menu, Tray, nativeImage } from 'electron';
+import { app, Menu, Tray, nativeImage, MenuItem, BrowserWindow } from 'electron';
 import windowManager from '../utils/windowManager';
 import path from 'path';
 import { STATIC_PATH } from '../constants';
+import fs from 'fs';
+import { WinWin } from 'win-win-api/lib';
 
 class AppTray {
   private tray?: Tray;
@@ -11,8 +13,7 @@ class AppTray {
       nativeImage.createFromNamedImage('NSImageNameActionTemplate') :
       path.join(STATIC_PATH, 'tray.ico'));
     this.tray.setToolTip('ClassTools');
-    // 还可以从桌面快捷方式进入功能窗口，以后做
-    this.tray.setContextMenu(Menu.buildFromTemplate([
+    const menu = Menu.buildFromTemplate([
       {
         label: '作业看板',
         click: () => {
@@ -44,17 +45,27 @@ class AppTray {
           windowManager.createAboutWindow();
         },
       },
-      { type: 'separator' },
-      {
-        label: '退出',
+    ]);
+    if (process.env.NODE_ENV === 'development' || fs.existsSync(path.join(app.getPath('appData'), 'debug'))) {
+      menu.append(new MenuItem({
+        label: '调试',
         click: () => {
-          windowManager.destroyAllWindows();
-          this.tray!.destroy();
-          app.quit();
-          process.exit(0);
+          windowManager.createWallpaperWindow().webContents.openDevTools({ mode: 'detach' });
+          BrowserWindow.getAllWindows().forEach(it => it.webContents.openDevTools());
         },
+      }));
+    }
+    menu.append(new MenuItem({ type: 'separator' }));
+    menu.append(new MenuItem({
+      label: '退出',
+      click: () => {
+        windowManager.destroyAllWindows();
+        this.tray!.destroy();
+        app.quit();
+        process.exit(0);
       },
-    ]));
+    }));
+    this.tray.setContextMenu(menu);
     this.tray.on('click', () => this.tray.popUpContextMenu());
   }
 }
