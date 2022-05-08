@@ -5,7 +5,7 @@ import yaml from 'js-yaml';
 let init;
 if (window.fs && !localStorage.getItem('settings')) {
   const initPath = window.path.join(window.path.dirname(window.exePath), '..', 'init.yaml');
-  if (window.isAppx && window.fs.existsSync(initPath)) {
+  if ((window.isAppx || window.exePath.includes('\\MsixCoreApps\\')) && window.fs.existsSync(initPath)) {
     init = yaml.load(window.fs.readFileSync(initPath, 'utf-8'));
   }
 }
