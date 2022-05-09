@@ -37,6 +37,7 @@ async function checkForUpdate() {
   else {
     console.log('无法更新');
   }
+  clearTimeout(interval);
 }
 
 export default function setupUpdateChecker() {
