@@ -8,6 +8,7 @@ import WindowName from './types/WindowName';
 import fs from 'fs';
 import path from 'path';
 import { execFile } from 'child_process';
+import setupUpdateChecker from './utils/checkForUpdate';
 
 // 如果是 portable 版本，软件目录有 data 这个文件夹的话，数据放在 data 里面
 // 提供的 portable 版本的压缩包里自带这个文件夹
@@ -34,13 +35,7 @@ app.whenReady().then(async () => {
     const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
     setAsWallpaper(wallPaperWindow);
   }
-  if (process.windowsStore && fs.existsSync(path.join(path.dirname(process.execPath), '..', 'updater.exe'))) {
-    try {
-      execFile(path.join(path.dirname(process.execPath), '..', 'updater.exe'));
-    }
-    catch {
-    }
-  }
+  setupUpdateChecker();
 });
 
 app.on('window-all-closed', () => {
