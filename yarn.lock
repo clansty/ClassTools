@@ -1163,7 +1163,7 @@ __metadata:
     compare-versions: ^4.1.3
     electron: ^18.2.0
     electron-builder: ^23.0.3
-    electron-request: ^1.8.1
+    electron-request: 1.8.0
     ffi-napi: ^4.0.3
     js-yaml: ^4.1.0
     minimist: ^1.2.6
@@ -1801,10 +1801,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron-request@npm:^1.8.1":
-  version: 1.8.1
-  resolution: "electron-request@npm:1.8.1"
-  checksum: 029e330a78393b0611fdd82f0fb98480c25656f77389d6e857381f3334593d1386ecc160bfcc3e7e30251528b4fdccb06ffe152cfcd79d2dfba76ace1508ba6c
+"electron-request@npm:1.8.0":
+  version: 1.8.0
+  resolution: "electron-request@npm:1.8.0"
+  checksum: 693e72e0aece0fda6dfdd364ccafca1458105e9a5108b052101a4ce23ad16bee103886bd620021bbed87711bb060ca1b3e0f8042ec757ddbc57347b32273b5ad
   languageName: node
   linkType: hard
 

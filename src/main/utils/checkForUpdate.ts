@@ -6,6 +6,7 @@ import fs from 'fs';
 import { compare } from 'compare-versions';
 import os from 'os';
 import { execFile, spawn } from 'child_process';
+import { app } from 'electron';
 
 const packagePath = path.join(path.dirname(process.execPath), '..');
 const manifestPath = path.join(packagePath, 'AppxManifest.xml');
@@ -16,7 +17,7 @@ const msixCorePath = 'C:\\Program Files\\msixmgr\\msixmgr.exe';
 let interval: NodeJS.Timer;
 
 async function checkForUpdate() {
-  const manifest = await xml2js.parseStringPromise();
+  const manifest = await xml2js.parseStringPromise(await fsP.readFile(manifestPath, 'utf-8'));
   const packageVersion: string = manifest.Package.Identity[0].$.Version;
   console.log('当前版本', packageVersion);
   const updateConfig: { versionUrl: string, packageUrl: string } =
