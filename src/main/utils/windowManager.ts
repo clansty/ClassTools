@@ -113,6 +113,8 @@ class WindowManager {
     }
     this.aboutWindow = this.createWindow('about', {
       title: '关于 ClassTools',
+      maximizable: false,
+      resizable: false,
     });
     this.aboutWindow.on('close', () => {
       this.aboutWindow = undefined;
