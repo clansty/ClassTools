@@ -1,7 +1,7 @@
 {
   "name": "class-tools",
   "productName": "ClassTools",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "main": "dist/main/index.cjs",
   "author": "Clansty <i@gao4.pw> & RainbowBird <rbxin2003@outlook.com>",
   "private": true,
