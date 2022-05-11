@@ -7,6 +7,7 @@ import HomeworkHistoryView from './views/HomeworkHistoryView.vue';
 import Settings from './views/Settings.vue';
 import SloganEdit from './views/SloganEdit.vue';
 import About from './views/About.vue';
+import Demo from './views/Demo.vue';
 import SettingsBasic from './views/settings/Basic.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
 import SettingsLessons from './views/settings/Lessons.vue';
@@ -18,7 +19,7 @@ import SettingsCountdown from './views/settings/Countdown.vue';
 export default createRouter({
   history: createWebHashHistory(),
   routes: [
-    { path: '/', redirect: '/wallpaper' },
+    { path: '/', component: Demo },
     { path: '/wallpaper', component: Wallpaper },
     { path: '/homeworkEdit', component: HomeworkEdit },
     { path: '/homeworkView', component: HomeworkView },
