@@ -64,7 +64,7 @@ const minimize = () => window.ipcRenderer.send('window:minimize');
 const close = () => window.close();
 
 const containerStyle = computed(() => ({
-  fontSize: settings.value.fontSize,
+  fontSize: settings.value.homeworkViewerSize + 'vw',
   fontFamily: settings.value.font,
 }));
 </script>
