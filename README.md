@@ -10,8 +10,8 @@
 
 这是一个用在班级电脑上面的教室系统🎉，以动态壁纸方式呈现高考倒计时、作业、课程表、值日生等看板，并提供简单易用的设置界面。
 
-本项目使用 [Electron](https://www.electronjs.org/) [Vue3](https://vuejs.org/) [NaiveUI](https://www.naiveui.com) 等工具构建。[在线体验]
-(https://demo.ct.0w.al/#/)
+本项目使用 [Electron](https://www.electronjs.org/) [Vue3](https://vuejs.org/) [NaiveUI](https://www.naiveui.com) 等工具构建。[在线体验](https://demo.ct.0w.al/#/)
+
 [2.0版本](https://github.com/luoling8192/ClassTools)
 
 ## 实现功能
