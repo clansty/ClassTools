@@ -2,31 +2,38 @@
 import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
 import { computed, ref, watch } from 'vue';
+import { useDebounce, useDebounceFn } from '@vueuse/core';
 
 const selectOptions = computed(() =>
   settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })));
 
-watch([() => settings.value.sessionsMorning,
-    () => settings.value.sessionsAfternoon,
-    () => settings.value.sessionsEvening],
-  ([morning, afternoon, evening]) => {
-    while (settings.value.schedule.length < morning + afternoon + evening) {
-      settings.value.schedule.push(new Array(7).fill(''));
-    }
-    // 多出来的话就不删了，这样减错了还能加回来
-  });
+const sessionsMorning = ref(settings.value.sessionsMorning);
+const sessionsAfternoon = ref(settings.value.sessionsAfternoon);
+const sessionsEvening = ref(settings.value.sessionsEvening);
+
+const updateSessions = useDebounceFn(([morning, afternoon, evening]) => {
+  settings.value.sessionsMorning = sessionsMorning.value;
+  settings.value.sessionsAfternoon = sessionsAfternoon.value;
+  settings.value.sessionsEvening = sessionsEvening.value;
+  while (settings.value.schedule.length < morning + afternoon + evening) {
+    settings.value.schedule.push(new Array(7).fill(''));
+  }
+  // 多出来的话就不删了，这样减错了还能加回来
+}, 250);
+
+watch([sessionsMorning, sessionsAfternoon, sessionsEvening], updateSessions);
 </script>
 
 <template>
   <n-form inline label-placement="left">
     <n-form-item :label="locale.settings.sessionsMorning">
-      <n-input-number v-model:value="settings.sessionsMorning"/>
+      <n-input-number v-model:value="sessionsMorning"/>
     </n-form-item>
     <n-form-item :label="locale.settings.sessionsAfternoon">
-      <n-input-number v-model:value="settings.sessionsAfternoon"/>
+      <n-input-number v-model:value="sessionsAfternoon"/>
     </n-form-item>
     <n-form-item :label="locale.settings.sessionsEvening">
-      <n-input-number v-model:value="settings.sessionsEvening"/>
+      <n-input-number v-model:value="sessionsEvening"/>
     </n-form-item>
   </n-form>
   <n-grid x-gap="12" cols="7">
