@@ -1,11 +1,12 @@
-import { BrowserWindow, dialog, app } from 'electron';
+import { app, BrowserWindow, dialog } from 'electron';
 import { CPP, ffi, L, NULL, WinWin } from 'win-win-api/lib';
 import { HANDLE } from 'win-win-api/lib/ts';
 import os from 'os';
 import { exec } from 'child_process';
+import { Severity, captureException, captureMessage } from '@sentry/electron/main';
 
 const winFns = new WinWin().winFns();
-export default function (childWindow: BrowserWindow) {
+export default async function (childWindow: BrowserWindow) {
   try {
     //壁纸句柄
     let workView: HANDLE | null = null;
@@ -51,25 +52,31 @@ export default function (childWindow: BrowserWindow) {
       winFns.SetParent(myAppHwnd, workView);
     }
     else {
+      captureMessage('设置壁纸失败，因为找不到 workView', {
+        level: Severity.Fatal,
+        tags: {
+          context: 'wallpaper',
+        },
+      });
       if (os.release().startsWith('6.1')) {
         // Win7
-        dialog.showMessageBoxSync({
+        await dialog.showMessageBox({
           message: '设置壁纸失败，请打开 Aero',
         });
       }
       else if (os.release().startsWith('10.')) {
         // Win10
-        const choice = dialog.showMessageBoxSync({
+        const choice = await dialog.showMessageBox({
           message: '设置壁纸失败，请在「性能设置」中打开「窗口内的动画控件和元素」',
           buttons: ['去设置', '退出'],
           defaultId: 1,
         });
-        if (choice === 0) {
+        if (choice.response === 0) {
           exec('control sysdm.cpl,,3');
         }
       }
       else {
-        dialog.showMessageBoxSync({
+        await dialog.showMessageBox({
           message: '设置壁纸失败',
         });
       }
@@ -77,7 +84,13 @@ export default function (childWindow: BrowserWindow) {
     }
   }
   catch (e) {
-    dialog.showMessageBoxSync({
+    captureException(e, {
+      level: Severity.Fatal,
+      tags: {
+        context: 'wallpaper',
+      },
+    });
+    await dialog.showMessageBox({
       message: '设置壁纸失败',
       detail: e.toString(),
     });

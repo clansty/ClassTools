@@ -7,6 +7,7 @@ import { compare } from 'compare-versions';
 import os from 'os';
 import { execFile, spawn } from 'child_process';
 import { ipcMain } from 'electron';
+import { Severity, captureException, captureMessage } from '@sentry/electron/main';
 
 const packagePath = path.join(path.dirname(process.execPath), '..');
 const manifestPath = path.join(packagePath, 'AppxManifest.xml');
@@ -49,15 +50,23 @@ async function checkForUpdate() {
       else {
         throw new Error('找不到更新方式');
       }
+      captureMessage('更新成功', {
+        level: Severity.Info,
+      });
     }
     catch (e) {
       ipcMain.emit('update:failed', e.message);
+      clearTimeout(interval);
       throw e;
     }
-    clearTimeout(interval);
   }
   catch (e) {
-
+    captureException(e, {
+      level: Severity.Error,
+      tags: {
+        context: 'update',
+      },
+    });
   }
 }
 

@@ -16,6 +16,9 @@
   },
   "devDependencies": {
     "@originjs/vite-plugin-content": "^1.0.1",
+    "@sentry/electron": "^3.0.7",
+    "@sentry/tracing": "^6.19.7",
+    "@sentry/vue": "^6.19.7",
     "@types/js-yaml": "^4.0.5",
     "@types/minimist": "^1.2.2",
     "@types/xml2js": "^0.4.11",

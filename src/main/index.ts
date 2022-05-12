@@ -7,14 +7,24 @@ import minimist from 'minimist';
 import WindowName from './types/WindowName';
 import fs from 'fs';
 import path from 'path';
-import { execFile } from 'child_process';
 import setupUpdateChecker from './utils/checkForUpdate';
+import * as Sentry from '@sentry/electron/main';
 
 // 如果是 portable 版本，软件目录有 data 这个文件夹的话，数据放在 data 里面
 // 提供的 portable 版本的压缩包里自带这个文件夹
 if (fs.existsSync(path.join(path.dirname(process.execPath), 'data'))) {
   app.setPath('userData', path.join(path.dirname(process.execPath), 'data'));
 }
+
+// 故障报告
+Sentry.init({
+  dsn: 'https://474bfb78ea9242568079efefa41943bc@o1243132.ingest.sentry.io/6398330',
+  release: app.getVersion(),
+});
+Sentry.setContext('application', {
+  portable: fs.existsSync(path.join(path.dirname(process.execPath), 'data')),
+  osVersion: os.release(),
+});
 
 // Disable GPU Acceleration for Windows 7
 if (os.release().startsWith('6.1')) app.disableHardwareAcceleration();
@@ -25,6 +35,7 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 app.whenReady().then(async () => {
+  setupUpdateChecker();
   tray.init();
   if (process.env.NODE_ENV !== 'development') {
     Menu.setApplicationMenu(null);
@@ -33,9 +44,8 @@ app.whenReady().then(async () => {
   const wallPaperWindow = windowManager.createWallpaperWindow();
   if (process.platform === 'win32') {
     const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
-    setAsWallpaper(wallPaperWindow);
+    await setAsWallpaper(wallPaperWindow);
   }
-  setupUpdateChecker();
 });
 
 app.on('window-all-closed', () => {
