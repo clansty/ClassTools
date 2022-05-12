@@ -13,6 +13,7 @@ export default defineConfig({
     },
     minify: process.env./* from mode option */NODE_ENV === 'production',
     emptyOutDir: true,
+    sourcemap: true,
     rollupOptions: {
       external: [
         'electron',

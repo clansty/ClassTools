@@ -47,6 +47,7 @@ export default defineConfig({
   build: {
     emptyOutDir: true,
     outDir: '../../dist/renderer',
+    sourcemap: true,
   },
   server: {
     port: pkg.env.PORT,
