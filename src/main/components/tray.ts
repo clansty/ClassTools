@@ -45,7 +45,7 @@ class AppTray {
         },
       },
     ]);
-    if (process.env.NODE_ENV === 'development' || fs.existsSync(path.join(app.getPath('appData'), 'debug'))) {
+    if (process.env.NODE_ENV === 'development' || fs.existsSync(path.join(app.getPath('userData'), 'debug'))) {
       menu.append(new MenuItem({
         label: '调试',
         click: () => {
