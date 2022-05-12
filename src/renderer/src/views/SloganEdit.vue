@@ -22,6 +22,11 @@ import FontSizeSliderFormItem from '../components/FontSizeSliderFormItem.vue';
         >
           <n-input v-model:value="slogan.author"/>
         </n-form-item>
+        <n-form-item
+          :label="locale.settings.font"
+        >
+          <FontSelector v-model:value="slogan.font"/>
+        </n-form-item>
         <FontSizeSliderFormItem
           :label="locale.slogan.size" v-model:value="slogan.size" unit="em"
         />

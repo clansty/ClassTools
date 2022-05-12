@@ -8,4 +8,5 @@ export default createAutoUpdateStorage('slogan', {
   authorSize: 2,
   color: '#ff0000',
   authorColor: '#303133',
+  font: '"Microsoft Yahei", "MicrosoftJhengHei", sans-serif',
 });

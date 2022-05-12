@@ -3,6 +3,7 @@ import slogan from '../stores/slogan';
 import { computed } from 'vue';
 
 const containerStyle = computed(() => ({
+  fontFamily: slogan.value.font,
   '--size': slogan.value.size + 'em',
   '--author-size': slogan.value.authorSize + 'em',
   '--color': slogan.value.color,
