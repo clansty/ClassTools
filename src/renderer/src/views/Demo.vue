@@ -2,7 +2,7 @@
 import GithubIcon from '../assets/icons/Github.svg';
 import { useTitle } from '@vueuse/core';
 
-useTitle('ClassTools Demo')
+useTitle('ClassTools Demo');
 </script>
 
 <template>
