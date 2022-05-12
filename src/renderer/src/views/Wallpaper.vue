@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup lang="tsx">
 import homeworks from '../stores/homeworks';
 import { computed } from 'vue';
 import settings from '../stores/settings';
@@ -8,6 +8,34 @@ import DateAndCountDown from '../components/DateAndCountDown.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 import slogan from '../stores/slogan';
+import { useNotification } from 'naive-ui';
+import { h, Fragment } from 'vue';
+
+const notification = useNotification();
+if (window.ipcRenderer) {
+  window.ipcRenderer.on('update:installing', (_, { remoteVersion, packageVersion }: { [k: string]: string }) =>
+    notification.info({
+      closable: false,
+      title: 'ClassTools 正在更新…',
+      content: () => (<>当前版本：<code>{packageVersion}</code>
+        <br/>最新版本：<code>{remoteVersion}</code></>),
+      duration: 30 * 1000,
+    }));
+  window.ipcRenderer.on('update:failed', (_, { reason }: { [k: string]: string }) =>
+    notification.info({
+      closable: false,
+      title: 'ClassTools 无法更新',
+      content: reason,
+      duration: 30 * 1000,
+    }));
+  window.ipcRenderer.on('update:needRestart', () =>
+    notification.info({
+      closable: false,
+      title: 'ClassTools 更新完成',
+      content: '下次启动时将使用新版本',
+      duration: 30 * 1000,
+    }));
+}
 
 const weatherOnLeft = computed(() => !!slogan.value.content);
 const backgroundStyle = computed(() => {
