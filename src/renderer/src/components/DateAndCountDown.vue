@@ -20,6 +20,7 @@ const dateStyle = computed(() => ({
   fontSize: settings.value.dateSize + 'em',
   marginBlock: '0.2em',
   fontVariantNumeric: 'tabular-nums',
+  fontFeatureSettings: '"tnum"',
 }));
 </script>
 
