@@ -68,11 +68,16 @@ const settings = createAutoUpdateStorage('settings', {
   homeworkViewerSize: 1.2,
   homeworkViewerCols: 3,
   showSchedule: true,
-  showTomorrowScheduleAfter: 1594051200000, // 16:00
+  showTomorrowScheduleAfter: '16:00:00', // 16:00
   showDuty: true,
 });
 if (init) {
   Object.assign(settings.value, init);
+}
+
+// 20220512 更改 showTomorrowScheduleAfter 格式为 HH:mm:ss
+if (typeof settings.value.showTomorrowScheduleAfter === 'number') {
+  settings.value.showTomorrowScheduleAfter = '16:00:00';
 }
 
 export default settings;

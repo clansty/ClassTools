@@ -34,7 +34,7 @@ const handleSelectFile = () => {
     <n-form-item
       :label="locale.settings.showTomorrowScheduleAfter"
     >
-      <n-time-picker v-model:value="settings.showTomorrowScheduleAfter"/>
+      <n-time-picker v-model:formatted-value="settings.showTomorrowScheduleAfter"/>
     </n-form-item>
     <n-form-item
       :label="locale.settings.showDuty"

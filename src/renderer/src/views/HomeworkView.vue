@@ -9,14 +9,16 @@ import { computed } from 'vue';
 import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 import HomeworkDisplay from '../components/HomeworkDisplay.vue';
 
-// 获取从今天 0 点到现在到秒数
-const getTime = (time: number | Date) => {
+// 获取从今天 0 点到现在的秒数
+const getTime = (time: Date | string) => {
   if (typeof time === 'object') {
-    time = time.getTime();
+    return time.getHours() * 60 * 60 + time.getMinutes() * 60 + time.getSeconds();
   }
-  // 转换为中国时间秒数
-  time += 1000 * 60 * 60 * 8;
-  return time % (1000 * 60 * 60 * 24);
+  const exec = /(\d+):(\d+):(\d+)/.exec(time);
+  const hours = Number(exec[1]);
+  const minutes = Number(exec[2]);
+  const seconds = Number(exec[3]);
+  return hours * 60 * 60 + minutes * 60 + seconds;
 };
 
 const now = useNow();
@@ -45,7 +47,7 @@ const groupedHomeworks = computed(() => {
 });
 // 现在的时间大于设定的时间，把这个分出来因为下面的文字要显示 今日/明日
 const showTomorrowSchedule = computed(() =>
-  getTime(now.value.getTime()) > getTime(settings.value.showTomorrowScheduleAfter));
+  getTime(now.value) > getTime(settings.value.showTomorrowScheduleAfter));
 const scheduleWeekday = computed(() =>
   new Date(now.value.getTime() +
     (showTomorrowSchedule.value ? 1000 * 60 * 60 * 24 : 0),
