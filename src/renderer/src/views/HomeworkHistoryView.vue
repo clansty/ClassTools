@@ -21,7 +21,7 @@ const setAsCurrent = () => {
   <div>
     <div style="display: flex">
       <n-h2 style="flex-grow: 1">
-        <n-time :time="homeworks.date" format="M 月 d 日作业"/>
+        <n-time :time="homeworks.date" format="M月d日作业"/>
       </n-h2>
       <n-button @click="setAsCurrent">
         设为当前

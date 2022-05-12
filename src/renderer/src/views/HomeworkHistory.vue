@@ -10,7 +10,7 @@ const menuOptions: MenuOption[] = historyHomeworkList.value.sort()
   .map(date => ({
     label: () => (
       <RouterLink to={`/homeworkHistory/${date}`}>
-        {() => <NTime time={date} format="M 月 d 日"/>}
+        {() => <NTime time={date} format="M月d日"/>}
       </RouterLink>
     ),
     key: date.toString(),
