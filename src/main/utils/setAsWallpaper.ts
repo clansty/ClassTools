@@ -6,9 +6,9 @@ import { exec } from 'child_process';
 import { Severity, captureException, captureMessage } from '@sentry/electron/main';
 import windowManager from './windowManager';
 
-const winFns = new Win32ffi().winFns();
 export default async function (childWindow: BrowserWindow) {
   try {
+    const winFns = new Win32ffi().winFns();
     //壁纸句柄
     let workView: HANDLE | null = null;
 
