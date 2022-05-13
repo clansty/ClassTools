@@ -4,6 +4,7 @@ import { HANDLE } from 'win32-ffi/lib/ts';
 import os from 'os';
 import { exec } from 'child_process';
 import { Severity, captureException, captureMessage } from '@sentry/electron/main';
+import windowManager from './windowManager';
 
 const winFns = new Win32ffi().winFns();
 export default async function (childWindow: BrowserWindow) {
@@ -52,6 +53,7 @@ export default async function (childWindow: BrowserWindow) {
       winFns.SetParent(myAppHwnd, workView);
     }
     else {
+      windowManager.destroyAllWindows();
       captureMessage('设置壁纸失败，因为找不到 workView', {
         level: Severity.Fatal,
         tags: {
@@ -84,6 +86,7 @@ export default async function (childWindow: BrowserWindow) {
     }
   }
   catch (e) {
+    windowManager.destroyAllWindows();
     captureException(e, {
       level: Severity.Fatal,
       tags: {
