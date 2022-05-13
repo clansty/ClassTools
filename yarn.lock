@@ -1369,7 +1369,7 @@ __metadata:
     vue: ^3.2.33
     vue-router: ^4.0.15
     wallpaper: ^6.1.1
-    win-win-api: ^0.0.5
+    win32-ffi: ^0.0.6-alpha.4
     xml2js: ^0.4.23
   languageName: unknown
   linkType: soft
@@ -4971,15 +4971,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"win-win-api@npm:^0.0.5":
-  version: 0.0.5
-  resolution: "win-win-api@npm:0.0.5"
+"win32-ffi@npm:^0.0.6-alpha.4":
+  version: 0.0.6-alpha.4
+  resolution: "win32-ffi@npm:0.0.6-alpha.4"
   dependencies:
     ffi-napi: ^4.0.3
     ref-napi: ^3.0.3
     ref-struct-di: ^1.1.1
     ref-union-di: ^1.0.1
-  checksum: 8be4f392d21031dda9cb4a2d1e4adc1012288a6e7fb7a7b47e80d248d84a3a5f9dc1fba85656c66c3940f4b2474fc11e75a8cff675289054792e47483836c908
+  checksum: 0043e215ebacbfba8e86c81fccdfdba65474bffd1e472006116c42d4d3633665d0b45f73f82ebd464f14ff438f898c6b724106a6e7f3dd59b04cfa6c3fa07075
   languageName: node
   linkType: hard
 

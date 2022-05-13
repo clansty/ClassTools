@@ -39,7 +39,7 @@
     "vite-svg-loader": "^3.3.0",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15",
-    "win-win-api": "^0.0.5",
+    "win32-ffi": "^0.0.6-alpha.4",
     "xml2js": "^0.4.23"
   },
   "env": {

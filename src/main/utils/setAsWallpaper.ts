@@ -1,11 +1,11 @@
 import { app, BrowserWindow, dialog } from 'electron';
-import { CPP, ffi, L, NULL, WinWin } from 'win-win-api/lib';
-import { HANDLE } from 'win-win-api/lib/ts';
+import { CPP, ffi, L, NULL, Win32ffi } from 'win32-ffi';
+import { HANDLE } from 'win32-ffi/lib/ts';
 import os from 'os';
 import { exec } from 'child_process';
 import { Severity, captureException, captureMessage } from '@sentry/electron/main';
 
-const winFns = new WinWin().winFns();
+const winFns = new Win32ffi().winFns();
 export default async function (childWindow: BrowserWindow) {
   try {
     //壁纸句柄
