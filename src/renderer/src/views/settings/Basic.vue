@@ -34,10 +34,11 @@ const timeFormatOption = timeFormats.map((value) => ({
     label-width="auto"
   >
     <n-form-item :label="locale.settings.dateFormat">
-      <n-select v-model:value="settings.dateFormat" :options="dateFormatOption"/>
+      <n-select v-model:value="settings.dateFormat" filterable tag :options="dateFormatOption"/>
     </n-form-item>
     <n-form-item :label="locale.settings.timeFormat">
-      <n-select v-model:value="settings.timeFormat" :options="[...timeFormatOption, {label:'不显示', value: ''}]"/>
+      <n-select v-model:value="settings.timeFormat" filterable tag
+                :options="[...timeFormatOption, {label:'不显示', value: ''}]"/>
     </n-form-item>
     <FontSizeSliderFormItem
       :label="locale.settings.fontSize" v-model:value="settings.fontSize" unit="vw"
