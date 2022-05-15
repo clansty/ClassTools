@@ -9,6 +9,8 @@ import fs from 'fs';
 import path from 'path';
 import setupUpdateChecker from './utils/checkForUpdate';
 import * as Sentry from '@sentry/electron/main';
+import getSettings from './utils/getSettings';
+import createShortcuts from './utils/createShortcuts';
 
 // 如果是 portable 版本，软件目录有 data 这个文件夹的话，数据放在 data 里面
 // 提供的 portable 版本的压缩包里自带这个文件夹
@@ -45,6 +47,11 @@ app.whenReady().then(async () => {
   if (process.platform === 'win32') {
     const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
     await setAsWallpaper(wallPaperWindow);
+  }
+  const settings = await getSettings();
+  console.log(settings);
+  if (settings.createDesktopShortcut) {
+    createShortcuts();
   }
 });
 

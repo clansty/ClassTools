@@ -26,6 +26,8 @@ const timeFormatOption = timeFormats.map((value) => ({
   label: value,
   value: value,
 }));
+
+const showCreateDesktopShortcut = !window.isAppx && window.fs;
 </script>
 
 <template>
@@ -100,6 +102,12 @@ const timeFormatOption = timeFormats.map((value) => ({
           {{ locale.settings.import }}
         </FileSelectButton>
       </n-space>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.createDesktopShortcut"
+      v-if="showCreateDesktopShortcut"
+    >
+      <n-switch v-model:value="settings.createDesktopShortcut"/>
     </n-form-item>
   </n-form>
 </template>

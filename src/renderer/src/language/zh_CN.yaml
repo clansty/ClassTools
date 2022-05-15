@@ -41,6 +41,7 @@ settings:
   configImportExport: 配置项
   import: 导入
   export: 导出
+  createDesktopShortcut: 桌面快捷方式
   routes:
     basic: 基础设置
     countdown: 倒计时设置

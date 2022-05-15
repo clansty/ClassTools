@@ -70,6 +70,7 @@ const settings = createAutoUpdateStorage('settings', {
   showSchedule: true,
   showTomorrowScheduleAfter: '16:00:00', // 16:00
   showDuty: true,
+  createDesktopShortcut: true,
 });
 if (init) {
   Object.assign(settings.value, init);
