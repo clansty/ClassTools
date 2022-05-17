@@ -73,6 +73,6 @@ const rollMulti = () => {
     transform: translateY(100%)
 
 .number
-  transition: all 0.2s ease
+  transition: all 0.3s cubic-bezier(0.68, -0.55, 0.27, 1.55)
   display: inline-block // 这行不加，translateY 不起作用
 </style>
