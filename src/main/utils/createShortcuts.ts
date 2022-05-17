@@ -25,7 +25,6 @@ export default function () {
   if (process.windowsStore) return;
   if (process.platform !== 'win32') return;
   const desktopPath = app.getPath('desktop');
-  const transaction = Sentry.startTransaction({ name: '创建快捷方式' });
   for (const shortcut of shortcuts) {
     try {
       const isOk = shell.writeShortcutLink(path.join(desktopPath, shortcut.name + '.lnk'), {
@@ -40,5 +39,4 @@ export default function () {
       Sentry.captureException(e);
     }
   }
-  transaction.finish();
 }

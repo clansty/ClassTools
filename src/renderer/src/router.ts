@@ -8,6 +8,7 @@ import Settings from './views/Settings.vue';
 import SloganEdit from './views/SloganEdit.vue';
 import About from './views/About.vue';
 import Demo from './views/Demo.vue';
+import Lots from './views/Lots.vue';
 import SettingsBasic from './views/settings/Basic.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
 import SettingsLessons from './views/settings/Lessons.vue';
@@ -42,5 +43,6 @@ export default createRouter({
       ],
     },
     { path: '/sloganEdit', component: SloganEdit },
+    { path: '/lots', component: Lots },
   ],
 });

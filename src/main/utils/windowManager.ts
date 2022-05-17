@@ -10,6 +10,7 @@ class WindowManager {
   private settingsWindow?: BrowserWindow;
   private sloganEditWindow?: BrowserWindow;
   private aboutWindow?: BrowserWindow;
+  private lotsWindow?: BrowserWindow;
 
   private createWindow(route: string, options: Partial<BrowserWindowConstructorOptions> = {}, onReadyToShow?: () => any) {
     const win = new BrowserWindow({
@@ -142,6 +143,26 @@ class WindowManager {
     return this.sloganEditWindow;
   }
 
+  public createLotsWindow() {
+    if (this.lotsWindow) {
+      this.lotsWindow.show();
+      return this.lotsWindow;
+    }
+    const screenSize = screen.getPrimaryDisplay().size;
+    this.lotsWindow = this.createWindow('lots', {
+      title: '抽签小工具',
+      // 显示在屏幕左边三分之一的位置，就像 C8UI 标语编辑器的左半边
+      height: 300,
+      width: 400,
+      x: screenSize.width - 500,
+      y: screenSize.height - 400,
+    });
+    this.lotsWindow.on('closed', () => {
+      this.lotsWindow = undefined;
+    });
+    return this.lotsWindow;
+  }
+
   public destroyAllWindows() {
     if (this.wallpaperWindow) {
       this.wallpaperWindow.destroy();
@@ -158,6 +179,9 @@ class WindowManager {
     if (this.sloganEditWindow) {
       this.sloganEditWindow.destroy();
     }
+    if (this.lotsWindow) {
+      this.lotsWindow.destroy();
+    }
   }
 
   public createByName(name: WindowName) {
@@ -172,6 +196,8 @@ class WindowManager {
         return this.createSettingsWindow();
       case 'about':
         return this.createAboutWindow();
+      case 'lots':
+        return this.createLotsWindow();
     }
   }
 }
