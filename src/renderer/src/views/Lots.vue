@@ -41,8 +41,8 @@ const rollMulti = () => {
             单抽
           </n-button>
           <n-input-group size="large">
-            <n-input-number v-model:value="lotsSettings.count" :min="1" :show-button="false"
-                            style="width: 45px" size="large"/>
+            <n-input-number v-model:value="lotsSettings.count" :min="1" :max="lotsSettings.max - lotsSettings.min + 1"
+                            :show-button="false" style="width: 45px" size="large"/>
             <n-button size="large" @click="rollMulti">
               连抽
             </n-button>
