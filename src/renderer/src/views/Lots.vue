@@ -27,7 +27,7 @@ const rollMulti = () => {
 <template>
   <n-layout>
     <n-layout-content content-style="padding: 24px">
-      <n-space vertical align="center" size="large">
+      <n-space vertical align="center" :size="20">
         <div style="display: flex; justify-content: center; align-items: center">
           最小值
           <n-input-number v-model:value="lotsSettings.min" :max="lotsSettings.max" :show-button="false"
@@ -50,11 +50,29 @@ const rollMulti = () => {
         </n-space>
         <div style="font-size: 3em">
           <n-number-animation v-if="rollType === 'single'" :from="valueSingleLast" :to="valueSingle" :duration="1000"/>
-          <n-space v-if="rollType === 'multi'" justify="center">
-            <span v-for="i in valueMulti">{{ i }}</span>
-          </n-space>
+          <transition name="animation">
+            <!-- 要是把 v-if 放在 transition 上，会导致第一次没有动画，因为 transition 在里面元素已经加载的时候确实不会有动画 -->
+            <!-- 这个 key 是为了每随机一次，这个元素对于 transition 来说都不一样，让 transition 重新进行一次 -->
+            <n-space v-if="rollType === 'multi'" justify="center" :size="20" :key="valueMulti.join(',')"
+                     style="overflow: hidden">
+              <!-- overflow: hidden 不加，动画的时候会出滚动条 -->
+              <span v-for="(i,index) in valueMulti" class="number"
+                    :style="{ transitionDelay: `${index * 0.1}s` }">{{ i }}</span>
+            </n-space>
+          </transition>
         </div>
       </n-space>
     </n-layout-content>
   </n-layout>
 </template>
+
+<style scoped lang="sass">
+.animation-enter-from
+  .number
+    opacity: 0
+    transform: translateY(100%)
+
+.number
+  transition: all 0.2s ease
+  display: inline-block // 这行不加，translateY 不起作用
+</style>
