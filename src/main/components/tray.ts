@@ -31,6 +31,12 @@ class AppTray {
           windowManager.createSloganEditWindow();
         },
       },
+      {
+        label: '抽签小工具',
+        click: () => {
+          windowManager.createLotsWindow();
+        },
+      },
       { type: 'separator' },
       {
         label: '设置',
