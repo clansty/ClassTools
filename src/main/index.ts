@@ -1,4 +1,4 @@
-import { app, Menu } from 'electron';
+import { app, dialog, Menu } from 'electron';
 import os from 'os';
 import windowManager from './utils/windowManager';
 import tray from './components/tray';
@@ -11,6 +11,7 @@ import setupUpdateChecker from './utils/checkForUpdate';
 import * as Sentry from '@sentry/electron/main';
 import getSettings from './utils/getSettings';
 import createShortcuts from './utils/createShortcuts';
+import { captureException, Severity } from '@sentry/electron/main';
 
 // 如果是 portable 版本，软件目录有 data 这个文件夹的话，数据放在 data 里面
 // 提供的 portable 版本的压缩包里自带这个文件夹
@@ -45,8 +46,24 @@ app.whenReady().then(async () => {
   ipcWindow.register();
   const wallPaperWindow = windowManager.createWallpaperWindow();
   if (process.platform === 'win32') {
-    const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
-    await setAsWallpaper(wallPaperWindow);
+    try {
+      const { default: setAsWallpaper } = await import('./utils/setAsWallpaper');
+      await setAsWallpaper(wallPaperWindow);
+    }
+    catch (e) {
+      windowManager.destroyAllWindows();
+      captureException(e, {
+        level: Severity.Fatal,
+        tags: {
+          context: 'wallpaper',
+        },
+      });
+      await dialog.showMessageBox({
+        message: '设置壁纸失败',
+        detail: e.toString(),
+      });
+      app.quit();
+    }
   }
   const settings = await getSettings();
   if (settings.createDesktopShortcut) {
