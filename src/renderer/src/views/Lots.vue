@@ -50,7 +50,7 @@ const rollMulti = () => {
         </n-space>
         <div style="font-size: 3em">
           <n-number-animation v-if="rollType === 'single'" :from="valueSingleLast" :to="valueSingle" :duration="1000"/>
-          <transition name="animation">
+          <transition name="animation" mode="out-in">
             <!-- 要是把 v-if 放在 transition 上，会导致第一次没有动画，因为 transition 在里面元素已经加载的时候确实不会有动画 -->
             <!-- 这个 key 是为了每随机一次，这个元素对于 transition 来说都不一样，让 transition 重新进行一次 -->
             <n-space v-if="rollType === 'multi'" justify="center" :size="20" :key="valueMulti.join(',')"
