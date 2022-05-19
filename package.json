@@ -39,7 +39,6 @@
     "vite-svg-loader": "^3.3.0",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15",
-    "win32-ffi": "^0.0.6-alpha.4",
     "xml2js": "^0.4.23"
   },
   "env": {
@@ -49,6 +48,7 @@
   "dependencies": {
     "ffi-napi": "^4.0.3",
     "ref-napi": "^3.0.3",
-    "wallpaper": "^6.1.1"
+    "wallpaper": "^6.1.1",
+    "win32-ffi": "^0.0.6-alpha.5"
   }
 }

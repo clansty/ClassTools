@@ -49,7 +49,6 @@ app.whenReady().then(async () => {
     await setAsWallpaper(wallPaperWindow);
   }
   const settings = await getSettings();
-  console.log(settings);
   if (settings.createDesktopShortcut) {
     createShortcuts();
   }
