@@ -8,6 +8,7 @@ declare global {
     exePath: string;
     isAppx: string;
     ipcRenderer: import('electron').IpcRenderer;
+    env: NodeJS.ProcessEnv;
     COMMIT_HASH: string;
   }
 }

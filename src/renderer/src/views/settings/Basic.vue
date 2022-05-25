@@ -62,9 +62,7 @@ const showCreateDesktopShortcut = !window.isAppx && window.fs;
       :label="locale.settings.backgroundType"
     >
       <n-radio-group v-model:value="settings.backgroundType">
-        <n-radio-button value="image">{{ locale.settings.backgroundTypeImage }}</n-radio-button>
-        <n-radio-button value="color">{{ locale.settings.backgroundTypeColor }}</n-radio-button>
-        <n-radio-button value="advanced">{{ locale.settings.backgroundTypeAdvanced }}</n-radio-button>
+        <n-radio-button v-for="(text, value) in locale.settings.backgroundTypes" :value="value">{{ text }}</n-radio-button>
       </n-radio-group>
     </n-form-item>
     <n-form-item

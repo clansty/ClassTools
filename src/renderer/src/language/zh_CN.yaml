@@ -27,9 +27,11 @@ settings:
   sessionsEvening: 晚上节次
   scheduleSize: 课表字体大小
   backgroundType: 背景类型
-  backgroundTypeImage: 图片
-  backgroundTypeColor: 纯色
-  backgroundTypeAdvanced: 高级
+  backgroundTypes:
+    image: 图片
+    color: 纯色
+    advanced: 高级
+    system: 同步系统
   backgroundImage: 背景图片
   backgroundColor: 背景颜色
   backgroundCss: 背景 CSS

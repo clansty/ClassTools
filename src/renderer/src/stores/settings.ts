@@ -32,7 +32,7 @@ const settings = createAutoUpdateStorage('settings', {
   weatherColorSecondary: '#9b9b9b',
   // 华文黑体永远滴神
   weatherFont: 'STHeiti, 华文细黑, 华文黑体, "Microsoft YaHei", "MicrosoftJhengHei", MingLiu, sans-serif',
-  backgroundType: 'color' as 'image' | 'color' | 'advanced',
+  backgroundType: 'color' as 'image' | 'color' | 'advanced' | 'system',
   // image 时使用
   backgroundImage: '',
   // color

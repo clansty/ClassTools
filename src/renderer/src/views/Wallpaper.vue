@@ -10,7 +10,9 @@ import ScheduleDisplay from '../components/ScheduleDisplay.vue';
 import slogan from '../stores/slogan';
 import { useNotification } from 'naive-ui';
 import { h, Fragment } from 'vue';
+import useSystemWallpaper from '../hooks/systemWallpaper';
 
+const systemWallpaper = useSystemWallpaper();
 const notification = useNotification();
 if (window.ipcRenderer) {
   window.ipcRenderer.on('update:installing', (_, { remoteVersion, packageVersion }: { [k: string]: string }) =>
@@ -49,6 +51,9 @@ const backgroundStyle = computed(() => {
       break;
     case 'advanced':
       css.background = settings.value.backgroundCss;
+      break;
+    case 'system':
+      css.background = `url('file://${systemWallpaper.value}')`;
       break;
   }
   css.fontSize = settings.value.fontSize + 'vw';
