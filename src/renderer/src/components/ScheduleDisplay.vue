@@ -11,10 +11,13 @@ const now = useNow();
 
 const scheduleToday = computed(() => // 这里不能用 ||，因为 0 也是假值，但是和 undefined 不一样
   settings.value.schedule.map(session => session[props.weekday !== undefined ? props.weekday : now.value.getDay()]));
+const containerStyle = computed(() => ({
+  fontSize: settings.value.scheduleSize + 'em',
+}));
 </script>
 
 <template>
-  <div>
+  <div :style="containerStyle">
     <p v-for="session in settings.sessionsMorning">
       {{ scheduleToday[session - 1] }}
     </p>

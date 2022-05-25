@@ -25,6 +25,7 @@ settings:
   sessionsMorning: 上午节次
   sessionsAfternoon: 下午节次
   sessionsEvening: 晚上节次
+  scheduleSize: 课表字体大小
   backgroundType: 背景类型
   backgroundTypeImage: 图片
   backgroundTypeColor: 纯色
