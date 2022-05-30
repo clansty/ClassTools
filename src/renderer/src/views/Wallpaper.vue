@@ -15,16 +15,22 @@ import useSystemWallpaper from '../hooks/systemWallpaper';
 const systemWallpaper = useSystemWallpaper();
 const notification = useNotification();
 if (window.ipcRenderer) {
-  window.ipcRenderer.on('update:installing', (_, { remoteVersion, packageVersion }: { [k: string]: string }) =>
+  window.ipcRenderer.on('update:available', (_, { remoteVersion, packageVersion }: { [k: string]: string }) =>
+    notification.info({
+      closable: false,
+      title: 'ClassTools 更新可用',
+      content: () => (<>当前版本：<code>{packageVersion}</code>
+        <br/>最新版本：<code>{remoteVersion}</code>
+        <br/>请在托盘菜单中选择更新</>),
+    }));
+  window.ipcRenderer.on('update:installing', () =>
     notification.info({
       closable: false,
       title: 'ClassTools 正在更新…',
-      content: () => (<>当前版本：<code>{packageVersion}</code>
-        <br/>最新版本：<code>{remoteVersion}</code></>),
       duration: 30 * 1000,
     }));
   window.ipcRenderer.on('update:failed', (_, { reason }: { [k: string]: string }) =>
-    notification.info({
+    notification.error({
       closable: false,
       title: 'ClassTools 无法更新',
       content: reason,
