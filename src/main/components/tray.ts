@@ -3,7 +3,6 @@ import windowManager from '../utils/windowManager';
 import path from 'path';
 import { STATIC_PATH } from '../constants';
 import fs from 'fs';
-import { doUpdate } from '../utils/checkForUpdate';
 
 class AppTray {
   private tray?: Tray;
@@ -13,11 +12,6 @@ class AppTray {
       nativeImage.createFromNamedImage('NSImageNameActionTemplate') :
       path.join(STATIC_PATH, 'tray.ico'));
     this.tray.setToolTip('ClassTools');
-    this.setMenu();
-    this.tray.on('click', () => this.tray.popUpContextMenu());
-  }
-
-  public setMenu(hasUpdate = false) {
     const menu = Menu.buildFromTemplate([
       {
         label: '作业看板',
@@ -66,12 +60,6 @@ class AppTray {
         },
       }));
     }
-    if (hasUpdate) {
-      menu.append(new MenuItem({
-        label: '更新',
-        click: doUpdate,
-      }));
-    }
     menu.append(new MenuItem({ type: 'separator' }));
     menu.append(new MenuItem({
       label: '退出',
@@ -89,6 +77,7 @@ class AppTray {
       },
     }));
     this.tray.setContextMenu(menu);
+    this.tray.on('click', () => this.tray.popUpContextMenu());
   }
 }
 

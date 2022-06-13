@@ -7,7 +7,7 @@ import minimist from 'minimist';
 import WindowName from './types/WindowName';
 import fs from 'fs';
 import path from 'path';
-import { setupUpdateChecker } from './utils/checkForUpdate';
+import setupUpdateChecker from './utils/checkForUpdate';
 import * as Sentry from '@sentry/electron/main';
 import getSettings from './utils/getSettings';
 import createShortcuts from './utils/createShortcuts';
@@ -38,6 +38,7 @@ if (!app.requestSingleInstanceLock()) {
 }
 
 app.whenReady().then(async () => {
+  setupUpdateChecker();
   tray.init();
   if (process.env.NODE_ENV !== 'development') {
     Menu.setApplicationMenu(null);
@@ -64,7 +65,6 @@ app.whenReady().then(async () => {
       app.quit();
     }
   }
-  setupUpdateChecker();
   const settings = await getSettings();
   if (settings.createDesktopShortcut) {
     createShortcuts();
