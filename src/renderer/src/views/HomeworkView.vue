@@ -41,7 +41,7 @@ const groupedHomeworks = computed(() => {
     if (current === settings.value.homeworkViewerCols) current = 0;
   }
   if (isDutyShown.value) {
-    result[current].今日值日生 = '';
+    result[current].duty = '';
   }
   return result;
 });
@@ -52,11 +52,19 @@ const scheduleWeekday = computed(() =>
   new Date(now.value.getTime() +
     (showTomorrowSchedule.value ? 1000 * 60 * 60 * 24 : 0),
   ).getDay());
+const showTomorrowDuty = computed(() =>
+  getTime(now.value) > getTime(settings.value.showTomorrowDutyAfter));
+const dutyTitle = computed(() => // 不想在下面嵌套太多三目表达式
+  showTomorrowDuty.value ? '明日值日生' : '今日值日生');
+const dutyWeekday = computed(() =>
+  new Date(now.value.getTime() +
+    (showTomorrowDuty.value ? 1000 * 60 * 60 * 24 : 0),
+  ).getDay());
 const isScheduleShown = computed(() => // 要确保明天有课
   settings.value.showSchedule && settings.value.schedule.some(session => session[scheduleWeekday.value]));
 const isDutyShown = computed(() =>
   settings.value.showDuty &&
-  Object.entries(settings.value.duty[now.value.getDay()])
+  Object.entries(settings.value.duty[dutyWeekday.value])
     .some(([type, student]) => student));
 
 console.log(Object.entries(settings.value.duty[now.value.getDay()]));
@@ -82,12 +90,12 @@ const containerStyle = computed(() => ({
       <n-grid x-gap="16" :cols="settings.homeworkViewerCols" style="align-items: flex-start;">
         <n-gi v-for="i in settings.homeworkViewerCols" style="display: grid; gap: 16px; grid-template-columns: 100%">
           <!-- 从 1 开始的，坏坏 -->
-          <n-card v-for="(content, subject) in groupedHomeworks[i-1]" :title="subject"
+          <n-card v-for="(content, subject) in groupedHomeworks[i-1]" :title="subject==='duty' ? dutyTitle : subject"
                   style="--n-font-size: 1em; --n-title-font-size: 1.2em"
                   content-style="word-wrap: break-word; white-space: pre-wrap; font-size: 1em">
             {{ content }}
             <!-- 值日生显示，借一下作业组件 -->
-            <HomeworkDisplay :homeworks="settings.duty[now.getDay()]" v-if="subject==='今日值日生'"/>
+            <HomeworkDisplay :homeworks="settings.duty[dutyWeekday]" v-if="subject==='duty'"/>
           </n-card>
         </n-gi>
       </n-grid>

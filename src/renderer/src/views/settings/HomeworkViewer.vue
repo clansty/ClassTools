@@ -41,5 +41,10 @@ const handleSelectFile = () => {
     >
       <n-switch v-model:value="settings.showDuty"/>
     </n-form-item>
+    <n-form-item
+      :label="locale.settings.showTomorrowDutyAfter"
+    >
+      <n-time-picker v-model:formatted-value="settings.showTomorrowDutyAfter"/>
+    </n-form-item>
   </n-form>
 </template>

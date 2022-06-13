@@ -68,7 +68,8 @@ const settings = createAutoUpdateStorage('settings', {
   homeworkViewerSize: 1.2,
   homeworkViewerCols: 3,
   showSchedule: true,
-  showTomorrowScheduleAfter: '16:00:00', // 16:00
+  showTomorrowScheduleAfter: '16:00:00',
+  showTomorrowDutyAfter: '16:00:00',
   showDuty: true,
   createDesktopShortcut: true,
   scheduleSize: 1,

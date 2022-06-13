@@ -40,6 +40,7 @@ settings:
   homeworkViewerCols: 作业列数
   showSchedule: 显示课表
   showTomorrowScheduleAfter: 在之后显示明日课表
+  showTomorrowDutyAfter: 在之后显示明日值日生
   showDuty: 显示值日生
   configImportExport: 配置项
   import: 导入
