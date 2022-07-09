@@ -3,21 +3,11 @@ import homeworks from '../stores/homeworks';
 import settings from '../stores/settings';
 import { computed } from 'vue';
 import { isToday } from 'date-fns';
-import historyHomeworkList from '../stores/homeworkHistoryList';
-import useHistoryHomeworks from '../stores/homeworkHistory';
+import newDay from '../utils/newDay';
 
 const subjects = computed(() => settings.value.lessons
   .filter(lesson => lesson.hasHomework)
   .map(subject => subject.name));
-
-const newDay = () => {
-  useHistoryHomeworks(homeworks.value.date, homeworks.value);
-  historyHomeworkList.value.push(homeworks.value.date);
-  homeworks.value = {
-    date: new Date().getTime(),
-    homeworks: {},
-  };
-};
 </script>
 
 <template>

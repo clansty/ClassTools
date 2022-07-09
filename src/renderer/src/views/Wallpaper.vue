@@ -1,6 +1,6 @@
 <script setup lang="tsx">
 import homeworks from '../stores/homeworks';
-import { computed } from 'vue';
+import { computed, watch } from 'vue';
 import settings from '../stores/settings';
 import Weather from '../components/Weather/index.vue';
 import SloganDisplay from '../components/SloganDisplay.vue';
@@ -11,6 +11,9 @@ import slogan from '../stores/slogan';
 import { useNotification } from 'naive-ui';
 import { h, Fragment } from 'vue';
 import useSystemWallpaper from '../hooks/systemWallpaper';
+import { useNow } from '@vueuse/core';
+import { isToday } from 'date-fns';
+import newDay from '../utils/newDay';
 
 const systemWallpaper = useSystemWallpaper();
 const notification = useNotification();
@@ -38,6 +41,14 @@ if (window.ipcRenderer) {
       duration: 30 * 1000,
     }));
 }
+
+const now = useNow();
+watch(() => now.value.getDate(), () => {
+  console.log('开始新的一天');
+  if (!settings.value.autoNewDay) return;
+  if (isToday(homeworks.value.date)) return;
+  newDay();
+});
 
 const weatherOnLeft = computed(() => !!slogan.value.content);
 const backgroundStyle = computed(() => {

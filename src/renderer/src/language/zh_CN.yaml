@@ -46,6 +46,9 @@ settings:
   import: 导入
   export: 导出
   createDesktopShortcut: 桌面快捷方式
+  createDesktopShortcutRemark: 自动在桌面上创建功能入口快捷方式
+  autoNewDay: 自动开始新的一天
+  autoNewDayRemark: 开启后会在每天零点将当前作业移入历史作业并清空作业列表
   routes:
     basic: 基础设置
     countdown: 倒计时设置

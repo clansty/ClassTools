@@ -62,7 +62,10 @@ const showCreateDesktopShortcut = !window.isAppx && window.fs;
       :label="locale.settings.backgroundType"
     >
       <n-radio-group v-model:value="settings.backgroundType">
-        <n-radio-button v-for="(text, value) in locale.settings.backgroundTypes" :value="value">{{ text }}</n-radio-button>
+        <n-radio-button v-for="(text, value) in locale.settings.backgroundTypes" :value="value">{{
+            text
+          }}
+        </n-radio-button>
       </n-radio-group>
     </n-form-item>
     <n-form-item
@@ -105,7 +108,18 @@ const showCreateDesktopShortcut = !window.isAppx && window.fs;
       :label="locale.settings.createDesktopShortcut"
       v-if="showCreateDesktopShortcut"
     >
-      <n-switch v-model:value="settings.createDesktopShortcut"/>
+      <n-space>
+        <n-switch v-model:value="settings.createDesktopShortcut"/>
+        {{ locale.settings.createDesktopShortcutRemark }}
+      </n-space>
+    </n-form-item>
+    <n-form-item
+      :label="locale.settings.autoNewDay"
+    >
+      <n-space>
+        <n-switch v-model:value="settings.autoNewDay"/>
+        {{ locale.settings.autoNewDayRemark }}
+      </n-space>
     </n-form-item>
   </n-form>
 </template>

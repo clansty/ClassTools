@@ -72,6 +72,7 @@ const settings = createAutoUpdateStorage('settings', {
   showTomorrowDutyAfter: '16:00:00',
   showDuty: true,
   createDesktopShortcut: true,
+  autoNewDay: false,
   scheduleSize: 1,
 });
 if (init) {
