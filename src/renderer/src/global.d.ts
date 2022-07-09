@@ -10,5 +10,6 @@ declare global {
     ipcRenderer: import('electron').IpcRenderer;
     env: NodeJS.ProcessEnv;
     COMMIT_HASH: string;
+    BUILD_DATE: number;
   }
 }

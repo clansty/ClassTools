@@ -18,6 +18,7 @@ export default defineConfig({
   root: __dirname,
   define: {
     COMMIT_HASH,
+    BUILD_DATE: new Date().getTime(),
   },
   plugins: [
     vue(),
