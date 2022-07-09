@@ -98,7 +98,7 @@ class WindowManager {
     }
     this.settingsWindow = this.createWindow('settings', {
       title: '设置',
-      width: 1024,
+      width: 1200,
       height: 768,
     });
     this.settingsWindow.on('close', () => {

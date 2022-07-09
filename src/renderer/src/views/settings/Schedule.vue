@@ -4,8 +4,10 @@ import locale from '../../language/zh_CN.yaml';
 import { computed, ref, watch } from 'vue';
 import { useDebounce, useDebounceFn } from '@vueuse/core';
 
-const selectOptions = computed(() =>
-  settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })));
+const selectOptions = computed(() => [
+  { label: '', value: '' },
+  ...settings.value.lessons.map(lesson => ({ label: lesson.name, value: lesson.name })),
+]);
 
 const sessionsMorning = ref(settings.value.sessionsMorning);
 const sessionsAfternoon = ref(settings.value.sessionsAfternoon);
