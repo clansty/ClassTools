@@ -70,6 +70,7 @@ const backgroundStyle = computed(() => {
   css.fontSize = settings.value.fontSize + 'vw';
   css.color = settings.value.fontColor;
   css.fontFamily = settings.value.font;
+  css.textShadow = `0 0 3px ${settings.value.shadowColor}`;
   return css;
 });
 </script>

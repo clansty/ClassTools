@@ -8,6 +8,7 @@ settings:
   dateSize: 日期大小
   fontSize: 字体大小
   fontColor: 字体颜色
+  shadowColor: 文字阴影颜色
   font: 字体
   city: 天气城市
   weatherFont: 字体

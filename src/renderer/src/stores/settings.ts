@@ -21,6 +21,7 @@ const settings = createAutoUpdateStorage('settings', {
   // 这里用 vw，这样所有设备上看起来都是一样的
   fontSize: 1.2,
   fontColor: '#303133',
+  shadowColor: '#fff',
   font: 'BlinkMacSystemFont, "PingFang SC", "Microsoft Yahei", "MicrosoftJhengHei", sans-serif',
   dateSize: 1.7,
   city: 'CN101010100',

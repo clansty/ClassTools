@@ -50,6 +50,11 @@ const showCreateDesktopShortcut = !window.isAppx && window.fs;
     >
       <n-color-picker v-model:value="settings.fontColor" :show-alpha="false"/>
     </n-form-item>
+    <n-form-item
+      :label="locale.settings.shadowColor"
+    >
+      <n-color-picker v-model:value="settings.shadowColor" :show-alpha="true"/>
+    </n-form-item>
     <FontSizeSliderFormItem
       :label="locale.settings.dateSize" v-model:value="settings.dateSize" unit="em"
     />
