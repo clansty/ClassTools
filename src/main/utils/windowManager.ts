@@ -47,7 +47,7 @@ class WindowManager {
   }
 
   public createWallpaperWindow() {
-    if (this.wallpaperWindow) {
+    if (this.wallpaperWindow && !this.wallpaperWindow.isDestroyed()) {
       return this.wallpaperWindow;
     }
     this.wallpaperWindow = this.createWindow('wallpaper', {
@@ -60,7 +60,7 @@ class WindowManager {
   }
 
   public createHomeworkEditWindow() {
-    if (this.homeworkEditWindow) {
+    if (this.homeworkEditWindow && !this.homeworkEditWindow.isDestroyed()) {
       this.homeworkEditWindow.show();
       return this.homeworkEditWindow;
     }
@@ -77,7 +77,7 @@ class WindowManager {
   }
 
   public createHomeworkViewWindow() {
-    if (this.homeworkViewWindow) {
+    if (this.homeworkViewWindow && !this.homeworkViewWindow.isDestroyed()) {
       this.homeworkViewWindow.show();
       return this.homeworkViewWindow;
     }
@@ -92,7 +92,7 @@ class WindowManager {
   }
 
   public createSettingsWindow() {
-    if (this.settingsWindow) {
+    if (this.settingsWindow && !this.settingsWindow.isDestroyed()) {
       this.settingsWindow.show();
       return this.settingsWindow;
     }
@@ -108,7 +108,7 @@ class WindowManager {
   }
 
   public createAboutWindow() {
-    if (this.aboutWindow) {
+    if (this.aboutWindow && !this.aboutWindow.isDestroyed()) {
       this.aboutWindow.show();
       return this.aboutWindow;
     }
@@ -124,7 +124,7 @@ class WindowManager {
   }
 
   public createSloganEditWindow() {
-    if (this.sloganEditWindow) {
+    if (this.sloganEditWindow && !this.sloganEditWindow.isDestroyed()) {
       this.sloganEditWindow.show();
       return this.sloganEditWindow;
     }
@@ -144,7 +144,7 @@ class WindowManager {
   }
 
   public createLotsWindow() {
-    if (this.lotsWindow) {
+    if (this.lotsWindow && !this.lotsWindow.isDestroyed()) {
       this.lotsWindow.show();
       return this.lotsWindow;
     }
