@@ -3,7 +3,7 @@ import { CPP, ffi, L, NULL, Win32ffi } from 'win32-ffi';
 import { HANDLE } from 'win32-ffi/lib/ts';
 import os from 'os';
 import { exec } from 'child_process';
-import { Severity, captureMessage } from '@sentry/electron/main';
+import { captureMessage } from '@sentry/electron/main';
 import windowManager from './windowManager';
 
 export default async function (childWindow: BrowserWindow) {
@@ -54,7 +54,7 @@ export default async function (childWindow: BrowserWindow) {
   else {
     windowManager.destroyAllWindows();
     captureMessage('设置壁纸失败，因为找不到 workView', {
-      level: Severity.Fatal,
+      level: 'fatal',
       tags: {
         context: 'wallpaper',
       },

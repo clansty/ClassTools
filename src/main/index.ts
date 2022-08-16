@@ -11,7 +11,7 @@ import setupUpdateChecker from './utils/checkForUpdate';
 import * as Sentry from '@sentry/electron/main';
 import getSettings from './utils/getSettings';
 import createShortcuts from './utils/createShortcuts';
-import { captureException, Severity } from '@sentry/electron/main';
+import { captureException } from '@sentry/electron/main';
 
 // 如果是 portable 版本，软件目录有 data 这个文件夹的话，数据放在 data 里面
 // 提供的 portable 版本的压缩包里自带这个文件夹
@@ -53,7 +53,7 @@ app.whenReady().then(async () => {
     catch (e) {
       windowManager.destroyAllWindows();
       captureException(e, {
-        level: Severity.Fatal,
+        level: 'fatal',
         tags: {
           context: 'wallpaper',
         },
