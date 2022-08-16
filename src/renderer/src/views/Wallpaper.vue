@@ -48,7 +48,7 @@ watch(() => now.value.getDate(), () => {
   if (!settings.value.autoNewDay) return;
   if (isToday(homeworks.value.date)) return;
   newDay();
-});
+}, { immediate: true });
 
 const weatherOnLeft = computed(() => !!slogan.value.content);
 const backgroundStyle = computed(() => {
