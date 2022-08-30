@@ -16,7 +16,7 @@ class WindowManager {
     const win = new BrowserWindow({
       webPreferences: {
         preload: path.join(__dirname, '../preload/index.cjs'),
-        webSecurity: false,
+        sandbox: false,
       },
       show: false,
       ...options,
