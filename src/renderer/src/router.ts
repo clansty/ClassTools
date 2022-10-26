@@ -10,6 +10,7 @@ import About from './views/About.vue';
 import Demo from './views/Demo.vue';
 import Lots from './views/Lots.vue';
 import SettingsBasic from './views/settings/Basic.vue';
+import SettingsWallpaper from './views/settings/Wallpaper.vue';
 import SettingsSchedule from './views/settings/Schedule.vue';
 import SettingsLessons from './views/settings/Lessons.vue';
 import SettingsDuty from './views/settings/Duty.vue';
@@ -34,6 +35,7 @@ export default createRouter({
       path: '/settings', component: Settings, children: [
         { path: '', redirect: '/settings/basic' },
         { path: 'basic', component: SettingsBasic, name: 'basic' },
+        { path: 'wallpaper', component: SettingsWallpaper, name: 'wallpaper' },
         { path: 'lessons', component: SettingsLessons, name: 'lessons' },
         { path: 'schedule', component: SettingsSchedule, name: 'schedule' },
         { path: 'duty', component: SettingsDuty, name: 'duty' },

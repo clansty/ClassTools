@@ -52,9 +52,10 @@ settings:
   autoNewDayRemark: 开启后会在每天零点将当前作业移入历史作业并清空作业列表
   routes:
     basic: 基础设置
+    wallpaper: 壁纸设置
     countdown: 倒计时设置
-    homeworkViewer: 作业看板
     weather: 天气设置
+    homeworkViewer: 作业看板
     lessons: 课程配置
     schedule: 课表编辑
     duty: 值日生

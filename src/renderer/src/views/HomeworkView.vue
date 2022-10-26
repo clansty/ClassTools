@@ -104,7 +104,7 @@ const containerStyle = computed(() => ({
         <p style="text-align: center; margin-top: 0; font-weight: bold">
           {{ showTomorrowSchedule ? '明' : '今' }}日课表
         </p>
-        <ScheduleDisplay :weekday="scheduleWeekday"/>
+        <ScheduleDisplay :style="{ fontSize: settings.scheduleSizeHomeworkView + 'em' }" :weekday="scheduleWeekday"/>
       </div>
     </n-layout-content>
     <n-layout-footer position="absolute" class="controlButtons">

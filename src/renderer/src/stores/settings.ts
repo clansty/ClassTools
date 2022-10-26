@@ -75,6 +75,7 @@ const settings = createAutoUpdateStorage('settings', {
   createDesktopShortcut: true,
   autoNewDay: false,
   scheduleSize: 1,
+  scheduleSizeHomeworkView: 1,
 });
 if (init) {
   Object.assign(settings.value, init);

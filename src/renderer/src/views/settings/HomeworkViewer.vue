@@ -21,6 +21,9 @@ const handleSelectFile = () => {
     <FontSizeSliderFormItem
       :label="locale.settings.homeworkViewerSize" v-model:value="settings.homeworkViewerSize" unit="vw"
     />
+    <FontSizeSliderFormItem
+      :label="locale.settings.scheduleSize" v-model:value="settings.scheduleSizeHomeworkView" unit="em"
+    />
     <n-form-item
       :label="locale.settings.homeworkViewerCols"
     >

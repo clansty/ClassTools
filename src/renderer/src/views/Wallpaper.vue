@@ -73,6 +73,10 @@ const backgroundStyle = computed(() => {
   css.textShadow = `0 0 3px ${settings.value.shadowColor}`;
   return css;
 });
+const scheduleStyle = computed(() => ({
+  flexShrink: 0,
+  fontSize: settings.value.scheduleSize + 'em',
+}));
 </script>
 
 <template>
@@ -91,7 +95,7 @@ const backgroundStyle = computed(() => {
           </n-gi>
           <n-gi style="display: flex">
             <HomeworkDisplay :homeworks="homeworks.homeworks" style="width: 0; flex-grow: 1"/>
-            <ScheduleDisplay style="flex-shrink: 0"/>
+            <ScheduleDisplay :style="scheduleStyle"/>
           </n-gi>
         </n-grid>
       </div>

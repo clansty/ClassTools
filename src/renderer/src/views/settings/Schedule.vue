@@ -38,14 +38,6 @@ watch([sessionsMorning, sessionsAfternoon, sessionsEvening], updateSessions);
       <n-input-number v-model:value="sessionsEvening"/>
     </n-form-item>
   </n-form>
-  <n-form
-    label-placement="left"
-    label-width="auto"
-  >
-    <FontSizeSliderFormItem
-      :label="locale.settings.scheduleSize" v-model:value="settings.scheduleSize" unit="em"
-    />
-  </n-form>
   <n-grid x-gap="12" cols="7">
     <n-gi v-for="(name, weekday) in locale.weekdays">
       <p style="font-weight: bold">{{ name }}</p>
