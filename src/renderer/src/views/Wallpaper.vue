@@ -11,9 +11,10 @@ import slogan from '../stores/slogan';
 import { useNotification } from 'naive-ui';
 import { h, Fragment } from 'vue';
 import useSystemWallpaper from '../hooks/systemWallpaper';
-import { useNow } from '@vueuse/core';
+import { formatDate, useNow } from '@vueuse/core';
 import { isToday } from 'date-fns';
 import newDay from '../utils/newDay';
+import sendHomeworkWebhook from '../utils/sendHomeworkWebhook';
 
 const systemWallpaper = useSystemWallpaper();
 const notification = useNotification();
@@ -49,6 +50,12 @@ watch(() => now.value.getDate(), () => {
   if (isToday(homeworks.value.date)) return;
   newDay();
 }, { immediate: true });
+watch(() => now.value.getMinutes(), async () => {
+  // WebHook
+  if (formatDate(now.value, 'HH:mm') !== settings.value.homeworkWebHookTime[now.value.getDay()]) return;
+  console.log('webhook');
+  await sendHomeworkWebhook(notification);
+});
 
 const weatherOnLeft = computed(() => !!slogan.value.content);
 const backgroundStyle = computed(() => {

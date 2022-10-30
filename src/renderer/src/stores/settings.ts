@@ -76,6 +76,9 @@ const settings = createAutoUpdateStorage('settings', {
   autoNewDay: false,
   scheduleSize: 1,
   scheduleSizeHomeworkView: 1,
+  homeworkWebHookUrl: '',
+  homeworkWebHookTime: ['17:30', '19:30', '19:30', '19:30', '19:30', '19:30', '17:50'],
+  homeworkWebHookContent: JSON.stringify({ text: '${}' }, undefined, 2),
 });
 if (init) {
   Object.assign(settings.value, init);
