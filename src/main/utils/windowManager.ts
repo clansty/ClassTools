@@ -153,10 +153,10 @@ class WindowManager {
     this.lotsWindow = this.createWindow('lots', {
       title: '抽签小工具',
       // 显示在屏幕左边三分之一的位置，就像 C8UI 标语编辑器的左半边
-      width: 500,
-      height: 400,
-      x: screenSize.width - 600,
-      y: screenSize.height - 500,
+      width: 600,
+      height: 500,
+      x: screenSize.width - 700,
+      y: screenSize.height - 600,
     });
     this.lotsWindow.on('closed', () => {
       this.lotsWindow = undefined;
