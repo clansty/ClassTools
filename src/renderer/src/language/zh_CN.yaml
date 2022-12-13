@@ -99,3 +99,12 @@ lots:
   name: 人
   min: 最小值
   max: 最大值
+
+demo:
+  routes:
+    wallpaper: 壁纸
+    homeworkView: 作业看板
+    homeworkEdit: 作业编辑器
+    sloganEdit: 标语编辑器
+    lots: 抽签小工具
+    settings: 设置

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import GithubIcon from '../assets/icons/Github.svg';
 import { useTitle } from '@vueuse/core';
+import locale from '../language/zh_CN.yaml';
 
 useTitle('ClassTools Demo');
 </script>
@@ -18,20 +19,8 @@ useTitle('ClassTools Demo');
         GitHub
       </a>
       <n-space>
-        <router-link to="/wallpaper" target="_blank">
-          <n-button size="large">壁纸</n-button>
-        </router-link>
-        <router-link to="/homeworkView" target="_blank">
-          <n-button size="large">作业看板</n-button>
-        </router-link>
-        <router-link to="/homeworkEdit" target="_blank">
-          <n-button size="large">作业编辑器</n-button>
-        </router-link>
-        <router-link to="/sloganEdit" target="_blank">
-          <n-button size="large">标语编辑器</n-button>
-        </router-link>
-        <router-link to="/settings" target="_blank">
-          <n-button size="large">设置</n-button>
+        <router-link v-for="(name, route) in locale.demo.routes" :to="'/' + route" target="_blank">
+          <n-button size="large">{{ name }}</n-button>
         </router-link>
       </n-space>
     </n-layout-content>
