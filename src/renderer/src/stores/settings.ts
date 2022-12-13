@@ -74,6 +74,7 @@ const settings = createAutoUpdateStorage('settings', {
   showDuty: true,
   createDesktopShortcut: true,
   autoNewDay: false,
+  autoNewDayTime: '00:00',
   scheduleSize: 1,
   scheduleSizeHomeworkView: 1,
   homeworkWebHookUrl: '',

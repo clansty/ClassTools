@@ -69,5 +69,11 @@ const showCreateDesktopShortcut = !window.isAppx && window.fs;
         {{ locale.settings.autoNewDayRemark }}
       </n-space>
     </n-form-item>
+    <n-form-item
+      :label="locale.settings.autoNewDayTime"
+      v-if="settings.autoNewDay"
+    >
+      <n-time-picker v-model:formatted-value="settings.autoNewDayTime" format="HH:mm"/>
+    </n-form-item>
   </n-form>
 </template>

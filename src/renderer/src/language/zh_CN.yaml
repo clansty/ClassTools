@@ -49,7 +49,8 @@ settings:
   createDesktopShortcut: 桌面快捷方式
   createDesktopShortcutRemark: 自动在桌面上创建功能入口快捷方式
   autoNewDay: 自动开始新的一天
-  autoNewDayRemark: 开启后会在每天零点将当前作业移入历史作业并清空作业列表
+  autoNewDayRemark: 开启后会在每天指定时间将当前作业移入历史作业并清空作业列表
+  autoNewDayTime: 开始新的一天的时间
   advancedSettings: 高级设置
   homeworkWebHook: 作业 WebHook，填写 URL 后会在指定时间给 URL 发起 WebHook
   homeworkWebHookUrl: WebHook URL

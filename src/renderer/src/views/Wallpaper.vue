@@ -15,6 +15,7 @@ import { formatDate, useNow } from '@vueuse/core';
 import { isToday } from 'date-fns';
 import newDay from '../utils/newDay';
 import sendHomeworkWebhook from '../utils/sendHomeworkWebhook';
+import getTime from '../utils/getTime';
 
 const systemWallpaper = useSystemWallpaper();
 const notification = useNotification();
@@ -44,10 +45,11 @@ if (window.ipcRenderer) {
 }
 
 const now = useNow();
-watch(() => now.value.getDate(), () => {
-  console.log('开始新的一天');
+watch(() => now.value.getMinutes(), () => {
   if (!settings.value.autoNewDay) return;
-  if (isToday(homeworks.value.date)) return;
+  const isTimeReached = getTime(new Date()) >= getTime(settings.value.autoNewDayTime);
+  if (isToday(homeworks.value.date) || !isTimeReached) return;
+  console.log('开始新的一天');
   newDay();
 }, { immediate: true });
 watch(() => now.value.getMinutes(), async () => {
