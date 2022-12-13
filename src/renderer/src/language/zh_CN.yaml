@@ -58,6 +58,7 @@ settings:
   homeworkWebHookContent: WebHook 内容，将会把 `${}` 替换为作业内容文本
   copy: 复制
   clear: 清除
+  namelistTips: 设置名单后，可以在值日生设置中自动填充。可以直接在名单表格里把姓名列复制下来粘贴在这里
   routes:
     basic: 基础设置
     wallpaper: 壁纸设置
@@ -66,6 +67,7 @@ settings:
     homeworkViewer: 作业看板
     lessons: 课程配置
     schedule: 课表编辑
+    namelist: 名单设置
     duty: 值日生
 
 weekdays:

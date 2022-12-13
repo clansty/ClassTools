@@ -17,6 +17,7 @@ import SettingsDuty from './views/settings/Duty.vue';
 import SettingsWeather from './views/settings/Weather.vue';
 import SettingsHomeworkViewer from './views/settings/HomeworkViewer.vue';
 import SettingsCountdown from './views/settings/Countdown.vue';
+import SettingsNamelist from './views/settings/Namelist.vue';
 
 export default createRouter({
   history: createWebHashHistory(),
@@ -42,6 +43,7 @@ export default createRouter({
         { path: 'weather', component: SettingsWeather, name: 'weather' },
         { path: 'homeworkViewer', component: SettingsHomeworkViewer, name: 'homeworkViewer' },
         { path: 'countdown', component: SettingsCountdown, name: 'countdown' },
+        { path: 'namelist', component: SettingsNamelist, name: 'namelist' },
       ],
     },
     { path: '/sloganEdit', component: SloganEdit },

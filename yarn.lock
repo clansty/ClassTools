@@ -1423,6 +1423,7 @@ __metadata:
     js-yaml: ^4.1.0
     minimist: ^1.2.7
     naive-ui: ^2.34.2
+    pinyin-pro: ^3.13.0
     ref-napi: ^3.0.3
     sass: ^1.56.2
     typescript: ^4.9.4
@@ -3578,6 +3579,13 @@ __metadata:
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 050c865ce81119c4822c45d3c84f1ced46f93a0126febae20737bd05ca20589c564d6e9226977df859ed5e03dc73f02584a2b0faad36e896936238238b0446cf
+  languageName: node
+  linkType: hard
+
+"pinyin-pro@npm:^3.13.0":
+  version: 3.13.0
+  resolution: "pinyin-pro@npm:3.13.0"
+  checksum: ec387ccf88bd46286ae3f77fc66daf4ccfc577291e6652136b76f5bd972599433017ba70fc4c0c4644d3bd9f50105e6929516d165ff88c8129bf69e2f2c4f3bd
   languageName: node
   linkType: hard
 

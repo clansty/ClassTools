@@ -1,6 +1,14 @@
 <script setup lang="ts">
 import settings from '../../stores/settings';
 import locale from '../../language/zh_CN.yaml';
+import { computed } from 'vue';
+import parseNamelist from '../../utils/parseNamelist';
+import { match } from 'pinyin-pro';
+
+const names = computed(() => parseNamelist(settings.value.namelist).map(them => ({ label: them, value: them })));
+const nameFilter = (pattern: string, { value }: { value: string }) => {
+  return !!match(value, pattern);
+};
 </script>
 
 <template>
@@ -31,7 +39,10 @@ import locale from '../../language/zh_CN.yaml';
         <n-input-group v-for="type in settings.dutyTypes">
           <!-- 不知道组件库什么毛病，label 都被挤掉了 -->
           <n-input-group-label style="flex-shrink: 0">{{ type }}</n-input-group-label>
-          <n-input v-model:value="settings.duty[weekday][type]" :placeholder="`${name}${type}值日生`"/>
+          <n-select :value="(settings.duty[weekday][type] || '').split(' ').filter(it => !!it)"
+                    @update:value="v => settings.duty[weekday][type] = v.join(' ')"
+                    tag filterable multiple :placeholder="`${name}${type}值日生`"
+                    :options="names" :filter="nameFilter"/>
         </n-input-group>
       </n-space>
     </div>
