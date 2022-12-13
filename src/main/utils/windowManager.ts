@@ -17,6 +17,7 @@ class WindowManager {
       webPreferences: {
         preload: path.join(__dirname, '../preload/index.cjs'),
         sandbox: false,
+        webSecurity: false,
       },
       show: false,
       ...options,
