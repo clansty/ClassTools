@@ -5,5 +5,5 @@
       nodejs-16_x
     ];
 
-    ELECTRON_OVERRIDE_DIST_PATH = "${pkgs.electron_20}/bin";
+    ELECTRON_OVERRIDE_DIST_PATH = "${pkgs.electron_22}/bin";
 }

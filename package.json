@@ -6,7 +6,7 @@
   "author": "Clansty <i@gao4.pw> & RainbowBird <rbxin2003@outlook.com>",
   "private": true,
   "scripts": {
-    "dev": "node scripts/watch.mjs",
+    "dev": "NODE_ENV=development node scripts/watch.mjs",
     "prebuild": "node scripts/build.mjs",
     "build": "yarn prebuild && electron-builder",
     "debug": "vite ./src/renderer"
@@ -34,7 +34,7 @@
     "sass": "^1.56.2",
     "typescript": "^4.9.4",
     "unplugin-vue-components": "^0.22.12",
-    "vite": "^4.0.1",
+    "vite": "3.2.5",
     "vite-plugin-resolve": "^2.3.0",
     "vite-svg-loader": "^3.6.0",
     "vue": "^3.2.45",

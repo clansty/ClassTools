@@ -8,9 +8,9 @@ class AppTray {
   private tray?: Tray;
 
   public init() {
-    this.tray = new Tray(process.platform === 'darwin' ?
-      nativeImage.createFromNamedImage('NSImageNameActionTemplate') :
-      path.join(STATIC_PATH, 'tray.ico'));
+    this.tray = new Tray(process.platform === 'win32' ?
+      path.join(STATIC_PATH, 'tray.ico') :
+      path.join(STATIC_PATH, 'tray.png'));
     this.tray.setToolTip('ClassTools');
     const menu = Menu.buildFromTemplate([
       {
