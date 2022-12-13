@@ -55,6 +55,8 @@ settings:
   homeworkWebHookUrl: WebHook URL
   homeworkWebHookTime: WebHook 时间
   homeworkWebHookContent: WebHook 内容，将会把 `${}` 替换为作业内容文本
+  copy: 复制
+  clear: 清除
   routes:
     basic: 基础设置
     wallpaper: 壁纸设置
