@@ -25,7 +25,7 @@
     "@vitejs/plugin-vue": "^4.0.0",
     "@vueuse/core": "^9.6.0",
     "compare-versions": "^5.0.1",
-    "electron": "^22.0.0",
+    "electron": "20",
     "electron-builder": "^23.6.0",
     "electron-request": "1.8.1",
     "js-yaml": "^4.1.0",
