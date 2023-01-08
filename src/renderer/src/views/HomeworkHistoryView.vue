@@ -12,6 +12,7 @@ const homeworks = useHistoryHomeworks(date);
 
 const setAsCurrent = () => {
   currentHomeworks.value = homeworks.value;
+  currentHomeworks.value.date = new Date().getTime();
   historyHomeworkList.value.splice(historyHomeworkList.value.indexOf(date), 1);
   router.push('/homeworkEdit');
 };
