@@ -5,6 +5,7 @@ import { formatDate } from '@vueuse/core';
 
 export default async (notification: NotificationApiInjection, isDebug = false) => {
   if (!settings.value.homeworkWebHookUrl) return;
+  if (!Object.entries(storeHomeworks.value).length) return;
   try {
     const homeworks = Object.entries(storeHomeworks.value.homeworks)
       .filter(([subject, content]) => content)
