@@ -64,7 +64,7 @@ const settings = createAutoUpdateStorage('settings', {
     { name: '班务', hasHomework: true },
     { name: '精神食粮', hasHomework: false },
   ],
-  dutyTypes: ['教室', '包干区'],
+  dutyTypes: ['教室', '走廊', '黑板', '倒垃圾', '包干区'],
   duty: new Array(7).fill({}),
   homeworkViewerSize: 1.2,
   homeworkViewerCols: 3,

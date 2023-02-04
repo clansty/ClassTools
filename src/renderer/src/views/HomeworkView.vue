@@ -29,9 +29,6 @@ const groupedHomeworks = computed(() => {
     current++;
     if (current === settings.value.homeworkViewerCols) current = 0;
   }
-  if (isDutyShown.value) {
-    result[current].duty = '';
-  }
   return result;
 });
 // 现在的时间大于设定的时间，把这个分出来因为下面的文字要显示 今日/明日
@@ -79,12 +76,19 @@ const containerStyle = computed(() => ({
       <n-grid x-gap="16" :cols="settings.homeworkViewerCols" style="align-items: flex-start;">
         <n-gi v-for="i in settings.homeworkViewerCols" style="display: grid; gap: 16px; grid-template-columns: 100%">
           <!-- 从 1 开始的，坏坏 -->
-          <n-card v-for="(content, subject) in groupedHomeworks[i-1]" :title="subject==='duty' ? dutyTitle : subject"
+          <n-card v-for="(content, subject) in groupedHomeworks[i-1]" :title="subject"
                   style="--n-font-size: 1em; --n-title-font-size: 1.2em"
                   content-style="word-wrap: break-word; white-space: pre-wrap; font-size: 1em">
             {{ content }}
-            <!-- 值日生显示，借一下作业组件 -->
-            <HomeworkDisplay :homeworks="settings.duty[dutyWeekday]" v-if="subject==='duty'"/>
+          </n-card>
+        </n-gi>
+
+        <!-- 值日生显示，在作业下方 -->
+        <n-gi v-for="(names, type) in settings.duty[dutyWeekday]" style="display: grid; gap: 16px; grid-template-columns: 100%">
+          <n-card :title="type"
+                  style="--n-font-size: 1em; --n-title-font-size: 1.2em"
+                  content-style="word-wrap: break-word; white-space: pre-wrap; font-size: 1em">
+            {{ names.replace(' ', '，') }}
           </n-card>
         </n-gi>
       </n-grid>
