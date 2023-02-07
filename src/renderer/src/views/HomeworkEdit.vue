@@ -4,10 +4,13 @@ import settings from '../stores/settings';
 import { computed } from 'vue';
 import { isToday } from 'date-fns';
 import newDay from '../utils/newDay';
+import historyHomeworkList from '../stores/homeworkHistoryList';
 
 const subjects = computed(() => settings.value.lessons
   .filter(lesson => lesson.hasHomework)
   .map(subject => subject.name));
+
+const cleanHomeworks = () => homeworks.value.homeworks = {};
 </script>
 
 <template>
@@ -21,6 +24,12 @@ const subjects = computed(() => settings.value.lessons
           <n-button v-if="!isToday(homeworks.date)" @click="newDay">
             开启新的一天
           </n-button>
+          <n-popconfirm v-if="isToday(homeworks.date)" :negative-text="null" @positive-click="cleanHomeworks">
+            <template #trigger>
+              <n-button>清除作业</n-button>
+            </template>
+            确定要清除今天的作业吗？
+          </n-popconfirm>
           <n-button @click="$router.push('/homeworkHistory')">
             历史作业
           </n-button>

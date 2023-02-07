@@ -46,6 +46,7 @@ declare module '@vue/runtime-core' {
     NMenu: typeof import('naive-ui')['NMenu']
     NNotificationProvider: typeof import('naive-ui')['NNotificationProvider']
     NNumberAnimation: typeof import('naive-ui')['NNumberAnimation']
+    NPopconfirm: typeof import('naive-ui')['NPopconfirm']
     NRadioButton: typeof import('naive-ui')['NRadioButton']
     NRadioGroup: typeof import('naive-ui')['NRadioGroup']
     NSelect: typeof import('naive-ui')['NSelect']
