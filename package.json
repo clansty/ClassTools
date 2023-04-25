@@ -45,7 +45,7 @@
   "env": {
     "PORT": 3355
   },
-  "packageManager": "yarn@3.2.0",
+  "packageManager": "yarn@3.5.0",
   "dependencies": {
     "ffi-napi": "^4.0.3",
     "ref-napi": "^3.0.3",
