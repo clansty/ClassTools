@@ -29,7 +29,8 @@ const distribute = <T>(entries: [string, T][], columns: number) => {
 // 需要把作业平均分配到设定好数量到组里
 const groupedHomeworks = computed(() => distribute(
   Object.entries(homeworks.value.homeworks)
-    .filter(([subject, content]) => content),
+    .filter(([subject, content]) => content)
+    .sort((a, b) => a[1].length - b[1].length),
   settings.value.homeworkViewerCols));
 const groupedDuty = computed(() => distribute(
   Object.entries(settings.value.duty[dutyWeekday.value])
