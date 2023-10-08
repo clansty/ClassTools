@@ -51,8 +51,15 @@ class WindowManager {
     if (this.wallpaperWindow && !this.wallpaperWindow.isDestroyed()) {
       return this.wallpaperWindow;
     }
+    const screenSize = screen.getPrimaryDisplay().size;
     this.wallpaperWindow = this.createWindow('wallpaper', {
       fullscreen: process.platform === 'win32',
+      height: screenSize.height,
+      width: screenSize.width,
+      titleBarStyle: 'customButtonsOnHover',
+      hasShadow: true,
+      roundedCorners: false,
+      type: 'desktop'
     });
     this.wallpaperWindow.on('closed', () => {
       this.wallpaperWindow = undefined;

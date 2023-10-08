@@ -64,10 +64,10 @@ app.whenReady().then(async () => {
       });
       app.quit();
     }
-  }
-  const settings = await getSettings();
-  if (settings.createDesktopShortcut) {
-    createShortcuts();
+    const settings = await getSettings();
+    if (settings.createDesktopShortcut) {
+      createShortcuts();
+    }
   }
 });
 
