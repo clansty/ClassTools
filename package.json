@@ -1,55 +1,38 @@
 {
   "name": "class-tools",
   "productName": "ClassTools",
-  "version": "3.2.1",
-  "main": "dist/main/index.cjs",
-  "author": "Clansty <i@gao4.pw> & RainbowBird <rbxin2003@outlook.com>",
-  "private": true,
+  "version": "3.3.0",
+  "type": "module",
+  "author": "Clansty",
   "scripts": {
-    "dev": "NODE_ENV=development node scripts/watch.mjs",
-    "prebuild": "node scripts/build.mjs",
-    "build": "yarn prebuild && electron-builder",
-    "debug": "vite ./src/renderer"
+    "dev": "set NODE_ENV=development && vite",
+    "build": "vite build"
   },
   "engines": {
     "node": ">=14.17.0"
   },
   "devDependencies": {
-    "@originjs/vite-plugin-content": "^1.0.1",
-    "@sentry/electron": "^4.1.2",
-    "@sentry/tracing": "^7.25.0",
-    "@sentry/vue": "^7.25.0",
-    "@types/js-yaml": "^4.0.5",
-    "@types/minimist": "^1.2.2",
-    "@types/xml2js": "^0.4.11",
-    "@vitejs/plugin-vue": "^4.0.0",
-    "@vueuse/core": "^9.6.0",
-    "compare-versions": "^5.0.1",
-    "electron": "20",
-    "electron-builder": "^23.6.0",
-    "electron-request": "1.8.1",
+    "@originjs/vite-plugin-content": "^1.0.5",
+    "@sentry/vue": "^8.8.0",
+    "@tauri-apps/cli": "^1.5.14",
+    "@types/js-yaml": "^4.0.9",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vueuse/core": "^10.10.0",
+    "date-fns": "^3.6.0",
     "js-yaml": "^4.1.0",
-    "minimist": "^1.2.7",
-    "naive-ui": "^2.34.2",
-    "pinyin-pro": "^3.13.0",
-    "sass": "^1.56.2",
-    "typescript": "^4.9.4",
-    "unplugin-vue-components": "^0.22.12",
-    "vite": "3.2.5",
-    "vite-plugin-resolve": "^2.3.0",
-    "vite-svg-loader": "^3.6.0",
-    "vue": "^3.2.45",
-    "vue-router": "^4.1.6",
-    "xml2js": "^0.4.23"
+    "naive-ui": "^2.38.2",
+    "pinyin-pro": "^3.22.0",
+    "sass": "^1.77.4",
+    "typescript": "^5.4.5",
+    "unplugin-vue-components": "^0.27.0",
+    "vite": "5.2.13",
+    "vite-plugin-resolve": "^2.5.1",
+    "vite-svg-loader": "^5.1.0",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.2"
   },
   "env": {
     "PORT": 3355
   },
-  "packageManager": "yarn@3.5.0",
-  "dependencies": {
-    "ffi-napi": "^4.0.3",
-    "ref-napi": "^3.0.3",
-    "wallpaper": "^6.1.1",
-    "win32-ffi": "^0.0.6-alpha.5"
-  }
+  "packageManager": "pnpm@9.1.2+sha256.19c17528f9ca20bd442e4ca42f00f1b9808a9cb419383cd04ba32ef19322aba7"
 }
