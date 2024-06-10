@@ -2,9 +2,12 @@
 #![cfg_attr(not(debug_assertions), windows_subsystem = "windows")]
 
 mod set_as_wallpaper;
+mod tray;
 
 fn main() {
     tauri::Builder::default()
+        .system_tray(tray::create())
+        .on_system_tray_event(tray::handle)
         .setup(|app| {
             let wallpaper_window = tauri::WindowBuilder::new(
                 app,
@@ -24,8 +27,20 @@ fn main() {
                 panic!("Failed to find WorkerW window")
             }
 
+            open_devtools(&wallpaper_window);
+
             Ok(())
         })
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
+}
+
+#[cfg(debug_assertions)]
+fn open_devtools(window: &tauri::Window) {
+    window.open_devtools();
+}
+
+#[cfg(not(debug_assertions))]
+fn open_devtools(_window: &tauri::Window) {
+    // do nothing
 }
